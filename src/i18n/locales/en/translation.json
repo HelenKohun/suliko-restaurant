@@ -1,0 +1,856 @@
+{
+  "hero": {
+    "eyebrow": "Authentic Georgian cuisine",
+    "title1": "GEORGIA",
+    "title2": "on a plate.",
+    "title3": "SOUL IN",
+    "title4": "EVERY BITE.",
+    "cta": "Reserve a table",
+    "scroll": "↓ Explore menu",
+    "stat1_num": "2018",
+    "stat1_lbl": "Founded",
+    "stat2_num": "80+",
+    "stat2_lbl": "Georgian wines",
+    "stat3_num": "4.8★",
+    "stat3_lbl": "Google Reviews"
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "wine": "Wine",
+    "booking": "Reservation",
+    "contact": "Contact",
+    "location": "Warsaw, Mokotów",
+    "booking_btn": "Reservation"
+  },
+
+  "about": {
+    "eyebrow": "about us",
+    "title1": "Georgian hospitality",
+    "title2": "with a modern",
+    "title3": "touch",
+    "text1": "At Suliko, we celebrate the authentic flavors of Georgia, combining traditional recipes with a contemporary approach to culinary craftsmanship.",
+    "text2": "Our cuisine is a story of hospitality, shared moments around the table, and unforgettable experiences that stay with you long after the meal is over."
+  },
+
+  "dishes": {
+    "eyebrow": "Our specialties",
+    "title1": "Flavors that",
+    "title2": "tell a story",
+    "button": "View full menu →"
+  },
+
+  "dish-card": {
+    "chinkali": {
+      "name": "Khinkali",
+      "category": "Traditional Georgian dumplings"
+    },
+    "chaczapuri": {
+      "name": "Khachapuri",
+      "category": "Cheese-filled oven-baked classic"
+    },
+    "mtsvadi": {
+      "name": "Mtsvadi",
+      "category": "Aromatic grilled meat"
+    }
+  },
+  "wine": {
+    "eyebrow": "Natural wines",
+    "title1": "Discover the taste",
+    "title2": "of Georgia",
+    "title3": "in every glass",
+    "text": "Over 80 labels from Kakheti, Kartli and Racha. Orange, natural and qvevri wines - a tradition dating back nearly 8,000 years.",
+    "button": "View wine list →"
+  },
+
+  "reservationCTA": {
+    "eyebrow": "Reservation",
+    "title1": "Reserve",
+    "title2": "your table",
+    "text1": "Tables available Monday through Sunday",
+    "text2": "12:00 PM – 11:00 PM · 85 Mokotowska St., Warsaw",
+    "date": "Date",
+    "time": "Time",
+    "guests": "Number of guests",
+    "person": "person",
+    "people": "people",
+    "button": "Reserve a table",
+    "text3": "Click to continue to the full reservation form"
+  },
+  "footer": {
+    "text": "Authentic Georgian cuisine in the heart of Warsaw. Tradition, natural wines, and a truly memorable atmosphere.",
+    "address1": "85 Mokotowska St.",
+    "address2": "99-999 Warsaw",
+    "address3": "+48 11 123 45 67",
+    "pages": "Pages",
+    "time": "Opening hours",
+    "time1": "Mon – Fri",
+    "time2": "12:00 PM – 11:00 PM",
+    "time3": "Sat – Sun",
+    "time4": "11:00 AM – 12:00 AM",
+    "contact": "Contact",
+    "bottom": "© 2026 Suliko Restaurant · All rights reserved"
+  },
+  "menuPage": {
+    "header": "MENU",
+    "header-text": "Authentic Georgian cuisine",
+    "all-btn": "All",
+    "add-btn": "+ Add"
+  },
+  "menuData": {
+    "zimne-przystawki": {
+      "label": "Cold starters",
+      "titleLine1": "Tradition",
+      "titleLine2": "in every bite",
+      "dishes": {
+        "1": {
+          "name": "Pkhali",
+          "description": "Spinach, beetroot and bean balls with walnut paste and pomegranate"
+        },
+        "2": {
+          "name": "Badrijani",
+          "description": "Fried eggplant with walnut paste, garlic and pomegranate"
+        },
+        "3": {
+          "name": "Lobio",
+          "description": "Red bean spread with walnuts and aromatic spices"
+        },
+        "4": {
+          "name": "Satsebeli",
+          "description": "A platter of cold appetizers with tomato and walnut sauce"
+        },
+        "5": {
+          "name": "Ajika",
+          "description": "Spicy pepper paste with herbs, served with shotis puri bread"
+        },
+        "6": {
+          "name": "Mchadi with cheese",
+          "description": "Cornbread with sulguni cheese and butter"
+        }
+      }
+    },
+    "ciepłe-przystawki": {
+      "label": "Warm starters",
+      "titleLine1": "The warmth",
+      "titleLine2": "of a Georgian home",
+      "dishes": {
+        "7": {
+          "name": "Chvishtari",
+          "description": "Fried cornbread filled with sulguni cheese"
+        },
+        "8": {
+          "name": "Gebzhalia",
+          "description": "Sulguni cheese rolls in mint sauce with walnuts"
+        },
+        "9": {
+          "name": "Kupati",
+          "description": "Georgian sausage fried with onion and spices"
+        },
+        "10": {
+          "name": "Ajapsandali",
+          "description": "Vegetable stew with eggplant, tomatoes and peppers"
+        },
+        "11": {
+          "name": "Elarji",
+          "description": "Warm cornmeal with sulguni cheese"
+        },
+        "12": {
+          "name": "Chiri",
+          "description": "Dried beef fried with onion and Caucasian herbs"
+        }
+      }
+    },
+    "chaczapuri": {
+      "label": "Khachapuri",
+      "titleLine1": "Cheesy",
+      "titleLine2": "oven-baked classics",
+      "dishes": {
+        "13": {
+          "name": "Adjarian khachapuri",
+          "description": "Boat-shaped bread with sulguni cheese, egg and butter — a Batumi classic"
+        },
+        "14": {
+          "name": "Imeretian khachapuri",
+          "description": "Round bread filled with imeruli cheese — simple and timeless"
+        },
+        "15": {
+          "name": "Megrelian khachapuri",
+          "description": "Bread with cheese inside and on top — double the cheese"
+        },
+        "16": {
+          "name": "Ossetian khachapuri",
+          "description": "Bread with cheese and potatoes — a hearty mountain-style version"
+        },
+        "17": {
+          "name": "Lobiani",
+          "description": "Bread filled with bean paste, bacon and spices"
+        }
+      }
+    },
+    "salaty": {
+      "label": "Salads",
+      "titleLine1": "Freshness",
+      "titleLine2": "of the Caucasus",
+      "dishes": {
+        "18": {
+          "name": "Georgian salad",
+          "description": "Tomatoes, cucumbers, peppers, onion, coriander and walnut oil"
+        },
+        "19": {
+          "name": "Walnut salad",
+          "description": "Mixed vegetables with walnut paste, garlic and pomegranate"
+        },
+        "20": {
+          "name": "Chicken salad",
+          "description": "Grilled chicken with vegetables in tkemali sauce"
+        },
+        "21": {
+          "name": "Tbilisi salad",
+          "description": "Mixed vegetables with sulguni cheese and olives"
+        }
+      }
+    },
+    "zupy": {
+      "label": "Soups",
+      "titleLine1": "Warming",
+      "titleLine2": "flavors of Georgia",
+      "dishes": {
+        "22": {
+          "name": "Kharcho",
+          "description": "Spicy beef soup with rice, walnuts and bay leaf"
+        },
+        "23": {
+          "name": "Chikhirtma",
+          "description": "Delicate chicken soup with egg and wine vinegar"
+        },
+        "24": {
+          "name": "Shurpa",
+          "description": "Rich lamb soup with vegetables and Caucasian herbs"
+        },
+        "25": {
+          "name": "Bozbash",
+          "description": "Lamb soup with chickpeas and tkemali plums"
+        }
+      }
+    },
+    "dania-glowne": {
+      "label": "Main courses",
+      "titleLine1": "The heart",
+      "titleLine2": "of Georgian cuisine",
+      "dishes": {
+        "26": {
+          "name": "Chakapuli",
+          "description": "Lamb stewed with tarragon, spring onion and white wine"
+        },
+        "27": {
+          "name": "Chanakhi",
+          "description": "Lamb baked in a clay pot with eggplant and tomatoes"
+        },
+        "28": {
+          "name": "Chicken satsivi",
+          "description": "Chicken in a cold walnut sauce with Caucasian spices"
+        },
+        "29": {
+          "name": "Ostri",
+          "description": "Beef stewed in a spicy tomato sauce with garlic"
+        },
+        "30": {
+          "name": "Tabaka",
+          "description": "Flattened chicken fried under weight with garlic"
+        },
+        "31": {
+          "name": "Kuchmachi",
+          "description": "Poultry offal stewed with walnuts and spices"
+        },
+        "32": {
+          "name": "Chkmeruli",
+          "description": "Chicken in creamy garlic sauce, Racha style"
+        },
+        "33": {
+          "name": "Lamb mtsvadi",
+          "description": "Lamb skewer marinated with onion and spices"
+        }
+      }
+    },
+    "grill": {
+      "label": "Grill",
+      "titleLine1": "From the fire",
+      "titleLine2": "straight to the table",
+      "dishes": {
+        "34": {
+          "name": "Pork mtsvadi",
+          "description": "Pork skewer marinated with onion and spices"
+        },
+        "35": {
+          "name": "Beef mtsvadi",
+          "description": "Beef tenderloin skewer with Caucasian herbs"
+        },
+        "36": {
+          "name": "Lamb mtsvadi",
+          "description": "Lamb skewer with tarragon and pomegranate"
+        },
+        "37": {
+          "name": "Chicken mtsvadi",
+          "description": "Chicken fillet skewer in tkemali marinade"
+        },
+        "38": {
+          "name": "Lula kebab",
+          "description": "Minced lamb with onion and herbs on a skewer"
+        },
+        "39": {
+          "name": "Grilled entrecôte",
+          "description": "Juicy grilled entrecôte with herb butter and vegetables"
+        },
+        "40": {
+          "name": "Pork ribs",
+          "description": "Ribs marinated in tkemali sauce and honey"
+        },
+        "41": {
+          "name": "Grilled vegetables",
+          "description": "Seasonal grilled vegetables with olive oil and herbs"
+        },
+        "42": {
+          "name": "Grill mix for 2",
+          "description": "A selection of pork, beef and chicken skewers"
+        },
+        "43": {
+          "name": "Grill mix for 4",
+          "description": "A generous set of skewers with sides and sauces"
+        }
+      }
+    },
+    "ryby": {
+      "label": "Fish",
+      "titleLine1": "Gifts",
+      "titleLine2": "of the Black Sea",
+      "dishes": {
+        "44": {
+          "name": "Grilled trout",
+          "description": "Trout from Caucasian rivers with herbs and lemon"
+        },
+        "45": {
+          "name": "Zander in walnut sauce",
+          "description": "Zander fillet in a creamy walnut sauce"
+        },
+        "46": {
+          "name": "Georgian-style carp",
+          "description": "Carp baked with vegetables and tkemali sauce"
+        },
+        "47": {
+          "name": "Salmon with eggplant",
+          "description": "Salmon fillet with eggplant purée and pomegranate sauce"
+        }
+      }
+    },
+    "desery": {
+      "label": "Desserts",
+      "titleLine1": "A sweet",
+      "titleLine2": "ending",
+      "dishes": {
+        "48": {
+          "name": "Churchkhela",
+          "description": "Walnuts dipped in thickened grape juice — a Georgian sweet"
+        },
+        "49": {
+          "name": "Gozinaki",
+          "description": "Crunchy walnuts caramelized in honey"
+        },
+        "50": {
+          "name": "Pelamushi",
+          "description": "Grape juice pudding with walnuts and cinnamon"
+        },
+        "51": {
+          "name": "Tklapi",
+          "description": "Fruit leather made from tkemali plums, served with vanilla ice cream"
+        }
+      }
+    }
+  },
+  "confirmModal": {
+    "title1": "Remove item?",
+    "title2": "Are you sure you want to remove",
+    "no": "No",
+    "yes": "Yes"
+  },
+  "cart": {
+    "cart": "CART",
+    "empty-cart": "Your cart is empty",
+    "to-menu-btn": "View menu →",
+    "to-wine-btn": "View wine list →",
+    "item": "Item",
+    "price": "Price",
+    "quantity": "Quantity",
+    "cost": "Total",
+    "pcs": "pcs",
+    "promo": "Promo code",
+    "promo-error": "Invalid promo code",
+    "placeholder": "Enter promo code...",
+    "apply-btn": "Apply",
+    "order-btn": "Place order →",
+    "clear-btn": "Clear cart",
+    "sum": "Subtotal",
+    "discount": "Discount",
+    "delivery": "Delivery",
+    "for-free": "free",
+    "pay": "Total to pay",
+    "itemsCount_one": "{{count}} item",
+    "itemsCount_other": "{{count}} items"
+  },
+  "booking": {
+    "info": {
+      "eyebrow": "Suliko · Warsaw",
+      "header1": "Reserve",
+      "header2": "your table",
+      "address": "85 Mokotowska St., Warsaw",
+      "open-time1": "Mon–Fri: 12:00 PM–11:00 PM",
+      "open-time2": "Sat–Sun: 11:00 AM–12:00 AM",
+      "phone": "+48 11 123 45 67"
+    },
+    "submittedThanks": {
+      "thanks": "Thank you!",
+      "text1": "Your reservation has been received.",
+      "text2": "A confirmation will be sent to the email address you provided.",
+      "home-btn": "Back to homepage"
+    },
+    "form": {
+      "eyebrow": "Reservation",
+      "header1": "Welcome",
+      "header2": "to Suliko",
+      "name-lastname": {
+        "title": "Full name *",
+        "error1": "Name is required",
+        "error2": "Name must be at least 2 characters long"
+      },
+      "date-time": {
+        "title-date": "Date *",
+        "error1-date": "Date is required",
+        "error2-date": "You cannot select a past date",
+        "title-time": "Time *",
+        "error1-time": "Time is required",
+        "error2-time": "Please select a valid time",
+        "time-def-opt": "Select a time"
+      },
+      "guests-phone": {
+        "title-guests": "Number of guests *",
+        "error1-guests": "Number of guests is required",
+        "error2-guests": "Please select the number of guests",
+        "title-phone": "Phone *",
+        "error1-phone": "Phone number is required",
+        "error2-phone": "Please enter a valid phone number"
+      },
+      "email": {
+        "title": "Email *",
+        "error1": "Email is required",
+        "error2": "Invalid email address"
+      },
+      "comment": {
+        "title": "Comment (optional)",
+        "error": "Comment can be up to 300 characters long",
+        "placeholder": "Birthday, allergies, special requests..."
+      },
+      "submit-btn": {
+        "sending": "Sending...",
+        "send": "Reserve a table →"
+      },
+      "confirmation": "A confirmation will be sent to the email address you provided",
+      "itemsCount_one": "{{count}} guest",
+      "itemsCount_other": "{{count}} guests",
+      "largeBookingBtn": "Group reservations →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title1": "Get in",
+      "title2": "touch",
+      "text": "Have a question about our menu, reservations, or a special gathering? We’ll be happy to help and take care of every detail."
+    },
+    "intro": {
+      "eyebrow": "Visit us",
+      "title1": "The heart of Georgia",
+      "title2": "in the heart of Warsaw",
+      "text": "Suliko is a place created for hospitality, shared tables, and memorable moments. Whether you are planning an intimate dinner, a family gathering, or a larger reservation, we are here to help."
+    },
+    "form": {
+      "title": "Send a message",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "phone": "Phone",
+      "subject": "Subject",
+      "subjectDefault": "Select a subject",
+      "subjects": {
+        "reservation": "Reservation",
+        "groupReservation": "Group reservation",
+        "event": "Event planning",
+        "feedback": "Visit feedback",
+        "other": "Other"
+      },
+      "input": {
+        "firstname-error1": "First name is required",
+        "firstname-error2": "First name must be at least 2 characters long",
+        "lastname-error1": "Last name is required",
+        "lastname-error2": "Last name must be at least 2 characters long",
+        "email-error1": "Email is required",
+        "email-error2": "Invalid email address",
+        "phone-error1": "Phone number is required",
+        "phone-error2": "Please enter a valid phone number",
+        "subjects-error": "Subject is required",
+        "message-error1": "Message is required",
+        "message-error2": "Message can be up to 300 characters long"
+      },
+      "message": "Message",
+      "button": "Send message",
+      "button2": "Sending...",
+      "note": "We usually reply within 24 hours."
+    },
+    "success": {
+      "title": "Thank you for your message!",
+      "text1": "Your contact form has been sent successfully.",
+      "text2": "Our manager will get back to you shortly.",
+      "btn": "Send another message"
+    },
+    "info": {
+      "address": {
+        "title": "Address",
+        "text": "85 Mokotowska St.\n99-999 Warsaw"
+      },
+      "hours": {
+        "title": "Hours",
+        "text": "Mon–Fri: 12:00 PM–11:00 PM\nSat–Sun: 11:00 AM–12:00 AM"
+      },
+      "phone": {
+        "title": "Phone",
+        "text": "+48 11 123 45 67"
+      },
+      "email": {
+        "title": "Email",
+        "text": "contact@suliko.pl"
+      }
+    },
+    "socials": {
+      "title": "Follow us"
+    },
+    "map": {
+      "placeholder": "The map will be added here",
+      "button": "Reserve a table →"
+    }
+  },
+  "wineList": {
+    "hero": {
+      "title1": "Curated",
+      "title2": "wines",
+      "text": "Discover wines selected to pair with Georgian cuisine — full of aroma, depth, and the history of the regions they come from."
+    },
+    "regionsSection": {
+      "text1": "7 regions of Georgia",
+      "text2": "Discover the flavours of our land"
+    },
+    "narrowSection": {
+      "text1": "Thousands of years of tradition",
+      "text2": "One culture.",
+      "text3": "Endless flavours"
+    },
+    "wineFilters": {
+      "eyebrow": "Browse our wines",
+      "type": "Type",
+      "style": "Style",
+      "region": "Region",
+      "all-regions": "All regions",
+      "clear-btn": "Clear filters"
+    },
+    "regions": {
+      "kakheti": {
+        "name": "Kakheti",
+        "description": "Full-bodied, deep qvevri wines",
+        "details": "Kakheti is Georgia’s most important wine region, known for traditional wines aged in clay qvevri vessels. Wines from this region are deep, intense, and full of character."
+      },
+      "kartli": {
+        "name": "Kartli",
+        "description": "Fresh, elegant table wines",
+        "details": "Kartli is known for elegant and well-balanced wines. They often have a fresh aroma, delicate structure, and pair beautifully with lighter dishes and appetisers."
+      },
+      "imeretia": {
+        "name": "Imeretia",
+        "description": "Light, mineral, and aromatic",
+        "details": "Imeretia produces lighter, fresher, and more mineral-driven wines. Their subtle aroma and gentle acidity make them an excellent match for vegetables, cheeses, and herb-based dishes."
+      },
+      "racha-lechkhumi": {
+        "name": "Racha-Lechkhumi",
+        "description": "Softly sweet, velvety notes",
+        "details": "Racha-Lechkhumi is known for distinctive, often semi-sweet wines with a velvety taste. These wines have a soft structure, fruit-forward notes, and an elegant dessert-like character."
+      },
+      "adjara": {
+        "name": "Adjara",
+        "description": "Coastal freshness and fruitiness",
+        "details": "Adjara, located near the Black Sea, produces fresh, light, and fruit-driven wines. The humid coastal climate gives them delicacy and a pleasant natural freshness."
+      },
+      "samegrelo": {
+        "name": "Samegrelo",
+        "description": "Expressive, warm, full of character",
+        "details": "Samegrelo offers expressive, warm wines with a strong regional identity. Their flavour often combines fruity depth with lightly spicy notes and a long finish."
+      },
+      "guria": {
+        "name": "Guria",
+        "description": "Rare, lively, slightly spicy",
+        "details": "Guria is one of Georgia’s less obvious wine regions, valued for lively and original wines. They stand out for their freshness, lightly spicy character, and distinctive regional style."
+      },
+      "more": "Learn more",
+      "close": "Close"
+    },
+    "typeData": {
+      "red": "Red",
+      "white": "White",
+      "amber": "Amber",
+      "rose": "Rosé"
+    },
+    "styleData": {
+      "dry": "Dry",
+      "semi-dry": "Semi-dry",
+      "semi-sweet": "Semi-sweet"
+    },
+
+    "wines": {
+      "1": {
+        "description": "A deep ruby wine with notes of dark fruit, spices, and gentle tannins. Fermented in traditional clay qvevri vessels."
+      },
+      "2": {
+        "description": "A classic Saperavi aged in oak barrels. Intense aromas of blackberry and plum with a soft vanilla finish."
+      },
+      "3": {
+        "description": "A natural wine made without added sulphur. Lively and fruit-driven, with bright acidity and freshness."
+      },
+      "4": {
+        "description": "An elegant wine from the Mukuzani appellation. Velvety texture with notes of cherry, cedar, and delicate spices."
+      },
+      "5": {
+        "description": "An iconic semi-sweet wine from the Alazani Valley. Rich aromas of raspberry and cherry with natural sweetness."
+      },
+      "6": {
+        "description": "Soft and velvety, with aromas of ripe forest berries and a subtle sweetness on the finish."
+      },
+      "7": {
+        "description": "A native variety from Kartli. Light and elegant, with notes of red fruit and herbs."
+      },
+      "8": {
+        "description": "A delicate and floral wine made from the native Tavkveri grape. Notes of cherry, pomegranate, and rose petals."
+      },
+      "9": {
+        "description": "A distinctive wine from the Racha region. Natural sweetness with aromas of raspberry and fig. Ideal with desserts."
+      },
+      "10": {
+        "description": "A rare variety grown only in Racha. Silky texture with notes of blackberry and cocoa."
+      },
+      "11": {
+        "description": "A legendary wine from Racha, often called the Georgian Pétrus. Intense aroma and a rich structure."
+      },
+      "12": {
+        "description": "A light and fresh wine from coastal Guria. Delicate aromas of strawberries and flowers."
+      },
+      "13": {
+        "description": "A traditional variety from Imeretia. Rustic and authentic, with earthy notes and dark fruit."
+      },
+      "14": {
+        "description": "Intense and full-bodied. Oak barrels bring notes of vanilla and chocolate, followed by a long finish."
+      },
+      "15": {
+        "description": "A Georgian interpretation of a classic variety. Blackcurrant, mint, and cedar with an elegant structure."
+      },
+      "16": {
+        "description": "Certified organic wine. Fresh and fruit-driven, with a pure aroma and natural acidity."
+      },
+      "17": {
+        "description": "Merlot fermented traditionally in qvevri. Soft tannins with aromas of plum and chocolate."
+      },
+      "18": {
+        "description": "The winery’s flagship wine. Three years in barrel, elegant and complex, with ageing potential."
+      },
+      "19": {
+        "description": "A monastery wine produced by monks for centuries. Authentic and soulful, with herbal notes."
+      },
+      "20": {
+        "description": "A modern interpretation of a native variety. Fresh and elegant, with a floral aroma."
+      },
+      "21": {
+        "description": "A clean and mineral white wine made from a native variety. Notes of green apple, citrus, and white flowers."
+      },
+      "22": {
+        "description": "Aromatic and elegant. An intense bouquet of flowers, peach, and melon with refreshing acidity."
+      },
+      "23": {
+        "description": "A native variety from Kartli. Light and fresh, with notes of pear, lime, and delicate minerality."
+      },
+      "24": {
+        "description": "A typical Imeretian variety. Crisp and lively, with aromas of green fruit and a delicate bitter note."
+      },
+      "25": {
+        "description": "The most popular white variety of Imeretia. Soft and rounded, with notes of peach and honey."
+      },
+      "26": {
+        "description": "Full and rich, with notes of almond, vanilla, and ripe fruit. A long and creamy finish."
+      },
+      "27": {
+        "description": "A rare variety from Kakheti. Golden and aromatic, with notes of apricot, honey, and warm spices."
+      },
+      "28": {
+        "description": "A mountain variety from Kartli. Fresh and mineral, with a floral aroma and refreshing acidity."
+      },
+      "29": {
+        "description": "Delicate sweetness with aromas of white flowers, peach, and apricot. Ideal with fish."
+      },
+      "30": {
+        "description": "Oak-aged Rkatsiteli with notes of vanilla, butter, and ripe fruit. Full-bodied and elegant."
+      },
+      "31": {
+        "description": "Fresh and aromatic, with notes of lemongrass, gooseberry, and lime. Perfect with salads."
+      },
+      "32": {
+        "description": "Light and refreshing, with notes of green apple, citrus, and white flowers. A graceful aperitif."
+      },
+      "33": {
+        "description": "A blend of two native Imeretian varieties. Complex and harmonious, with notes of fruit and minerals."
+      },
+      "34": {
+        "description": "A rare monastery variety. Aromatic and complex, with notes of apricot, fig, and oriental spices."
+      },
+      "35": {
+        "description": "Clean and elegant Mtsvane from Kakheti. Floral aroma with notes of citrus and white pepper."
+      },
+      "36": {
+        "description": "An exceptionally rare variety from Guria. Delicate and floral, with a mineral finish."
+      },
+      "37": {
+        "description": "Natural Tsolikouri made without sulphur. Lively and authentic, with distinctive fruit character."
+      },
+      "38": {
+        "description": "Certified organic Rkatsiteli. Clean and mineral, with a long finish."
+      },
+      "39": {
+        "description": "Aromatic Viognier in a Georgian style. An intense bouquet of peach, apricot, and violets."
+      },
+      "40": {
+        "description": "Chardonnay fermented in qvevri. A unique meeting of a Western grape variety and Eastern tradition."
+      },
+      "41": {
+        "description": "An iconic orange wine macerated on the skins for six months. Tannic and complex, with notes of tea and nuts."
+      },
+      "42": {
+        "description": "A traditional Imeretian style. Several months of grape maceration create a rich and mineral wine."
+      },
+      "43": {
+        "description": "A rare Kisi variety in amber style. Intense aromas of dried apricot, nuts, and spices."
+      },
+      "44": {
+        "description": "A monastery amber wine made from a rare variety. Deep and meditative, with notes of fig and cardamom."
+      },
+      "45": {
+        "description": "A modern interpretation of skin-contact wine. Fresh tannins and lively acidity with a fruit-driven aroma."
+      },
+      "46": {
+        "description": "A traditional Imeretian wine macerated on the skins. Authentic and rustic, with a strong character."
+      },
+      "47": {
+        "description": "A classic Imeretian style. Amber colour with notes of honey, nuts, and dried fruit."
+      },
+      "48": {
+        "description": "Eight months of long maceration in qvevri. Tannic and powerful, with remarkable depth and complexity."
+      },
+      "49": {
+        "description": "A mountain variety in amber style. Elegant tannins and a floral aroma with notes of dried fruit."
+      },
+      "50": {
+        "description": "A full and rich amber wine from Imeretia. Intense aromas of almond, vanilla, and dried apricot."
+      },
+      "51": {
+        "description": "A natural wine made without sulphur. Lively and dynamic, with notes of orange peel and tea."
+      },
+      "52": {
+        "description": "Produced by the monks of Alaverdi Monastery. Traditional qvevri wine with a precious heritage."
+      },
+      "53": {
+        "description": "The winery’s flagship amber wine. Long maceration and ageing create a monumental, collectible bottle."
+      },
+      "54": {
+        "description": "Chinuri fermented in the Imeretian method. Moderate maceration with distinctive freshness."
+      },
+      "55": {
+        "description": "An Imeretian blend in amber style. A harmonious combination of two varieties with rich tannic structure."
+      },
+      "56": {
+        "description": "An exceptionally rare variety from Guria made in amber style. Unique and collectible."
+      },
+      "57": {
+        "description": "A white mutation of Saperavi in amber style. Unusual and experimental, with impressive depth."
+      },
+      "58": {
+        "description": "Twelve months of maceration in qvevri. Powerful and tannic, with remarkable aromatic complexity."
+      },
+      "59": {
+        "description": "An elegant amber wine from a mountain variety. Delicate tannins and a floral aroma with nutty notes."
+      },
+      "60": {
+        "description": "A blend of native Kakhetian varieties in amber style. Classic and representative of the region."
+      },
+      "61": {
+        "description": "A fresh and fruit-driven rosé made from Saperavi. Aromas of strawberry, raspberry, and pomegranate with refreshing acidity."
+      },
+      "62": {
+        "description": "Delicate and elegant, made from the native Tavkveri variety. Notes of rose petals and red fruit."
+      },
+      "63": {
+        "description": "A light and floral rosé from coastal Guria. Aromas of strawberry, lime, and white flowers."
+      },
+      "64": {
+        "description": "A rosé made from a native Kartli variety. Mineral and fresh, with notes of cherry and citrus."
+      },
+      "65": {
+        "description": "The rustic character of Imeretia in a rosé expression. Authentic, with notes of wild berries."
+      },
+      "66": {
+        "description": "An elegant rosé made from selected grapes. Intense fruit aroma and delicate minerality."
+      },
+      "67": {
+        "description": "An unusual rosé from the rare Aladasturi variety. Delicate and floral, with a mineral finish."
+      },
+      "68": {
+        "description": "Elegant Pinot Noir in a Provençal style. Pale pink, with aromas of strawberry and rose petals."
+      },
+      "69": {
+        "description": "A lightly sparkling rosé made by the ancestral method. Lively and joyful, with bubbles and a fruit-driven aroma."
+      },
+      "70": {
+        "description": "Traditional rosé fermented in qvevri. Unfiltered and authentic, with a mineral character."
+      },
+      "71": {
+        "description": "A delicate and fruity Merlot rosé. Aromas of strawberry and cherry with subtle sweetness."
+      },
+      "72": {
+        "description": "A sparkling rosé from Guria. Bubbles and a light aroma of strawberries and flowers. Ideal as an aperitif."
+      },
+      "73": {
+        "description": "Certified organic rosé. Clean and fresh, with a natural aroma of red fruit."
+      },
+      "74": {
+        "description": "A rosé blend of several native varieties. Complex and intriguing, with the character of Imeretia."
+      },
+      "75": {
+        "description": "A natural rosé made without sulphur. Lively and dynamic, with light effervescence and a fruit-driven aroma."
+      },
+      "76": {
+        "description": "A unique rosé with short skin maceration. Deeper in colour and more structured than a classic rosé."
+      },
+      "77": {
+        "description": "A Provençal grape variety grown in Georgian terroir. Elegant and mineral, with aromas of dried flowers."
+      },
+      "78": {
+        "description": "A prestigious rosé made from selected grapes. Complex and elegant, with a long finish."
+      },
+      "79": {
+        "description": "A natural rosé from Imeretia. Rustic and authentic, with the character of native varieties."
+      },
+      "80": {
+        "description": "A blend of Kakhetian varieties in a rosé expression. Fresh and fruit-driven, with mineral acidity."
+      }
+    }
+  }
+}

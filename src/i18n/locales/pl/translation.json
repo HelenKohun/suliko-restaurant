@@ -1,0 +1,862 @@
+{
+  "hero": {
+    "eyebrow": "Autentyczna kuchnia gruzińska",
+    "title1": "GRUZJA",
+    "title2": "na talerzu.",
+    "title3": "DUSZA W",
+    "title4": "KAŻDYM KĘSIE.",
+    "cta": "Zarezerwuj stolik",
+    "scroll": "↓ Odkryj menu",
+    "stat1_num": "2018",
+    "stat1_lbl": "Rok założenia",
+    "stat2_num": "80+",
+    "stat2_lbl": "Win gruzińskich",
+    "stat3_num": "4.8★",
+    "stat3_lbl": "Google Reviews"
+  },
+
+  "nav": {
+    "home": "Strona główna",
+    "menu": "Menu",
+    "wine": "Wina",
+    "booking": "Rezerwacja",
+    "contact": "Kontakt",
+    "location": "Warszawa, Mokotów",
+    "booking_btn": "Rezerwacja"
+  },
+
+  "about": {
+    "eyebrow": "o nas",
+    "title1": "Gruzińska gościnność",
+    "title2": "w nowoczesnym",
+    "title3": "wydaniu",
+    "text1": "W Suliko celebrujemy autentyczne smaki Gruzji, łącząc tradycyjne receptury z nowoczesnym podejściem do kulinarnej sztuki.",
+    "text2": "Nasza kuchnia to opowieść o gościnności, wspólnym stole i wyjątkowych chwilach, które pozostają w pamięci na długo."
+  },
+
+  "dishes": {
+    "eyebrow": "Nasze specjalności",
+    "title1": "Smaki, które",
+    "title2": "opowiadają historię",
+    "button": "Zobacz całe menu →"
+  },
+
+  "dish-card": {
+    "chinkali": {
+      "name": "Chinkali",
+      "category": "Tradycyjne gruzińskie pierożki"
+    },
+
+    "chaczapuri": {
+      "name": "Chaczapuri",
+      "category": "Serowy klasyk z pieca"
+    },
+    "mtsvadi": {
+      "name": "Mtsvadi",
+      "category": "Aromatyczne mięso z grilla"
+    }
+  },
+
+  "wine": {
+    "eyebrow": "Naturalne wina",
+    "title1": "Odkryj smak",
+    "title2": "Gruzji",
+    "title3": "w kieliszku",
+    "text": "Ponad 80 etykiet z Kakheti, Kartlii i Rachy. Wina pomarańczowe, naturalne i kwewri - tradycja sięgająca niemal 8000 lat.",
+    "button": "Zobacz kartę win →"
+  },
+
+  "reservationCTA": {
+    "eyebrow": "Rezerwacja",
+    "title1": "Zarezerwuj",
+    "title2": "swój stolik",
+    "text1": "Stoliki dostępne od poniedziałku do niedzieli",
+    "text2": "12:00 – 23:00 · ul. Mokotowska 85, Warszawa",
+    "date": "Data",
+    "time": "Godzina",
+    "guests": "Liczba osób",
+    "person": "osoba",
+    "people": "osoby",
+    "button": "Zarezerwuj stolik",
+    "text3": "Kliknij aby przejść do pełnego formularza"
+  },
+
+  "footer": {
+    "text": "Autentyczna kuchnia gruzińska w sercu Warszawy. Tradycja, naturalne wina i wyjątkowa atmosfera.",
+    "address1": "ul. Mokotowska 85",
+    "address2": "99-999 Warszawa",
+    "address3": "+48 11 123 45 67",
+    "pages": "Strony",
+    "time": "Godziny",
+    "time1": "Pn – Pt",
+    "time2": "12:00 – 23:00",
+    "time3": "Sb – Nd",
+    "time4": "11:00 – 24:00",
+    "contact": "Kontakt",
+    "bottom": "© 2026 Suliko Restaurant · Wszelkie prawa zastrzeżone"
+  },
+  "menuPage": {
+    "header": "MENU",
+    "header-text": "Autentyczna kuchnia gruzińska",
+    "all-btn": "Wszystko",
+    "add-btn": "+ Dodaj"
+  },
+  "menuData": {
+    "zimne-przystawki": {
+      "label": "Zimne przystawki",
+      "titleLine1": "Tradycja",
+      "titleLine2": "w każdym kęsie",
+      "dishes": {
+        "1": {
+          "name": "Pkhali",
+          "description": "Kulki ze szpinaku, buraków i fasoli z pastą orzechową i granatem"
+        },
+        "2": {
+          "name": "Badridżani",
+          "description": "Bakłażan smażony z pastą orzechową, czosnkiem i granatem"
+        },
+        "3": {
+          "name": "Lobio",
+          "description": "Pasta z czerwonej fasoli z orzechami włoskimi i aromatycznymi przyprawami"
+        },
+        "4": {
+          "name": "Satsebeli",
+          "description": "Talerz zimnych przekąsek z sosem pomidorowo-orzechowym"
+        },
+        "5": {
+          "name": "Ajika",
+          "description": "Ostra pasta paprykowa z ziołami podawana z chlebem shotis puri"
+        },
+        "6": {
+          "name": "Mczadi z serem",
+          "description": "Kukurydziany placek z serem suluguni i masłem"
+        }
+      }
+    },
+    "ciepłe-przystawki": {
+      "label": "Ciepłe przystawki",
+      "titleLine1": "Ciepło",
+      "titleLine2": "gruzińskiego domu",
+      "dishes": {
+        "7": {
+          "name": "Czvisztari",
+          "description": "Smażony placek kukurydziany nadziewany serem suluguni"
+        },
+        "8": {
+          "name": "Gebżalia",
+          "description": "Roladki z sera suluguni w sosie miętowym z orzechami"
+        },
+        "9": {
+          "name": "Kupati",
+          "description": "Gruzińska kiełbasa smażona z cebulą i przyprawami"
+        },
+        "10": {
+          "name": "Ajapsandali",
+          "description": "Gulasz warzywny z bakłażanem, pomidorami i papryką"
+        },
+        "11": {
+          "name": "Elardżi",
+          "description": "Kukurydziana masa z serem suluguni podawana na ciepło"
+        },
+        "12": {
+          "name": "Cziri",
+          "description": "Suszona wołowina smażona z cebulą i ziołami kaukaskimi"
+        }
+      }
+    },
+    "chaczapuri": {
+      "label": "Chaczapuri",
+      "titleLine1": "Serowe",
+      "titleLine2": "klasyki z pieca",
+      "dishes": {
+        "13": {
+          "name": "Chaczapuri po adżarsku",
+          "description": "Łódka z ciasta z serem suluguni, jajkiem i masłem — klasyk z Batumi"
+        },
+        "14": {
+          "name": "Chaczapuri po imeretyńsku",
+          "description": "Okrągły placek z serem imeruli — najprostszy i najbardziej klasyczny"
+        },
+        "15": {
+          "name": "Chaczapuri po megrelsku",
+          "description": "Placek z serem w środku i na wierzchu — podwójnie serowy"
+        },
+        "16": {
+          "name": "Chaczapuri po osetyńsku",
+          "description": "Placek z serem i ziemniakami — sycąca wersja z gór"
+        },
+        "17": {
+          "name": "Lobiani",
+          "description": "Placek z pastą fasolową, boczkiem i przyprawami"
+        }
+      }
+    },
+    "salaty": {
+      "label": "Sałatki",
+      "titleLine1": "Świeżość",
+      "titleLine2": "Kaukazu",
+      "dishes": {
+        "18": {
+          "name": "Sałatka gruzińska",
+          "description": "Pomidory, ogórki, papryka, cebula, kolendra i olej orzechowy"
+        },
+        "19": {
+          "name": "Sałatka z orzechami",
+          "description": "Mix warzyw z pastą orzechową, czosnkiem i granatem"
+        },
+        "20": {
+          "name": "Sałatka z kurczakiem",
+          "description": "Grillowany kurczak z warzywami w sosie tkemali"
+        },
+        "21": {
+          "name": "Sałatka Tbilisi",
+          "description": "Mieszane warzywa z serem suluguni i oliwkami"
+        }
+      }
+    },
+    "zupy": {
+      "label": "Zupy",
+      "titleLine1": "Rozgrzewające",
+      "titleLine2": "smaki Gruzji",
+      "dishes": {
+        "22": {
+          "name": "Charczo",
+          "description": "Pikantna zupa wołowa z ryżem, orzechami i liściem laurowym"
+        },
+        "23": {
+          "name": "Chikhirtma",
+          "description": "Delikatna zupa z kurczaka z jajkiem i octem winnym"
+        },
+        "24": {
+          "name": "Szurpa",
+          "description": "Treściwa zupa jagnięca z warzywami i ziołami kaukaskimi"
+        },
+        "25": {
+          "name": "Bozbasz",
+          "description": "Zupa z jagnięciny z ciecierzycą i śliwkami tkemali"
+        }
+      }
+    },
+    "dania-glowne": {
+      "label": "Dania główne",
+      "titleLine1": "Serce",
+      "titleLine2": "gruzińskiej kuchni",
+      "dishes": {
+        "26": {
+          "name": "Chakapuli",
+          "description": "Jagnięcina duszona z estragonem, cebulą dymką i białym winem"
+        },
+        "27": {
+          "name": "Czanachi",
+          "description": "Jagnięcina pieczona w glinianym garnku z bakłażanem i pomidorami"
+        },
+        "28": {
+          "name": "Satsivi z kurczaka",
+          "description": "Kurczak w zimnym sosie orzechowym z przyprawami kaukaskimi"
+        },
+        "29": {
+          "name": "Ostri",
+          "description": "Wołowina duszona w pikantnym sosie pomidorowym z czosnkiem"
+        },
+        "30": {
+          "name": "Tabaka",
+          "description": "Kurczak smażony pod ciężarkiem z czosnkiem"
+        },
+        "31": {
+          "name": "Kuchmachi",
+          "description": "Podroby drobiowe duszone z orzechami i przyprawami"
+        },
+        "32": {
+          "name": "Czkmeruli",
+          "description": "Kurczak w kremowym sosie czosnkowym w stylu Racha"
+        },
+        "33": {
+          "name": "Mtsvadi z jagnięciny",
+          "description": "Szaszłyk jagnięcy marynowany w cebuli i przyprawach"
+        }
+      }
+    },
+    "grill": {
+      "label": "Grill",
+      "titleLine1": "Z ognia",
+      "titleLine2": "prosto na talerz",
+      "dishes": {
+        "34": {
+          "name": "Mtsvadi wieprzowy",
+          "description": "Szaszłyk z wieprzowiny marynowany w cebuli i przyprawach"
+        },
+        "35": {
+          "name": "Mtsvadi wołowy",
+          "description": "Szaszłyk z polędwicy wołowej z ziołami kaukaskimi"
+        },
+        "36": {
+          "name": "Mtsvadi jagnięcy",
+          "description": "Szaszłyk z jagnięciny z estragonem i granatem"
+        },
+        "37": {
+          "name": "Mtsvadi z kurczaka",
+          "description": "Szaszłyk z fileta z kurczaka w marynacie tkemali"
+        },
+        "38": {
+          "name": "Lula kebab",
+          "description": "Mielona jagnięcina z cebulą i ziołami na szaszłyku"
+        },
+        "39": {
+          "name": "Antrekot z grilla",
+          "description": "Soczysty antrekot z grilla z masłem ziołowym i warzywami"
+        },
+        "40": {
+          "name": "Żeberka wieprzowe",
+          "description": "Żeberka marynowane w sosie tkemali i miodzie"
+        },
+        "41": {
+          "name": "Warzywa z grilla",
+          "description": "Sezonowe warzywa grillowane z oliwą i ziołami"
+        },
+        "42": {
+          "name": "Mix grilla dla 2 osób",
+          "description": "Zestaw szaszłyków wieprzowych, wołowych i z kurczaka"
+        },
+        "43": {
+          "name": "Mix grilla dla 4 osób",
+          "description": "Duży zestaw szaszłyków z dodatkami i sosami"
+        }
+      }
+    },
+    "ryby": {
+      "label": "Ryby",
+      "titleLine1": "Dary",
+      "titleLine2": "Morza Czarnego",
+      "dishes": {
+        "44": {
+          "name": "Pstrąg z grilla",
+          "description": "Pstrąg z rzek kaukaskich z ziołami i cytryną"
+        },
+        "45": {
+          "name": "Sandacz w sosie orzechowym",
+          "description": "Filet z sandacza w kremowym sosie z orzechów włoskich"
+        },
+        "46": {
+          "name": "Karp po gruzińsku",
+          "description": "Karp pieczony z warzywami i sosem tkemali"
+        },
+        "47": {
+          "name": "Łosoś z bakłażanem",
+          "description": "Filet z łososia z purée z bakłażana i sosem z granatu"
+        }
+      }
+    },
+    "desery": {
+      "label": "Desery",
+      "titleLine1": "Słodkie",
+      "titleLine2": "zakończenie",
+      "dishes": {
+        "48": {
+          "name": "Czurczchela",
+          "description": "Orzechy w zastygłym soku winogronowym — gruzińska słodycz"
+        },
+        "49": {
+          "name": "Gozinaki",
+          "description": "Chrupiące orzechy włoskie karmelizowane w miodzie"
+        },
+        "50": {
+          "name": "Pelamushi",
+          "description": "Budyń z soku winogronowego z orzechami i cynamonem"
+        },
+        "51": {
+          "name": "Tklapi",
+          "description": "Owocowy placek ze śliwek tkemali z lodami waniliowymi"
+        }
+      }
+    }
+  },
+  "confirmModal": {
+    "title1": "Usunąć pozycje?",
+    "title2": "Czy na pewno chcesz usunąć",
+    "no": "Nie",
+    "yes": "Tak"
+  },
+  "cart": {
+    "cart": "KOSZYK",
+    "empty-cart": "Twój koszyk jest pusty",
+    "to-menu-btn": "Zobacz menu →",
+    "to-wine-btn": "Zobacz kartę win →",
+    "item": "Pozycja",
+    "price": "Cena",
+    "quantity": "Ilość",
+    "cost": "Wartość",
+    "pcs": "szt",
+    "promo": "Kod promocyjny",
+    "promo-error": "Nieprawidłowy kod promocyjny",
+    "placeholder": "Wpisz kod...",
+    "apply-btn": "Zastosuj",
+    "order-btn": "Złóż zamówienie →",
+    "clear-btn": "Wyczyść koszyk",
+    "sum": "Suma produktów",
+    "discount": "Zniżka",
+    "delivery": "Dostawa",
+    "for-free": "za darmo",
+    "pay": "Do zapłaty",
+    "itemsCount_one": "{{count}} pozycja",
+    "itemsCount_few": "{{count}} pozycje",
+    "itemsCount_many": "{{count}} pozycji",
+    "itemsCount_other": "{{count}} pozycji"
+  },
+  "booking": {
+    "info": {
+      "eyebrow": "Suliko · Warszawa",
+      "header1": "Zarezerwuj",
+      "header2": "swój stolik",
+      "address": "ul. Mokotowska 85, Warszawa",
+      "open-time1": "Pn–Pt: 12:00–23:00",
+      "open-time2": "Sb–Nd: 11:00–24:00",
+      "phone": "+48 11 123 45 67"
+    },
+    "submittedThanks": {
+      "thanks": "Dziękujemy!",
+      "text1": "Twoja rezerwacja została przyjęta.",
+      "text2": "Potwierdzenie zostanie wysłane na podany adres e-mail.",
+      "home-btn": "Wróć na stronę główną"
+    },
+    "form": {
+      "eyebrow": "Rezerwacja",
+      "header1": "Witamy",
+      "header2": "w Suliko",
+      "name-lastname": {
+        "title": "Imię i nazwisko *",
+        "error1": "Imię jest wymagane",
+        "error2": "Imię musi mieć minimum 2 znaki"
+      },
+      "date-time": {
+        "title-date": "Data *",
+        "error1-date": "Data jest wymagana",
+        "error2-date": "Nie można wybrać daty z przeszłości",
+        "title-time": "Godzina *",
+        "error1-time": "Godzina jest wymagana",
+        "error2-time": "Wybierz poprawną godzinę",
+        "time-def-opt": "Wybierz godzinę"
+      },
+      "guests-phone": {
+        "title-guests": "Liczba osób *",
+        "error1-guests": "Liczba osób jest wymagana",
+        "error2-guests": "Wybierz liczbę osób",
+        "title-phone": "Telefon *",
+        "error1-phone": "Telefon jest wymagany",
+        "error2-phone": "Wpisz poprawny numer telefonu"
+      },
+      "email": {
+        "title": "Email *",
+        "error1": "Email jest wymagany",
+        "error2": "Nieprawidłowy email"
+      },
+      "comment": {
+        "title": "Komentarz (opcjonalnie)",
+        "error": "Komentarz może mieć maksymalnie 300 znaków",
+        "placeholder": "Urodziny, alergie, życzenia specjalne..."
+      },
+      "submit-btn": {
+        "sending": "Wysyłanie...",
+        "send": "Zarezerwuj stolik →"
+      },
+      "confirmation": "Potwierdzenie zostanie wysłane na podany adres e-mail",
+      "itemsCount_one": "{{count}} osoba",
+      "itemsCount_few": "{{count}} osoby",
+      "itemsCount_many": "{{count}} osób",
+      "largeBookingBtn": "Rezerwacja dla grup →"
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title1": "Napisz",
+      "title2": "do nas",
+      "text": "Masz pytanie dotyczące menu, rezerwacji lub organizacji wyjątkowego spotkania? Chętnie pomożemy i zadbamy o każdy szczegół."
+    },
+    "intro": {
+      "eyebrow": "Odwiedź nas",
+      "title1": "Serce Gruzji",
+      "title2": "w sercu Warszawy",
+      "text": "Suliko to miejsce stworzone z myślą o gościnności, wspólnym stole i wyjątkowych chwilach. Niezależnie od tego, czy planujesz kameralną kolację, rodzinne spotkanie czy większą rezerwację - jesteśmy tutaj, aby Ci pomóc."
+    },
+    "form": {
+      "title": "Wyślij wiadomość",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "Adres e-mail",
+      "phone": "Telefon",
+      "subject": "Temat",
+      "subjectDefault": "Wybierz temat",
+      "subjects": {
+        "reservation": "Rezerwacja",
+        "groupReservation": "Rezerwacja grupowa",
+        "event": "Organizacja wydarzenia",
+        "feedback": "Opinia o wizycie",
+        "other": "Inne"
+      },
+      "input": {
+        "firstname-error1": "Imię jest wymagane",
+        "firstname-error2": "Imię musi mieć minimum 2 znaki",
+        "lastname-error1": "Nazwisko jest wymagane",
+        "lastname-error2": "Nazwisko musi mieć minimum 2 znaki",
+        "email-error1": "Email jest wymagany",
+        "email-error2": "Nieprawidłowy email",
+        "phone-error1": "Telefon jest wymagany",
+        "phone-error2": "Wpisz poprawny numer telefonu",
+        "subjects-error": "Temat jest wymagany",
+        "message-error1": "Wiadomość jest wymagana",
+        "message-error2": "Komentarz może mieć maksymalnie 300 znaków"
+      },
+      "message": "Wiadomość",
+      "button": "Wyślij wiadomość",
+      "button2": "Wysyłanie...",
+      "note": "Zazwyczaj odpowiadamy w ciągu 24 godzin."
+    },
+    "success": {
+      "title": "Dziękujemy za wiadomość!",
+      "text1": "Formularz kontaktowy został pomyślnie wysłany.",
+      "text2": "Nasz menedżer skontaktuje się w najbliższym czasie.",
+      "btn": "Wyślij kolejną wiadomość"
+    },
+    "info": {
+      "address": {
+        "title": "Adres",
+        "text": "ul. Mokotowska 85\n99-999 Warszawa"
+      },
+      "hours": {
+        "title": "Godziny",
+        "text": "Pn–Pt: 12:00–23:00\nSb–Nd: 11:00–24:00"
+      },
+      "phone": {
+        "title": "Telefon",
+        "text": "+48 11 123 45 67"
+      },
+      "email": {
+        "title": "Email",
+        "text": "kontakt@suliko.pl"
+      }
+    },
+    "socials": {
+      "title": "Obserwuj nas"
+    },
+    "map": {
+      "placeholder": "Mapa zostanie tutaj dodana",
+      "button": "Zarezerwuj stolik →"
+    }
+  },
+  "wineList": {
+    "hero": {
+      "title1": "Wyselekcjonowane",
+      "title2": "wina",
+      "text": "Odkryj wina dobrane do gruzińskiej kuchni - pełne aromatu, głębi i historii regionów, z których pochodzą."
+    },
+    "regionsSection": {
+      "text1": "7 regionów Gruzji",
+      "text2": "Odkryj smaki naszej ziemi"
+    },
+    "narrowSection": {
+      "text1": "Tysiące lat tradycji",
+      "text2": "Jedna kultura.",
+      "text3": "Nieskończone smaki"
+    },
+    "wineFilters": {
+      "eyebrow": "Przegladaj nasze wina",
+      "type": "Typ",
+      "style": "Styl",
+      "region": "Region",
+      "all-regions": "Wszystkie regiony",
+      "clear-btn": "Wyczysc filtry"
+    },
+    "regions": {
+      "kakheti": {
+        "name": "Kakheti",
+        "description": "Pełne, głębokie wina qvevri",
+        "details": "Kakheti to najważniejszy region winiarski Gruzji, znany z tradycyjnych win dojrzewających w glinianych amforach qvevri. Wina z tego regionu są głębokie, intensywne i pełne charakteru."
+      },
+      "kartli": {
+        "name": "Kartli",
+        "description": "Świeże, eleganckie wina stołowe",
+        "details": "Kartli słynie z eleganckich i dobrze zbalansowanych win. Często mają one świeży aromat, delikatną strukturę i świetnie komponują się z lekkimi daniami oraz przystawkami."
+      },
+      "imeretia": {
+        "name": "Imeretia",
+        "description": "Lekkie, mineralne i aromatyczne",
+        "details": "Imeretia daje wina lżejsze, świeże i bardziej mineralne. Ich subtelny aromat oraz delikatna kwasowość sprawiają, że doskonale pasują do warzyw, serów i dań z ziołami."
+      },
+      "racha-lechkhumi": {
+        "name": "Racha-Lechkhumi",
+        "description": "Delikatnie słodkie, aksamitne nuty",
+        "details": "Racha-Lechkhumi to region znany z wyjątkowych, często półsłodkich win o aksamitnym smaku. Wina te mają miękką strukturę, owocowe nuty i elegancki, deserowy charakter."
+      },
+      "adjara": {
+        "name": "Adjara",
+        "description": "Nadmorska świeżość i owocowość",
+        "details": "Adjara, położona blisko Morza Czarnego, tworzy wina świeże, lekkie i owocowe. Wilgotny klimat nadaje im delikatności oraz przyjemnej, naturalnej lekkości."
+      },
+      "samegrelo": {
+        "name": "Samegrelo",
+        "description": "Wyraziste, ciepłe, pełne charakteru",
+        "details": "Samegrelo oferuje wina wyraziste, ciepłe i pełne regionalnego charakteru. Ich smak często łączy owocową głębię z lekko pikantnymi nutami i długim finiszem."
+      },
+      "guria": {
+        "name": "Guria",
+        "description": "Rzadkie, żywe, lekko pikantne",
+        "details": "Guria to mniej oczywisty region winiarski Gruzji, ceniony za żywe i oryginalne wina. Wyróżniają się świeżością, lekko pikantnym charakterem oraz niepowtarzalnym stylem."
+      },
+      "more": "Poznaj więcej",
+      "close": "Zamknij"
+    },
+    "typeData": {
+      "red": "Czerwone",
+      "white": "Białe",
+      "amber": "Amber",
+      "rose": "Różowe"
+    },
+    "styleData": {
+      "dry": "Wytrawne",
+      "semi-dry": "Półwytrawne",
+      "semi-sweet": "Półsłodkie"
+    },
+    "wines": {
+      "1": {
+        "description": "Głęboko rubinowe wino z nutami ciemnych owoców, przypraw i delikatną garbnikowatością. Fermentowane w glinianych amforach qvevri."
+      },
+      "2": {
+        "description": "Klasyczny Saperavi leżakowany w dębowych beczkach. Intensywny aromat jeżyn i śliwek z waniliowym wykończeniem."
+      },
+      "3": {
+        "description": "Naturalne wino bez dodatku siarki. Żywe i owocowe z charakterystyczną kwasowością i świeżością."
+      },
+      "4": {
+        "description": "Eleganckie wino z apelacji Mukuzani. Aksamitna tekstura z nutami wiśni, cedru i delikatnych przypraw."
+      },
+      "5": {
+        "description": "Ikoniczne półsłodkie wino z doliny Alazani. Bogaty aromat malin i wiśni z naturalną słodyczą."
+      },
+      "6": {
+        "description": "Miękkie i aksamitne z aromatem dojrzałych owoców leśnych i subtelną słodyczą w finiszu."
+      },
+      "7": {
+        "description": "Rdzenna odmiana z Kartli. Lekkie i eleganckie z nutami czerwonych owoców i ziołami."
+      },
+      "8": {
+        "description": "Delikatne i kwiatowe wino z rdzennej odmiany Tavkveri. Nuty wiśni, granatu i różanych płatków."
+      },
+      "9": {
+        "description": "Wyjątkowe wino z regionu Racha. Naturalna słodycz z aromatem malin i fig. Idealne do deserów."
+      },
+      "10": {
+        "description": "Rzadka odmiana uprawiana wyłącznie w Racha. Jedwabista tekstura z nutami jeżyn i kakao."
+      },
+      "11": {
+        "description": "Legendarne wino z Racha, zwane gruzińskim Pétrus. Intensywny aromat, bogata struktura."
+      },
+      "12": {
+        "description": "Lekkie i świeże wino z nadmorskiej Gurii. Delikatny aromat truskawek i kwiatów."
+      },
+      "13": {
+        "description": "Tradycyjna odmiana z Imeretii. Rustykalne i autentyczne z nutami ziemi i ciemnych owoców."
+      },
+      "14": {
+        "description": "Intensywne i pełne ciało. Dębowe beczki nadają nuty wanilii i czekolady. Długi finisz."
+      },
+      "15": {
+        "description": "Gruzińska interpretacja klasycznej odmiany. Czarne porzeczki, mięta i cedr z elegancką strukturą."
+      },
+      "16": {
+        "description": "Certyfikowane wino organiczne. Świeże i owocowe z czystym aromatem i naturalną kwasowością."
+      },
+      "17": {
+        "description": "Merlot fermentowany tradycyjnie w qvevri. Miękkie taniny z aromatem śliwek i czekolady."
+      },
+      "18": {
+        "description": "Flagowe wino winnicy. Trzy lata w beczce, eleganckie i złożone z potencjałem do leżakowania."
+      },
+      "19": {
+        "description": "Wino klasztorne produkowane przez mnichów od wieków. Autentyczne i duchowe z nutami ziół."
+      },
+      "20": {
+        "description": "Nowoczesna interpretacja rdzennej odmiany. Świeże i eleganckie z kwiatowym aromatem."
+      },
+      "21": {
+        "description": "Czyste i mineralne białe wino z rdzennej odmiany. Nuty zielonych jabłek, cytrusów i białych kwiatów."
+      },
+      "22": {
+        "description": "Aromatyczne i eleganckie. Intensywny bukiet kwiatów, brzoskwini i melona z orzeźwiającą kwasowością."
+      },
+      "23": {
+        "description": "Rdzenna odmiana z Kartli. Lekkie i świeże z nutami gruszki, limonki i delikatną mineralnością."
+      },
+      "24": {
+        "description": "Typowa odmiana Imeretii. Kwasowe i żywe z aromatem zielonych owoców i delikatną goryczką."
+      },
+      "25": {
+        "description": "Najpopularniejsza biała odmiana Imeretii. Miękkie i okrągłe z nutami brzoskwini i miodu."
+      },
+      "26": {
+        "description": "Pełne i bogate z nutami migdałów, wanilii i dojrzałych owoców. Długi i kremowy finisz."
+      },
+      "27": {
+        "description": "Rzadka odmiana Kakheti. Złociste i aromatyczne z nutami moreli, miodu i przypraw korzennych."
+      },
+      "28": {
+        "description": "Górska odmiana z Kartli. Świeże i mineralne z kwiatowym aromatem i orzeźwiającą kwasowością."
+      },
+      "29": {
+        "description": "Delikatna słodycz z aromatem białych kwiatów, brzoskwini i moreli. Idealne do ryb."
+      },
+      "30": {
+        "description": "Leżakowane w dębie Rkatsiteli z nutami wanilii, masła i dojrzałych owoców. Pełne i eleganckie."
+      },
+      "31": {
+        "description": "Świeży i aromatyczny z nutami trawy cytrynowej, agrestu i limonki. Idealne do sałatek."
+      },
+      "32": {
+        "description": "Lekkie i orzeźwiające z nutami zielonych jabłek, cytrusów i białych kwiatów. Aperitif."
+      },
+      "33": {
+        "description": "Blend dwóch rdzennych odmian Imeretii. Złożone i harmonijne z nutami owoców i minerałów."
+      },
+      "34": {
+        "description": "Rzadka odmiana klasztorna. Aromatyczne i złożone z nutami moreli, fig i przypraw orientalnych."
+      },
+      "35": {
+        "description": "Czyste i eleganckie Mtsvane z Kakheti. Kwiatowy aromat z nutami cytrusów i białego pieprzu."
+      },
+      "36": {
+        "description": "Niezwykle rzadka odmiana z Gurii. Delikatne i kwiatowe z mineralnym wykończeniem."
+      },
+      "37": {
+        "description": "Naturalne Tsolikouri bez siarki. Żywe i autentyczne z charakterystyczną owocowością."
+      },
+      "38": {
+        "description": "Certyfikowane organiczne Rkatsiteli. Czyste i mineralne z długim finiszem."
+      },
+      "39": {
+        "description": "Aromatyczny Viognier w gruzińskim stylu. Intensywny bukiet brzoskwini, moreli i fiołków."
+      },
+      "40": {
+        "description": "Chardonnay fermentowane w qvevri. Unikalne połączenie zachodniego szczepu i wschodniej tradycji."
+      },
+      "41": {
+        "description": "Ikoniczne pomarańczowe wino macerowane 6 miesięcy na skórkach. Taniczne i złożone z nutami herbaty i orzechów."
+      },
+      "42": {
+        "description": "Tradycyjny styl imerecki. Maceracja z gronami przez kilka miesięcy. Bogaty i mineralny."
+      },
+      "43": {
+        "description": "Rzadka odmiana Kisi w stylu amber. Intensywne aromaty suszonej moreli, orzechów i przypraw."
+      },
+      "44": {
+        "description": "Klasztorne wino amber z rzadkiej odmiany. Głębokie i medytacyjne z nutami fig i kardamonu."
+      },
+      "45": {
+        "description": "Nowoczesna interpretacja skin contact. Świeże taniny i żywa kwasowość z owocowym aromatem."
+      },
+      "46": {
+        "description": "Tradycyjne wino imerecki z maceracja na skórkach. Autentyczne i rustykalne z dużym charakterem."
+      },
+      "47": {
+        "description": "Klasyczny styl imerecki. Bursztynowy kolor z nutami miodu, orzechów i suszonych owoców."
+      },
+      "48": {
+        "description": "Długa maceracja 8 miesięcy w qvevri. Taniczne i potężne z niezwykłą głębią i kompleksowością."
+      },
+      "49": {
+        "description": "Górska odmiana w stylu amber. Eleganckie taniny i kwiatowy aromat z nutami suchych owoców."
+      },
+      "50": {
+        "description": "Pełne i bogate amber z Imeretii. Intensywny aromat migdałów, wanilii i suszonych moreli."
+      },
+      "51": {
+        "description": "Naturalne wino bez siarki. Żywe i dynamiczne z nutami skórki pomarańczy i herbaty."
+      },
+      "52": {
+        "description": "Produkowane przez mnichów klasztoru Alaverdi. Tradycyjny qvevri z cennym dziedzictwem."
+      },
+      "53": {
+        "description": "Flagowe amber winnicy. Długa maceracja i leżakowanie. Monumentalne i godne kolekcji."
+      },
+      "54": {
+        "description": "Chinuri fermentowane metodą imerecki. Umiarkowana maceracja z charakterystyczną świeżością."
+      },
+      "55": {
+        "description": "Blend imerecki w stylu amber. Harmonijne połączenie dwóch odmian z bogatą strukturą taninową."
+      },
+      "56": {
+        "description": "Niezwykle rzadka odmiana z Gurii w stylu amber. Unikalne i kolekcjonerskie."
+      },
+      "57": {
+        "description": "Biała mutacja Saperavi w stylu amber. Niezwykłe i eksperymentalne z dużą głębią."
+      },
+      "58": {
+        "description": "Maceracja 12 miesięcy w qvevri. Potężne i taniczne z niezwykłą kompleksowością aromatów."
+      },
+      "59": {
+        "description": "Eleganckie amber z górskiej odmiany. Delikatne taniny i kwiatowy aromat z nutami orzechów."
+      },
+      "60": {
+        "description": "Blend rdzennych odmian kachetyńskich w stylu amber. Klasyczny i reprezentatywny dla regionu."
+      },
+      "61": {
+        "description": "Świeże i owocowe różowe z Saperavi. Aromat truskawek, malin i granatu z orzeźwiającą kwasowością."
+      },
+      "62": {
+        "description": "Delikatne i eleganckie z rdzennej odmiany Tavkveri. Nuty różanych płatków i czerwonych owoców."
+      },
+      "63": {
+        "description": "Lekkie i kwiatowe różowe z nadmorskiej Gurii. Aromat truskawek, limonki i białych kwiatów."
+      },
+      "64": {
+        "description": "Różowe z rdzennej odmiany Kartli. Mineralne i świeże z nutami wiśni i cytrusów."
+      },
+      "65": {
+        "description": "Rustykalny charakter Imeretii w różowej wersji. Autentyczne z nutami dzikich owoców."
+      },
+      "66": {
+        "description": "Eleganckie różowe z selekcjonowanych winogron. Intensywny aromat owoców i delikatna mineralność."
+      },
+      "67": {
+        "description": "Niezwykłe różowe z rzadkiej odmiany Aladasturi. Delikatne i kwiatowe z mineralnym finiszem."
+      },
+      "68": {
+        "description": "Eleganckie Pinot Noir w stylu prowansalskim. Bledoróżowe z aromatem truskawek i płatków róży."
+      },
+      "69": {
+        "description": "Lekko musujące różowe metodą ancestrale. Żywe i radosne z bąbelkami i owocowym aromatem."
+      },
+      "70": {
+        "description": "Tradycyjne różowe fermentowane w qvevri. Niefiltrowane i autentyczne z mineralnym charakterem."
+      },
+      "71": {
+        "description": "Delikatne i owocowe różowe Merlot. Aromat truskawek i wiśni z subtelną słodyczą."
+      },
+      "72": {
+        "description": "Musujące różowe z Gurii. Bąbelki i lekki aromat truskawek i kwiatów. Idealne na aperitif."
+      },
+      "73": {
+        "description": "Certyfikowane organiczne różowe. Czyste i świeże z naturalnym aromatem czerwonych owoców."
+      },
+      "74": {
+        "description": "Blend kilku rdzennych odmian w wersji różowej. Złożone i interesujące z charakterem Imeretii."
+      },
+      "75": {
+        "description": "Naturalne różowe bez siarki. Żywe i dynamiczne z lekką eferwescencją i owocowym aromatem."
+      },
+      "76": {
+        "description": "Unikalne różowe z krótką maceracją skórkową. Głębszy kolor i więcej struktury niż klasyczne rosé."
+      },
+      "77": {
+        "description": "Prowansalski szczep w gruzińskim terroir. Eleganckie i mineralne z aromatem suchych kwiatów."
+      },
+      "78": {
+        "description": "Prestiżowe różowe z selekcjonowanych gronk. Złożone i eleganckie z długim finiszem."
+      },
+      "79": {
+        "description": "Naturalne różowe z Imeretii. Rustykalne i autentyczne z charakterem rdzennnych odmian."
+      },
+      "80": {
+        "description": "Blend odmian kachetyńskich w wersji różowej. Świeże i owocowe z mineralną kwasowością."
+      }
+    }
+  }
+}
