@@ -18,7 +18,7 @@ export default function Cart() {
 
   // States
   const [promo, setPromo] = useState("");
-  const [discount, setDiscount] = useState(0);
+
   const [isPromoCorrect, setIsPromoCorrect] = useState(false);
   const [itemToDelete, setItemToDelete] = useState(null);
   const [promoError, setPromoError] = useState(false);
@@ -29,6 +29,7 @@ export default function Cart() {
     (sum, item) => sum + item.price * item.quantity,
     0,
   );
+  const discount = subtotal * 0.1;
   const delivery = items.length > 0 && subtotal < 349 ? 15 : 0;
   const total = subtotal - discount + delivery;
 
@@ -37,11 +38,9 @@ export default function Cart() {
     if (promo === "SULIKO10") {
       setIsPromoCorrect(true);
       setPromoError(false);
-      setDiscount(subtotal * 0.1);
     } else {
       setPromoError(true);
       setIsPromoCorrect(false);
-      setDiscount(0);
     }
   }
 
@@ -212,7 +211,6 @@ export default function Cart() {
                     setPromo(e.target.value);
                     setIsPromoCorrect(false);
                     setPromoError(false);
-                    setDiscount(0);
                   }}
                   placeholder={t("cart.placeholder")}
                   className="border-text/20 font-body text-text placeholder:text-text-muted/60 min-w-0 flex-1 rounded-l border border-r-0 bg-transparent px-4 py-3 text-[12px] outline-none"
