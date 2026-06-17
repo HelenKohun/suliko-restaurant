@@ -203,7 +203,13 @@ export default function Cart() {
                   {t("cart.promo-error")}
                 </p>
               )}
-              <div className="flex">
+              <form
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  handlePromo();
+                }}
+                className="flex"
+              >
                 <input
                   type="text"
                   value={promo}
@@ -216,13 +222,13 @@ export default function Cart() {
                   className="border-text/20 font-body text-text placeholder:text-text-muted/60 min-w-0 flex-1 rounded-l border border-r-0 bg-transparent px-4 py-3 text-[12px] outline-none"
                 />
                 <button
-                  type="button"
+                  type="submit"
                   onClick={handlePromo}
                   className="bg-wine text-cream font-body hover:bg-wine-light rounded-r px-5 py-2 text-[10px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200"
                 >
                   {t("cart.apply-btn")}
                 </button>
-              </div>
+              </form>
             </div>
 
             <div className="flex flex-col gap-2">
