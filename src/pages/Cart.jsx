@@ -16,8 +16,6 @@ export default function Cart() {
   const decreaseItem = useCartStore((state) => state.decreaseItem);
   const clearCart = useCartStore((state) => state.clearCart);
 
-  console.log(items);
-
   // States
   const [promo, setPromo] = useState("");
   const [discount, setDiscount] = useState(0);
@@ -117,13 +115,13 @@ export default function Cart() {
             {/* Name */}
             <div className="pr-10 lg:pr-0">
               <div className="font-heading text-text text-2xl font-light">
-                {item?.winery
+                {item.itemType === "wine"
                   ? item.name
                   : t(`menuData.${item.categoryId}.dishes.${item.dishId}.name`)}
               </div>
               <div className="font-body text-text-muted mt-1 text-[12px] leading-relaxed">
-                {item?.winery
-                  ? t(`wineList.wines.${item.id}.description`)
+                {item.itemType === "wine"
+                  ? t(`wineList.wines.${item.wineId}.description`)
                   : t(
                       `menuData.${item.categoryId}.dishes.${item.dishId}.description`,
                     )}

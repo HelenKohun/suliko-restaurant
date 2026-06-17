@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import useCartStore from "../../store/cartStore";
 
-export default function CartButton() {
+export default function CartButton({ onClick }) {
   const items = useCartStore((state) => state.items);
 
   const cartQuantity = items.reduce((sum, item) => sum + item.quantity, 0);
@@ -9,6 +9,7 @@ export default function CartButton() {
   return (
     <Link
       to="/cart"
+      onClick={onClick}
       className="font-body relative text-[12px] tracking-widest text-white/70 uppercase transition-colors duration-200 hover:text-white"
     >
       🛒

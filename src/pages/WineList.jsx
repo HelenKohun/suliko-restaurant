@@ -231,7 +231,7 @@ export default function WineList() {
                 <FilterButton
                   key={style}
                   isActive={activeStyle === style}
-                  onClick={(event) => {
+                  onClick={() => {
                     handleFiltering("style", style);
                   }}
                 >

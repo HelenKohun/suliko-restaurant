@@ -8,8 +8,10 @@ import winePhoto3 from "../assets/Wine/pexels-tonyflood-4710897-removebg-preview
 import winePhoto4 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247927-removebg-preview.png";
 import winePhoto5 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247922-removebg-preview.png";
 import winePhoto6 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247940-removebg-preview.png";
+import winePhoto7 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247954-removebg-preview.png";
+import winePhoto8 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247934-removebg-preview.png";
 
-export default function WineCard({ wine, onClick, image }) {
+export default function WineCard({ wine, onClick }) {
   const { t } = useTranslation();
 
   const photo = [
@@ -19,11 +21,13 @@ export default function WineCard({ wine, onClick, image }) {
     winePhoto4,
     winePhoto5,
     winePhoto6,
+    winePhoto7,
+    winePhoto8,
   ];
 
-  const randomIndex = Math.ceil(Math.random() * photo.length) - 1;
+  const photoIndex = (wine.id - 1) % photo.length;
 
-  const wineBottle = photo[randomIndex];
+  const wineBottle = photo[photoIndex];
 
   return (
     <article className="group bg-cream/5 border-gold/25 hover:border-gold/60 relative min-h-[220px] overflow-visible rounded border transition-colors duration-300">
@@ -74,7 +78,14 @@ export default function WineCard({ wine, onClick, image }) {
 
             <button
               type="button"
-              onClick={() => onClick({ ...wine })}
+              onClick={() =>
+                onClick({
+                  ...wine,
+                  id: `wine-${wine.id}`,
+                  itemType: "wine",
+                  wineId: wine.id,
+                })
+              }
               className="border-gold/50 text-cream hover:bg-gold hover:text-wine flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border text-xl leading-none transition-colors duration-300"
               aria-label={`Dodaj ${wine.name}`}
             >

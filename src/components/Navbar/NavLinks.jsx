@@ -1,10 +1,15 @@
 import { navigationLinks } from "../../data/navigationLinks";
 import NavLinkItem from "./NavLinkItem";
 
-export default function NavLinks({ mobile = false }) {
+export default function NavLinks({ mobile = false, onClick }) {
   // List of navigation links
   const navLinks = navigationLinks.map((link) => (
-    <NavLinkItem key={link.path} path={link.path} labelKey={link.labelKey} />
+    <NavLinkItem
+      onClick={onClick}
+      key={link.path}
+      path={link.path}
+      labelKey={link.labelKey}
+    />
   ));
 
   return (

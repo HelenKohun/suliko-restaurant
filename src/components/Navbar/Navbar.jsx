@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
+
 import NavLinks from "./NavLinks";
 import Logo from "./Logo";
 import BookingButton from "./BookingButton";
@@ -8,11 +8,6 @@ import CartButton from "./CartButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
 
   return (
     <header
@@ -72,13 +67,13 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="bg-wine/95 mx-6 rounded p-6 backdrop-blur-md lg:hidden">
-          <NavLinks mobile />
+          <NavLinks mobile onClick={() => setIsOpen(false)} />
 
           <div className="mt-6 flex justify-center">
-            <BookingButton />
+            <BookingButton onClick={() => setIsOpen(false)} />
           </div>
           <div className="mt-6 flex justify-center">
-            <CartButton />
+            <CartButton onClick={() => setIsOpen(false)} />
           </div>
         </div>
       )}
