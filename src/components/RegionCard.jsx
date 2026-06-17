@@ -6,11 +6,11 @@ export default function RegionCard({ region, onSelect }) {
 
   return (
     <article className="group flex h-full max-w-[163.5px] flex-col items-center text-center">
-      <div className="border-gold/60 h-[140px] w-[140px] rounded-full border p-1 transition-transform duration-500 group-hover:scale-120">
+      <div className="border-gold/60 h-[140px] w-[140px] rounded-full border p-1 transition-transform duration-500 group-hover:scale-110">
         <img
           className="h-full w-full rounded-full object-cover"
           src={region.image}
-          alt={region.alt}
+          alt={t(`${regionPath}.name`)}
         />
       </div>
 

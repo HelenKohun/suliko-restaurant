@@ -53,7 +53,7 @@ export default function WineCard({ wine, onClick, image }) {
 
             <div className="mt-5 flex flex-col items-start gap-2">
               <span className="border-gold/30 text-cream/75 font-body rounded-full border px-3 py-1 text-[10px] tracking-widest uppercase">
-                {wine.region}
+                {t(`wineList.regions.${wine.region}.name`)}
               </span>
               <span className="border-gold/30 text-cream/75 font-body rounded-full border px-3 py-1 text-[10px] tracking-widest uppercase">
                 {wine.winery}

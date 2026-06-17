@@ -124,7 +124,7 @@ export const winesData = [
   { id: 69, name: "Tavkveri Pétillant", winery: "Pheasant's Tears", region: "kartli", type: "rose", style: "dry", price: 68, year: 2022 },
   { id: 70, name: "Saperavi Różowe Qvevri", winery: "Alaverdi Monastery", region: "kakheti", type: "rose", style: "dry", price: 82, year: 2022 },
   { id: 71, name: "Merlot Rosé", winery: "Teliani Valley", region: "kakheti", type: "rose", style: "semi-dry", price: 55, year: 2022 },
-  { id: 72, name: "Chkhaveri Pétillant", winery: "Baia's Wine", region: "guria", type: "rose", style: "dry", description: "Musujące różowe z Gurii. Bąbelki i lekki aromat truskawek i kwiatów. Idealne na aperitif.", price: 72, year: 2022 },
+  { id: 72, name: "Chkhaveri Pétillant", winery: "Baia's Wine", region: "guria", type: "rose", style: "dry", price: 72, year: 2022 },
   { id: 73, name: "Saperavi Rosé Organiczne", winery: "GWS", region: "kakheti", type: "rose", style: "dry", price: 62, year: 2022 },
   { id: 74, name: "Blend Różowe", winery: "Okro's Wines", region: "imeretia", type: "rose", style: "dry", price: 60, year: 2022 },
   { id: 75, name: "Tavkveri Naturalny", winery: "Gotsa Family Wines", region: "kartli", type: "rose", style: "dry", price: 75, year: 2022 },

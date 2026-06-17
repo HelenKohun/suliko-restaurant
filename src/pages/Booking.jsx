@@ -52,10 +52,10 @@ export default function Booking() {
         <h2 className="font-heading text-text mb-4 text-4xl font-light sm:text-5xl lg:text-6xl">
           {t("booking.submittedThanks.thanks")}
         </h2>
-        <p className="font-body text-muted mb-2 text-[15px] leading-relaxed">
+        <p className="font-body text-text-muted mb-2 text-[15px] leading-relaxed">
           {t("booking.submittedThanks.text1")}
         </p>
-        <p className="font-body text-muted mb-10 text-[15px] leading-relaxed">
+        <p className="font-body text-text-muted mb-10 text-[15px] leading-relaxed">
           {t("booking.submittedThanks.text2")}
         </p>
         <Link

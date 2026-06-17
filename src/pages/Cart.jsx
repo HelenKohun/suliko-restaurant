@@ -61,7 +61,7 @@ export default function Cart() {
         <h1 className="font-heading text-text mb-4 text-7xl font-light tracking-[0.12em]">
           {t("cart.cart")}
         </h1>
-        <p className="font-body text-muted mb-8 text-[15px] tracking-widest uppercase">
+        <p className="font-body text-text-muted mb-8 text-[15px] tracking-widest uppercase">
           {t("cart.empty-cart")}
         </p>
         <Link
@@ -88,7 +88,7 @@ export default function Cart() {
           <h1 className="font-heading text-text text-7xl font-light tracking-[0.12em] lg:text-8xl">
             {t("cart.cart")}
           </h1>
-          <p className="font-body text-muted mt-2 text-[12px] tracking-[0.18em] uppercase">
+          <p className="font-body text-text-muted mt-2 text-[12px] tracking-[0.18em] uppercase">
             {t("cart.itemsCount", { count: cartQuantity })}
           </p>
         </div>
@@ -121,7 +121,7 @@ export default function Cart() {
                   ? item.name
                   : t(`menuData.${item.categoryId}.dishes.${item.dishId}.name`)}
               </div>
-              <div className="font-body text-muted mt-1 text-[12px] leading-relaxed">
+              <div className="font-body text-text-muted mt-1 text-[12px] leading-relaxed">
                 {item?.winery
                   ? t(`wineList.wines.${item.id}.description`)
                   : t(
@@ -157,7 +157,7 @@ export default function Cart() {
             {/* Cost */}
 
             <div className="absolute right-0 bottom-5 text-right lg:static lg:text-left">
-              <div className="font-body text-muted mb-1 text-[11px] lg:hidden">
+              <div className="font-body text-text-muted mb-1 text-[11px] lg:hidden">
                 {item.price} zł / {t("cart.pcs")}
               </div>
 
@@ -196,7 +196,7 @@ export default function Cart() {
           {/* Promo code and buttons */}
           <div className="order-2 flex w-full flex-col gap-6 lg:order-1 lg:max-w-sm">
             <div>
-              <p className="font-body text-muted mb-3 text-[11px] tracking-widest uppercase">
+              <p className="font-body text-text-muted mb-3 text-[11px] tracking-widest uppercase">
                 {t("cart.promo")}
               </p>
               {promoError && (
@@ -215,7 +215,7 @@ export default function Cart() {
                     setDiscount(0);
                   }}
                   placeholder={t("cart.placeholder")}
-                  className="border-text/20 font-body text-text placeholder:text-muted/60 min-w-0 flex-1 rounded-l border border-r-0 bg-transparent px-4 py-3 text-[12px] outline-none"
+                  className="border-text/20 font-body text-text placeholder:text-text-muted/60 min-w-0 flex-1 rounded-l border border-r-0 bg-transparent px-4 py-3 text-[12px] outline-none"
                 />
                 <button
                   onClick={handlePromo}
@@ -232,7 +232,7 @@ export default function Cart() {
               </button>
               <button
                 onClick={clearCart}
-                className="text-muted border-text/15 font-body hover:border-wine hover:text-wine rounded border bg-transparent py-3 text-[12px] tracking-widest uppercase transition-colors duration-200"
+                className="text-text-muted border-text/15 font-body hover:border-wine hover:text-wine rounded border bg-transparent py-3 text-[12px] tracking-widest uppercase transition-colors duration-200"
               >
                 {t("cart.clear-btn")}
               </button>
@@ -242,7 +242,7 @@ export default function Cart() {
           {/* Summary */}
           <div className="order-1 rounded bg-white p-5 lg:order-2 lg:min-w-65 lg:bg-transparent lg:p-0">
             <div className="mb-3 flex justify-between">
-              <span className="font-body text-muted text-[13px]">
+              <span className="font-body text-text-muted text-[13px]">
                 {t("cart.sum")}
               </span>
               <span className="font-body text-text text-[13px]">
@@ -251,7 +251,7 @@ export default function Cart() {
             </div>
             {isPromoCorrect && (
               <div className="mb-3 flex justify-between">
-                <span className="font-body text-muted text-[13px]">
+                <span className="font-body text-text-muted text-[13px]">
                   {t("cart.discount")}
                 </span>
                 <span className="font-body text-wine text-[13px]">
@@ -260,7 +260,7 @@ export default function Cart() {
               </div>
             )}
             <div className="mb-3 flex justify-between">
-              <span className="font-body text-muted text-[13px]">
+              <span className="font-body text-text-muted text-[13px]">
                 {t("cart.delivery")}{" "}
                 {subtotal >= 350 ? `(${t("cart.for-free")})` : ""}
               </span>

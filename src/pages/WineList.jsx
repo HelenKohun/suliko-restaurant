@@ -17,7 +17,6 @@ export default function WineList() {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedRegion, setSelectedRegion] = useState(null);
-  const [isActive, setIsActive] = useState(false);
 
   const activeType = searchParams.get("type");
   const activeRegion = searchParams.get("region");
@@ -107,7 +106,7 @@ export default function WineList() {
       {/* Hero photo */}
       <section className="relative h-[480px] overflow-hidden lg:min-h-[50vh]">
         <div
-          className="absolute inset-0 bg-cover bg-top-left"
+          className="absolute inset-0 bg-cover bg-left-top"
           style={{ backgroundImage: `url(${grapeImage})` }}
         />
 
@@ -253,15 +252,11 @@ export default function WineList() {
                   handleFiltering("region", event.target.value)
                 }
               >
-                <option value="" text-white>
+                <option value="">
                   {t("wineList.wineFilters.all-regions")}
                 </option>
                 {regions.map((region) => (
-                  <option
-                    key={region.id}
-                    value={region.id}
-                    className="text-white"
-                  >
+                  <option key={region.id} value={region.id}>
                     {t(`wineList.regions.${region.id}.name`)}
                   </option>
                 ))}
