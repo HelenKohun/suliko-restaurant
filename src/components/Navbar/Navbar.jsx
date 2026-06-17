@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useLocation } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import Logo from "./Logo";
 import BookingButton from "./BookingButton";
@@ -8,6 +8,7 @@ import CartButton from "./CartButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header

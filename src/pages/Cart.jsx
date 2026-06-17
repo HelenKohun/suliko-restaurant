@@ -136,6 +136,7 @@ export default function Cart() {
             {/* Quantity  */}
             <div className="mt-4 flex items-center gap-3 lg:mt-0">
               <button
+                type="button"
                 onClick={() => handleDecrease(item)}
                 className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
               >
@@ -145,6 +146,7 @@ export default function Cart() {
                 {item.quantity}
               </span>
               <button
+                type="button"
                 onClick={() => increaseItem(item.id)}
                 className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
               >
@@ -167,7 +169,7 @@ export default function Cart() {
             {/* Delete */}
             <div className="absolute top-5 right-0 lg:static lg:flex lg:justify-end">
               <button
-                // removeItem(item.id)
+                type="button"
                 onClick={() => setItemToDelete(item)}
                 className="border-wine/20 text-wine hover:bg-wine flex h-7 w-7 items-center justify-center rounded border text-xs transition-colors duration-200 hover:text-white"
               >
@@ -216,6 +218,7 @@ export default function Cart() {
                   className="border-text/20 font-body text-text placeholder:text-text-muted/60 min-w-0 flex-1 rounded-l border border-r-0 bg-transparent px-4 py-3 text-[12px] outline-none"
                 />
                 <button
+                  type="button"
                   onClick={handlePromo}
                   className="bg-wine text-cream font-body hover:bg-wine-light rounded-r px-5 py-2 text-[10px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200"
                 >
@@ -225,10 +228,14 @@ export default function Cart() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <button className="bg-wine font-body hover:bg-wine-light rounded py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200">
+              <button
+                type="button"
+                className="bg-wine font-body hover:bg-wine-light rounded py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200"
+              >
                 {t("cart.order-btn")}
               </button>
               <button
+                type="button"
                 onClick={clearCart}
                 className="text-text-muted border-text/15 font-body hover:border-wine hover:text-wine rounded border bg-transparent py-3 text-[12px] tracking-widest uppercase transition-colors duration-200"
               >

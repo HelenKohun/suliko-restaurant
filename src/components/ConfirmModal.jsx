@@ -2,9 +2,17 @@ import { useTranslation } from "react-i18next";
 
 export default function ConfirmModal({ itemToDelete, onConfirm, onCancel }) {
   const { t } = useTranslation();
+
+  const isWine = itemToDelete.itemType === "wine";
+  const itemName = isWine
+    ? itemToDelete.name
+    : t(
+        `menuData.${itemToDelete.categoryId}.dishes.${itemToDelete.dishId}.name`,
+      );
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-6"
       onClick={onCancel}
     >
       <div
@@ -16,11 +24,12 @@ export default function ConfirmModal({ itemToDelete, onConfirm, onCancel }) {
         </h3>
 
         <p className="font-body text-text-muted mt-3">
-          {t("confirmModal.title2")} {itemToDelete.name}?
+          {t("confirmModal.title2")} {itemName}?
         </p>
 
         <div className="mt-10 flex justify-between gap-4">
           <button
+            type="button"
             onClick={onCancel}
             className="border-wine/20 hover:border-wine/70 rounded border px-7 py-2 text-lg"
           >
@@ -28,6 +37,7 @@ export default function ConfirmModal({ itemToDelete, onConfirm, onCancel }) {
           </button>
 
           <button
+            type="button"
             onClick={onConfirm}
             className="bg-wine hover:bg-wine-light rounded px-7 py-2 text-lg text-white"
           >
