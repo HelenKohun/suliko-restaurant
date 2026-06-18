@@ -97,7 +97,13 @@ export default function ReservationCTA() {
       </p>
 
       {/* Form */}
-      <div className="flex w-full max-w-lg flex-col items-center">
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          handleSubmit();
+        }}
+        className="flex w-full max-w-lg flex-col items-center"
+      >
         <div className="mb-10 flex w-full flex-col gap-8 lg:flex-row">
           {/* Date */}
           <div className="border-text/25 focus-within:border-gold flex flex-1 flex-col border-b pb-2 transition-colors duration-200">
@@ -157,7 +163,7 @@ export default function ReservationCTA() {
         </div>
 
         <button
-          onClick={handleSubmit}
+          type="submit"
           className="bg-wine font-body hover:bg-wine-light rounded px-12 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200"
         >
           {t("reservationCTA.button")}
@@ -166,7 +172,7 @@ export default function ReservationCTA() {
         <p className="font-body text-text/60 mt-4 text-[11px] tracking-wide">
           {t("reservationCTA.text3")}
         </p>
-      </div>
+      </form>
     </section>
   );
 }
