@@ -303,6 +303,7 @@ export default function WineList() {
 
                 return (
                   <button
+                    type="button"
                     key={page}
                     type="button"
                     onClick={() => goToPage(page)}

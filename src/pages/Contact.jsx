@@ -139,6 +139,7 @@ export default function Contact() {
                     {t("contact.success.text2")}
                   </p>
                   <button
+                    type="button"
                     onClick={() => {
                       setIsSuccess(false);
                     }}

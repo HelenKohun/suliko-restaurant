@@ -59,6 +59,7 @@ export default function MenuCategory({
                     {dish.price} zł
                   </span>
                   <button
+                    type="button"
                     onClick={() =>
                       onClick({
                         ...dish,

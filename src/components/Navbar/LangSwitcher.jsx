@@ -9,6 +9,7 @@ export default function LangSwitcher() {
     <div className="flex items-center gap-2">
       {langs.map((lang) => (
         <button
+          type="button"
           key={lang}
           onClick={() => i18n.changeLanguage(lang)}
           className={`font-body cursor-pointer text-[10px] tracking-widest uppercase transition-colors duration-200 ${i18n.language === lang ? "text-gold" : "text-white/70 hover:text-white/70"}`}
