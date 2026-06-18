@@ -395,7 +395,7 @@ export default function Contact() {
           <div className="mt-6 flex justify-center rounded py-6">
             <Link
               to="/booking"
-              className="font-body bg-wine hover:text-wine rounded border px-6 py-3 text-center text-[12px] tracking-widest text-white/80 uppercase transition-colors duration-200 hover:bg-transparent"
+              className="font-body focus-visible:ring-cream focus-visible:ring-offset-gold bg-wine hover:text-wine rounded border px-6 py-3 text-center text-[12px] tracking-widest text-white/80 uppercase transition-colors duration-200 hover:bg-transparent focus-visible:ring-3 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {t("contact.map.button")}
             </Link>
