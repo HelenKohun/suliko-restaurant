@@ -247,7 +247,7 @@ export default function WineList() {
             <div className="mt-4 flex gap-2">
               <select
                 value={activeRegion || ""}
-                className="font-heading bg-wine cursor-pointer text-xl font-light text-white outline-none sm:text-[22px]"
+                className="font-heading bg-wine focus-visible:ring-gold focus-visible:ring-offset-wine cursor-pointer rounded-sm text-xl font-light text-white transition-shadow duration-200 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:text-[22px]"
                 onChange={(event) =>
                   handleFiltering("region", event.target.value)
                 }

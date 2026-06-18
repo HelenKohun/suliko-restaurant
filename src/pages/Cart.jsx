@@ -234,7 +234,7 @@ export default function Cart() {
                 <button
                   type="submit"
                   onClick={handlePromo}
-                  className="bg-wine text-cream font-body hover:bg-wine-light rounded-r px-5 py-2 text-[10px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200"
+                  className="bg-wine focus-visible:ring-gold focus-visible:ring-offset-cream text-cream font-body hover:bg-wine-light rounded-r px-5 py-2 text-[10px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                 >
                   {t("cart.apply-btn")}
                 </button>
@@ -244,7 +244,7 @@ export default function Cart() {
             <div className="flex flex-col gap-2">
               <button
                 type="button"
-                className="bg-wine font-body hover:bg-wine-light rounded py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200"
+                className="bg-wine font-body focus-visible:ring-gold focus-visible:ring-offset-cream hover:bg-wine-light rounded py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 {t("cart.order-btn")}
               </button>

@@ -120,7 +120,7 @@ export default function ReservationCTA() {
           </div>
 
           {/* Hour */}
-          <div className="border-text/25 focus-within:border-gold flex flex-1 flex-col border-b pb-2 transition-colors duration-200">
+          <div className="border-text/25 focus-within:border-gold focus-within:ring-gold/40 focus-within:ring-offset-cream flex flex-1 flex-col rounded-sm border-b pb-2 transition-colors duration-200 focus-within:ring-1 focus-within:ring-offset-4">
             <label className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase">
               {t("reservationCTA.time")}
             </label>
@@ -131,7 +131,7 @@ export default function ReservationCTA() {
               className="font-heading text-text cursor-pointer bg-transparent text-xl font-light outline-none"
             >
               <option value="" disabled>
-                Wybierz godzinę
+                {t("reservationCTA.selectTime")}
               </option>
 
               {timeOptions.map((time) => (
@@ -143,7 +143,7 @@ export default function ReservationCTA() {
           </div>
 
           {/* Number of guests */}
-          <div className="border-text/25 focus-within:border-gold flex flex-1 flex-col border-b pb-2 transition-colors duration-200">
+          <div className="border-text/25 focus-within:border-gold focus-within:ring-gold/40 focus-within:ring-offset-cream flex flex-1 flex-col rounded-sm border-b pb-2 transition-colors duration-200 focus-within:ring-1 focus-within:ring-offset-4">
             <label className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase">
               {t("reservationCTA.guests")}
             </label>
@@ -164,7 +164,7 @@ export default function ReservationCTA() {
 
         <button
           type="submit"
-          className="bg-wine font-body hover:bg-wine-light rounded px-12 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200"
+          className="bg-wine font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream rounded px-12 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
         >
           {t("reservationCTA.button")}
         </button>

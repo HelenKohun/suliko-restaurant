@@ -269,7 +269,7 @@ export default function Contact() {
                           required: t("contact.form.input.subjects-error"),
                         })}
                         defaultValue=""
-                        className="border-text/20 font-body text-text w-full cursor-pointer rounded border bg-transparent px-4 py-3 text-sm outline-none"
+                        className="border-text/20 font-body text-text focus-visible:border-wine focus-visible:ring-wine/40 focus-visible:ring-offset-cream w-full cursor-pointer rounded border bg-transparent px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1 focus-visible:ring-offset-1"
                       >
                         <option value="" disabled>
                           {t("contact.form.subjectDefault")}
@@ -312,7 +312,7 @@ export default function Contact() {
                     <button
                       type="sumbit"
                       disabled={isSubmitting}
-                      className="bg-wine text-cream font-body hover:bg-wine-light mt-2 rounded px-8 py-4 text-[12px] tracking-widest uppercase transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-60"
+                      className="bg-wine text-cream font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-2 rounded px-8 py-4 text-[12px] tracking-widest uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60"
                     >
                       {isSubmitting
                         ? t("contact.form.button2") // TO DO

@@ -157,7 +157,7 @@ export default function Booking() {
                   </span>
                 )}
               </div>
-              <div className="border-gold/15 sm:border-l-gold/10 flex flex-col border-b py-3 sm:border-l sm:pl-4">
+              <div className="border-gold/15 sm:border-l-gold/10 focus-within:border-gold focus-within:ring-gold/40 focus-within:ring-offset-wine flex flex-col border-b py-3 transition-colors duration-200 focus-within:ring-1 focus-within:ring-offset-1 sm:border-l sm:pl-4">
                 <label className="font-body text-gold/90 mb-1 text-[11px] tracking-widest uppercase">
                   {t("booking.form.date-time.title-time")}
                 </label>
@@ -191,7 +191,7 @@ export default function Booking() {
 
             {/* Guests and phone */}
             <div className="grid grid-cols-1 sm:grid-cols-2">
-              <div className="border-gold/15 flex flex-col border-b py-3">
+              <div className="border-gold/15 focus-within:border-gold focus-within:ring-offset-wine focus-within:ring-gold/40 flex flex-col border-b py-3 focus-within:ring-1 focus-within:ring-offset-1">
                 <label className="font-body text-gold/90 mb-1 text-[11px] tracking-widest uppercase">
                   {t("booking.form.guests-phone.title-guests")}
                 </label>
@@ -203,9 +203,9 @@ export default function Booking() {
                       Number(value) >= 1 ||
                       t("booking.form.guests-phone.error2-guests"),
                   })}
-                  className="font-heading cursor-pointer appearance-none bg-transparent text-xl font-light text-white outline-none sm:text-[22px]"
+                  className="font-heading mr-2 cursor-pointer bg-transparent text-xl font-light text-white outline-none sm:text-[22px]"
                 >
-                  <option value="" disabled className="bg-dark-wine">
+                  <option value="" disabled>
                     —
                   </option>
 
