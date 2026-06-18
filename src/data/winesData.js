@@ -1,10 +1,10 @@
-import kakheti from "../assets/Wine/46f90a1ff03e4b38b288e93a1925b11d.jpg"
-import kartli from "../assets/Wine/0b0lc7dkewc0x16agid3jzs96010ursd.jpg"
-import imeretia from "../assets/Wine/i.jpg"
-import rachaLechkhumi from "../assets/Wine/Racha-Lechkhumi_and_Lower_Svaneti,_Georgia_-_panoramio_(1).jpg"
-import adjara from "../assets/Wine/Аджария-вид-в-сторону-турецкой-границы.jpg"
-import samegrelo from "../assets/Wine/XXL_height.jpg"
-import guria from "../assets/Wine/5.-Achi-church-Guria-Region-in-Georgia.jpg"
+import kakheti from "../assets/Resized/Wine/Regions/46f90a1ff03e4b38b288e93a1925b11d.webp"
+import kartli from "../assets/Resized/Wine/Regions/0b0lc7dkewc0x16agid3jzs96010ursd.webp"
+import imeretia from "../assets/Resized/Wine/Regions/i.webp"
+import rachaLechkhumi from "../assets/Resized/Wine/Regions/Racha-Lechkhumi_and_Lower_Svaneti,_Georgia_-_panoramio_(1).webp"
+import adjara from "../assets/Resized/Wine/Regions/Аджария-вид-в-сторону-турецкой-границы.webp"
+import samegrelo from "../assets/Resized/Wine/Regions/XXL_height.webp"
+import guria from "../assets/Resized/Wine/Regions/5.-Achi-church-Guria-Region-in-Georgia.webp"
 
 
 

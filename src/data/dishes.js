@@ -1,6 +1,6 @@
-import khinkaliImage from "../assets/pexels-nadin-sh-78971847-23285788.jpg"
-import khachapuriImage from "../assets/pexels-pexels-user-1324748584-25243827.jpg"
-import mtsvadiImage from "../assets/pexels-mohamed9380-37080264.jpg"
+import khinkaliImage from "../assets/Resized/pexels-nadin-sh-78971847-23285788.webp"
+import khachapuriImage from "../assets/Resized/pexels-pexels-user-1324748584-25243827.webp"
+import mtsvadiImage from "../assets/Resized/pexels-mohamed9380-37080264.webp"
 
 
 export const dishes = [

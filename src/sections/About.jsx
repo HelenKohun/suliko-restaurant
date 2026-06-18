@@ -1,4 +1,6 @@
-import aboutImage1 from "../assets/pexels-valeriya-27305315.jpg";
+// import aboutImage1 from "../assets/pexels-valeriya-27305315.jpg";
+import aboutImage1 from "../assets/Resized/pexels-valeriya-27305315.webp";
+
 import SectionEyebrow from "../components/SectionEyebrow";
 import { useTranslation } from "react-i18next";
 

@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { MapPin, Clock, Phone, Clock12 } from "lucide-react";
 import SectionEyebrow from "../components/SectionEyebrow";
-import bookingImg from "../assets/pexels-kadiravsarr-20169244.jpg";
+import bookingImg from "../assets/Resized/pexels-kadiravsarr-20169244.webp";
 import { timeOptions } from "../data/bookingData";
 
 export default function Booking() {

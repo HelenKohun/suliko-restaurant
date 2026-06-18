@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import wineImage from "../assets/Wine/pexels-liv-kao-2149337698-30557559.jpg";
+import wineImage from "../assets/Resized/Wine/pexels-liv-kao-2149337698-30557559.webp";
 import SectionEyebrow from "../components/SectionEyebrow";
 
 export default function WineExperience() {

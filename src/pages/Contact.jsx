@@ -6,8 +6,8 @@ import { MapPin, Clock, Phone, Mail } from "lucide-react";
 import SectionEyebrow from "../components/SectionEyebrow";
 import ContactMap from "../components/ContactMap";
 
-import contactHeroImg from "../assets/pexels-ansar-muhammad-380085065-27626759.jpg";
-import contactSmallImg from "../assets/pexels-kpaukshtite-4256560.jpg";
+import contactHeroImg from "../assets/Resized/pexels-ansar-muhammad-380085065-27626759.webp";
+import contactSmallImg from "../assets/Resized/pexels-kpaukshtite-4256560.webp";
 
 export default function Contact() {
   const { t } = useTranslation();

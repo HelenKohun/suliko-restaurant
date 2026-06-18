@@ -1,4 +1,5 @@
-import homeImage from "../assets/pexels-ensar-84745078-11817815.jpg";
+// import homeImage from "../assets/pexels-ensar-84745078-11817815.jpg";
+import homeImage from "../assets/Resized/pexels-ensar-84745078-11817815.webp";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 

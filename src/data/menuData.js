@@ -1,12 +1,12 @@
-import coldStarters from "../assets/Menu/pexels-nadin-sh-78971847-14866633.jpg"
-import hotStarters from "../assets/Menu/pexels-amanda-lim-5074906-8508107.jpg"
-import chaczapuri from "../assets/Menu/pexels-anhelina-vasylyk-734724285-33637724.jpg"
-import salat from "../assets/Menu/pexels-valeriya-27294704.jpg";
-import soup from "../assets/Menu/pexels-vovkapanda-6213758.jpg";
-import mainDish from "../assets/Menu/pexels-nadin-sh-78971847-18363400.jpg"
-import grill from "../assets/Menu/pexels-nadin-sh-78971847-20352397.jpg"
-import fish from "../assets/Menu/pexels-nano-erdozain-120534369-29149766.jpg"
-import desert from "../assets/Menu/pexels-valeriya-1639567.jpg"
+import coldStarters from "../assets/Resized/Menu/pexels-nadin-sh-78971847-14866633.webp"
+import hotStarters from "../assets/Resized/Menu/pexels-amanda-lim-5074906-8508107.webp"
+import chaczapuri from "../assets/Resized/Menu/pexels-anhelina-vasylyk-734724285-33637724.webp"
+import salat from "../assets/Resized/Menu/pexels-valeriya-27294704.webp";
+import soup from "../assets/Resized/Menu/pexels-vovkapanda-6213758.webp";
+import mainDish from "../assets/Resized/Menu/pexels-nadin-sh-78971847-18363400.webp"
+import grill from "../assets/Resized/Menu/pexels-nadin-sh-78971847-20352397.webp"
+import fish from "../assets/Resized/Menu/pexels-nano-erdozain-120534369-29149766.webp"
+import desert from "../assets/Resized/Menu/pexels-valeriya-1639567.webp"
 
 export const menuData = [
   {

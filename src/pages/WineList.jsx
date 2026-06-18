@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { winesData, styles, types, regions } from "../data/winesData";
-import grapeImage from "../assets/Wine/pexels-mattia-d-andrea-1351715572-25696380.jpg";
+import grapeImage from "../assets/Resized/Wine/pexels-mattia-d-andrea-1351715572-25696380.webp";
 import SectionEyebrow from "../components/SectionEyebrow";
 import RegionCard from "../components/RegionCard";
 import RegionModal from "../components/RegionModal";
-import grapeImage2 from "../assets/Wine/pexels-david-bartus-43782-442116.jpg";
+import grapeImage2 from "../assets/Resized/Wine/pexels-david-bartus-43782-442116.jpg";
 import FilterButton from "../components/FilterButton";
 import { RotateCw, ChevronLeft, ChevronRight } from "lucide-react";
 import WineCard from "../components/WineCard";
