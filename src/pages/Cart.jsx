@@ -106,81 +106,87 @@ export default function Cart() {
           ))}
         </div>
 
-        {/* Dishes */}
-        {items.map((item) => (
-          <div
-            key={item.id}
-            className="border-text/[0.07] relative border-b py-5 lg:grid lg:grid-cols-[1fr_100px_140px_100px_40px] lg:items-center lg:gap-4"
-          >
-            {/* Name */}
-            <div className="pr-10 lg:pr-0">
-              <div className="font-heading text-text text-2xl font-light">
-                {item.itemType === "wine"
-                  ? item.name
-                  : t(`menuData.${item.categoryId}.dishes.${item.dishId}.name`)}
-              </div>
-              <div className="font-body text-text-muted mt-1 text-[12px] leading-relaxed">
-                {item.itemType === "wine"
-                  ? t(`wineList.wines.${item.wineId}.description`)
-                  : t(
-                      `menuData.${item.categoryId}.dishes.${item.dishId}.description`,
-                    )}
-              </div>
-            </div>
+        {/* Dishes or wine */}
+        {items.map((item) => {
+          const isWine = item.itemType === "wine";
 
-            {/* Price - desctop only */}
-            <div className="font-heading text-text hidden text-xl lg:block">
-              {item.price} zł
-            </div>
+          const itemName = isWine
+            ? item.name
+            : t(`menuData.${item.categoryId}.dishes.${item.dishId}.name`);
 
-            {/* Quantity  */}
-            <div className="mt-4 flex items-center gap-3 lg:mt-0">
-              <button
-                type="button"
-                aria-label="Decrease quantity"
-                onClick={() => handleDecrease(item)}
-                className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
-              >
-                <Minus size={16} />
-              </button>
-              <span className="font-heading text-text min-w-6 text-center text-xl">
-                {item.quantity}
-              </span>
-              <button
-                aria-label="Increase quantity"
-                type="button"
-                onClick={() => increaseItem(item.id)}
-                className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
-              >
-                <Plus size={16} />
-              </button>
-            </div>
-
-            {/* Cost */}
-
-            <div className="absolute right-0 bottom-5 text-right lg:static lg:text-left">
-              <div className="font-body text-text-muted mb-1 text-[11px] lg:hidden">
-                {item.price} zł / {t("cart.pcs")}
+          return (
+            <div
+              key={item.id}
+              className="border-text/[0.07] relative border-b py-5 lg:grid lg:grid-cols-[1fr_100px_140px_100px_40px] lg:items-center lg:gap-4"
+            >
+              {/* Name */}
+              <div className="pr-10 lg:pr-0">
+                <div className="font-heading text-text text-2xl font-light">
+                  {itemName}
+                </div>
+                <div className="font-body text-text-muted mt-1 text-[12px] leading-relaxed">
+                  {isWine
+                    ? t(`wineList.wines.${item.wineId}.description`)
+                    : t(
+                        `menuData.${item.categoryId}.dishes.${item.dishId}.description`,
+                      )}
+                </div>
               </div>
 
-              <div className="font-heading text-gold text-xl">
-                {item.price * item.quantity} zł
+              {/* Price - desctop only */}
+              <div className="font-heading text-text hidden text-xl lg:block">
+                {item.price} zł
+              </div>
+
+              {/* Quantity  */}
+              <div className="mt-4 flex items-center gap-3 lg:mt-0">
+                <button
+                  type="button"
+                  aria-label={t("aria-labels.cart.minus", { name: itemName })}
+                  onClick={() => handleDecrease(item)}
+                  className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
+                >
+                  <Minus size={16} />
+                </button>
+                <span className="font-heading text-text min-w-6 text-center text-xl">
+                  {item.quantity}
+                </span>
+                <button
+                  aria-label={t("aria-labels.cart.plus", { name: itemName })}
+                  type="button"
+                  onClick={() => increaseItem(item.id)}
+                  className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
+                >
+                  <Plus size={16} />
+                </button>
+              </div>
+
+              {/* Cost */}
+
+              <div className="absolute right-0 bottom-5 text-right lg:static lg:text-left">
+                <div className="font-body text-text-muted mb-1 text-[11px] lg:hidden">
+                  {item.price} zł / {t("cart.pcs")}
+                </div>
+
+                <div className="font-heading text-gold text-xl">
+                  {item.price * item.quantity} zł
+                </div>
+              </div>
+
+              {/* Delete */}
+              <div className="absolute top-5 right-0 lg:static lg:flex lg:justify-end">
+                <button
+                  type="button"
+                  aria-label={t("aria-labels.cart.delete", { name: itemName })}
+                  onClick={() => setItemToDelete(item)}
+                  className="border-wine/20 text-wine hover:bg-wine flex h-7 w-7 items-center justify-center rounded border text-xs transition-colors duration-200 hover:text-white"
+                >
+                  <X size={18} />
+                </button>
               </div>
             </div>
-
-            {/* Delete */}
-            <div className="absolute top-5 right-0 lg:static lg:flex lg:justify-end">
-              <button
-                type="button"
-                arial-label="Delete item"
-                onClick={() => setItemToDelete(item)}
-                className="border-wine/20 text-wine hover:bg-wine flex h-7 w-7 items-center justify-center rounded border text-xs transition-colors duration-200 hover:text-white"
-              >
-                <X size={18} />
-              </button>
-            </div>
-          </div>
-        ))}
+          );
+        })}
 
         {/* Modal */}
         {itemToDelete && (

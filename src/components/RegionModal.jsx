@@ -11,6 +11,8 @@ export default function RegionModal({ region, onClose }) {
       <div
         className="bg-cream text-text max-w-md rounded p-8"
         onClick={(event) => event.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
       >
         <h3 className="font-heading text-wine text-4xl">
           {t(`${regionPath}.name`)}

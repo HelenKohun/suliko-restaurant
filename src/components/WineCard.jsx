@@ -87,7 +87,7 @@ export default function WineCard({ wine, onClick }) {
                 })
               }
               className="border-gold/50 text-cream hover:bg-gold hover:text-wine flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border text-xl leading-none transition-colors duration-300"
-              aria-label={`Dodaj ${wine.name}`}
+              aria-label={t("aria-labels.wineCard", { name: wine.name })}
             >
               <Plus size={20} />
             </button>

@@ -1,4 +1,23 @@
 {
+  "aria-labels": {
+    "wineCard": "Add wine {{name}} to the cart",
+    "cart": {
+      "minus": "Decrease quantity of {{name}}",
+      "plus": "Increase quantity of {{name}}",
+      "delete": "Remove {{name}} from the cart"
+    },
+    "navbar": {
+      "close": "Close menu",
+      "open": "Open menu"
+    },
+    "langSwicher": {
+      "pl": "Polish",
+      "en": "English",
+      "ru": "Russian",
+      "switcher": "Change language to {{language}}"
+    },
+    "contactMap": "Map showing the location of Suliko restaurant"
+  },
   "hero": {
     "eyebrow": "Authentic Georgian cuisine",
     "title1": "GEORGIA",

@@ -18,8 +18,14 @@ export default function ConfirmModal({ itemToDelete, onConfirm, onCancel }) {
       <div
         className="bg-cream rounded p-8 shadow-xl"
         onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="confirm-modal-title"
       >
-        <h3 className="font-heading text-text text-3xl">
+        <h3
+          className="font-heading text-text text-3xl"
+          id="confirm-modal-title"
+        >
           {t("confirmModal.title1")}
         </h3>
 

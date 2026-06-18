@@ -1,4 +1,23 @@
 {
+  "aria-labels": {
+    "wineCard": "Dodaj wino {{name}} do koszyka",
+    "cart": {
+      "minus": "Zmniejsz ilość {{name}}",
+      "plus": "Zwiększ ilość {{name}}",
+      "delete": "Usuń pozycję {{name}}"
+    },
+    "navbar": {
+      "close": "Zamknij menu",
+      "open": "Otwórz menu"
+    },
+    "langSwitcher": {
+      "pl": "polski",
+      "en": "angielski",
+      "ru": "rosyjski",
+      "switcher": "Zmień język na {{język}}"
+    },
+    "contactMap": "Mapa lokalizacji restauracji Suliko"
+  },
   "hero": {
     "eyebrow": "Autentyczna kuchnia gruzińska",
     "title1": "GRUZJA",

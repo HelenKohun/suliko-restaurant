@@ -42,7 +42,12 @@ export default function Navbar() {
             type="button"
             onClick={() => setIsOpen(!isOpen)}
             className="relative flex h-10 w-10 items-center justify-center lg:hidden"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-label={
+              isOpen
+                ? t("arial-labels.navbar.close")
+                : t("arial-labels.navbar.open")
+            }
+            aria-expanded={isOpen}
           >
             <span
               className={`absolute h-px w-6 bg-white/90 transition-transform duration-300 ${

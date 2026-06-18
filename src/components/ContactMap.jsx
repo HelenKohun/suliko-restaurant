@@ -1,5 +1,6 @@
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useTranslation } from "react-i18next";
 
 const position = [52.190146, 21.031355];
 
@@ -28,8 +29,11 @@ const sulikoIcon = L.divIcon({
 });
 
 export default function ContactMap() {
+  const { t } = useTranslation();
   return (
     <MapContainer
+      role="region"
+      aria-label={t("aria-labels.contactMap")}
       center={position}
       zoom={15}
       scrollWheelZoom={false}
