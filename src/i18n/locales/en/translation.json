@@ -89,6 +89,7 @@
     "text1": "Tables available Monday through Sunday",
     "text2": "12:00 PM – 11:00 PM · 85 Mokotowska St., Warsaw",
     "date": "Date",
+    "selectTime": "Choose a time",
     "time": "Time",
     "guests": "Number of guests",
     "person": "person",

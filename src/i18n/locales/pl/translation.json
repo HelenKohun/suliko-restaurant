@@ -14,7 +14,7 @@
       "pl": "polski",
       "en": "angielski",
       "ru": "rosyjski",
-      "switcher": "Zmień język na {{język}}"
+      "switcher": "Zmień język na {{language}}"
     },
     "contactMap": "Mapa lokalizacji restauracji Suliko"
   },
@@ -93,6 +93,7 @@
     "text2": "12:00 – 23:00 · ul. Mokotowska 85, Warszawa",
     "date": "Data",
     "time": "Godzina",
+    "selectTime": "Wybierz godzinę",
     "guests": "Liczba osób",
     "person": "osoba",
     "people": "osoby",

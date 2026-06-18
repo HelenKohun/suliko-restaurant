@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import Logo from "./Logo";
@@ -9,6 +10,8 @@ import CartButton from "./CartButton";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+
+  const { t } = useTranslation();
 
   return (
     <header
