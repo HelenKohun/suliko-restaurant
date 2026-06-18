@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import useCartStore from "../store/cartStore";
 import ConfirmModal from "../components/ConfirmModal";
+import { X, Plus, Minus } from "lucide-react";
 
 export default function Cart() {
   const { t } = useTranslation();
@@ -136,20 +137,22 @@ export default function Cart() {
             <div className="mt-4 flex items-center gap-3 lg:mt-0">
               <button
                 type="button"
+                aria-label="Decrease quantity"
                 onClick={() => handleDecrease(item)}
                 className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
               >
-                −
+                <Minus size={16} />
               </button>
               <span className="font-heading text-text min-w-6 text-center text-xl">
                 {item.quantity}
               </span>
               <button
+                aria-label="Increase quantity"
                 type="button"
                 onClick={() => increaseItem(item.id)}
                 className="border-text/20 text-text hover:border-wine hover:text-wine flex h-7 w-7 items-center justify-center rounded border text-sm transition-colors duration-200"
               >
-                +
+                <Plus size={16} />
               </button>
             </div>
 
@@ -169,10 +172,11 @@ export default function Cart() {
             <div className="absolute top-5 right-0 lg:static lg:flex lg:justify-end">
               <button
                 type="button"
+                arial-label="Delete item"
                 onClick={() => setItemToDelete(item)}
                 className="border-wine/20 text-wine hover:bg-wine flex h-7 w-7 items-center justify-center rounded border text-xs transition-colors duration-200 hover:text-white"
               >
-                ✕
+                <X size={18} />
               </button>
             </div>
           </div>
