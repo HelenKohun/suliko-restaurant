@@ -68,7 +68,7 @@ export default function MenuCategory({
                         categoryId: cat.id,
                       })
                     }
-                    className="font-body text-wine border-wine/30 lg:hover:bg-wine active:bg-wine rounded border px-2 py-1 text-[12px] tracking-widest uppercase transition-colors duration-200 active:text-white lg:px-3 lg:text-[11px] lg:hover:text-white"
+                    className="font-body text-wine border-wine/30 active:bg-wine lg:hover:bg-wine focus-visible:ring-gold focus-visible:ring-offset-cream rounded border px-2 py-1 text-[12px] tracking-widest uppercase transition-all duration-150 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 active:text-white lg:px-3 lg:text-[11px] lg:hover:text-white"
                   >
                     {t("menuPage.add-btn")}
                   </button>
