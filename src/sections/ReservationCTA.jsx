@@ -7,7 +7,16 @@ export default function ReservationCTA() {
 
   const navigate = useNavigate();
 
-  const today = new Date().toLocaleDateString("en-CA").split("T")[0];
+  function getTodatDateString() {
+    const today = new Date();
+
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDay()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  }
+  const today = getTodatDateString();
 
   // Time options
   const timeOptions = [
