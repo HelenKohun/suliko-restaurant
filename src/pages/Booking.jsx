@@ -11,7 +11,7 @@ export default function Booking() {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams();
 
-  function getTodatDateString() {
+  function getTodayDateString() {
     const today = new Date();
 
     const year = today.getFullYear();
@@ -20,7 +20,7 @@ export default function Booking() {
 
     return `${year}-${month}-${day}`;
   }
-  const today = getTodatDateString();
+  const today = getTodayDateString();
   console.log(today);
 
   //Restaurant info
@@ -52,7 +52,7 @@ export default function Booking() {
 
   function onSubmit(data) {
     console.log(data);
-    // тут потом можно подключить EmailJS
+    //  EmailJS
   }
 
   if (isSubmitSuccessful) {
