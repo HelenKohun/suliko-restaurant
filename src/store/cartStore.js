@@ -4,6 +4,47 @@ import { persist } from "zustand/middleware"
 const useCartStore = create(persist((set) => ({
 
   items: [],
+  promoCode: "",
+  isPromoCorrect: false,
+  promoError: false,
+
+  clearPromo: () =>
+    set({
+      promoCode: "",
+      isPromoCorrect: false,
+      promoError: false,
+    }),
+
+  applyPromo: (code) => {
+    const normalizedCode = code.trim().toUpperCase();
+
+
+    if (normalizedCode === "") {
+      set({
+        promoCode: "",
+        isPromoCorrect: false,
+        promoError: false,
+      })
+      return;
+    }
+
+    if (normalizedCode === "SULIKO10") {
+      set({
+        promoCode: normalizedCode,
+        isPromoCorrect: true,
+        promoError: false,
+      })
+    } else {
+      set({
+        promoCode: "",
+        isPromoCorrect: false,
+        promoError: true,
+      })
+
+    }
+  },
+
+
 
   addItem: (item) => set((state) => {
 
@@ -49,11 +90,21 @@ const useCartStore = create(persist((set) => ({
 
 
   clearCart: () => set({
-    items: []
+    items: [],
+    promoCode: "",
+    isPromoCorrect: false,
+    promoError: true,
   }),
 
 
-}), { name: "suliko-cart" }));
+}), {
+  name: "suliko-cart",
+  partialize: (state) => ({
+    items: state.items,
+    promoCode: state.promoCode,
+    isPromoCorrect: state.isPromoCorrect,
+  }),
+}));
 
 
 export default useCartStore

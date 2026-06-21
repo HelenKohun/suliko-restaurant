@@ -4,9 +4,13 @@ import { useTranslation } from "react-i18next";
 import useCartStore from "../store/cartStore";
 import ConfirmModal from "../components/ConfirmModal";
 import { X, Plus, Minus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { getCartTotals } from "../utils/cartTotals";
 
 export default function Cart() {
   const { t } = useTranslation();
+
+  const navigate = useNavigate();
 
   const tableHeaders = ["item", "price", "quantity", "cost"];
 
@@ -17,32 +21,26 @@ export default function Cart() {
   const decreaseItem = useCartStore((state) => state.decreaseItem);
   const clearCart = useCartStore((state) => state.clearCart);
 
+  const promoCode = useCartStore((state) => state.PromoCode);
+  const isPromoCorrect = useCartStore((state) => state.isPromoCorrect);
+  const promoError = useCartStore((state) => state.promoError);
+  const applyPromo = useCartStore((state) => state.applyPromo);
+  const clearPromo = useCartStore((state) => state.clearPromo);
+
   // States
-  const [promo, setPromo] = useState("");
-
-  const [isPromoCorrect, setIsPromoCorrect] = useState(false);
+  const [promo, setPromo] = useState(promoCode || "");
   const [itemToDelete, setItemToDelete] = useState(null);
-  const [promoError, setPromoError] = useState(false);
+  const [deliveryMethod, setDeliveryMethod] = useState("delivery");
 
-  // Derived values
+  const { subtotal, discount, delivery, total } = getCartTotals(items, {
+    isPromoCorrect,
+    deliveryMethod,
+  });
+
   const cartQuantity = items.reduce((sum, item) => sum + item.quantity, 0);
-  const subtotal = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0,
-  );
-  const discount = subtotal * 0.1;
-  const delivery = items.length > 0 && subtotal < 349 ? 15 : 0;
-  const total = subtotal - discount + delivery;
-
   // Promo
   function handlePromo() {
-    if (promo === "SULIKO10") {
-      setIsPromoCorrect(true);
-      setPromoError(false);
-    } else {
-      setPromoError(true);
-      setIsPromoCorrect(false);
-    }
+    applyPromo(promo);
   }
 
   function handleDecrease(item) {
@@ -225,15 +223,14 @@ export default function Cart() {
                   value={promo}
                   onChange={(e) => {
                     setPromo(e.target.value);
-                    setIsPromoCorrect(false);
-                    setPromoError(false);
+                    clearPromo();
                   }}
                   placeholder={t("cart.placeholder")}
                   className="border-text/20 font-body text-text placeholder:text-text-muted/60 min-w-0 flex-1 rounded-l border border-r-0 bg-transparent px-4 py-3 text-[12px] outline-none"
                 />
                 <button
                   type="submit"
-                  onClick={handlePromo}
+                  onClick={() => handlePromo(promo)}
                   className="bg-wine focus-visible:ring-gold focus-visible:ring-offset-cream text-cream font-body hover:bg-wine-light rounded-r px-5 py-2 text-[10px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                 >
                   {t("cart.apply-btn")}
@@ -244,10 +241,12 @@ export default function Cart() {
             <div className="flex flex-col gap-2">
               <button
                 type="button"
+                onClick={() => navigate("/checkout")}
                 className="bg-wine font-body focus-visible:ring-gold focus-visible:ring-offset-cream hover:bg-wine-light rounded py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 {t("cart.order-btn")}
               </button>
+
               <button
                 type="button"
                 onClick={clearCart}
