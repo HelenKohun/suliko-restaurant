@@ -13,7 +13,7 @@ i18n
       en: { translation: en },
       ru: { translation: ru },
     },
-    lng: 'pl',
+    lng: localStorage.getItem("suliko-language") || "pl",
     fallbackLng: 'pl',
     interpolation: {
       escapeValue: false,

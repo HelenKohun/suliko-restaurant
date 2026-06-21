@@ -19,7 +19,10 @@ export default function LangSwitcher() {
               language: language,
             })}
             aria-pressed={isActive}
-            onClick={() => i18n.changeLanguage(lang)}
+            onClick={() => {
+              i18n.changeLanguage(lang);
+              localStorage.setItem("suliko-language", lang);
+            }}
             className={`font-body cursor-pointer text-[10px] tracking-widest uppercase transition-colors duration-200 ${isActive ? "text-gold" : "text-white/70 hover:text-white/70"}`}
           >
             {lang}
