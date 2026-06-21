@@ -1,6 +1,7 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware"
 
-const useCartStore = create((set) => ({
+const useCartStore = create(persist((set) => ({
 
   items: [],
 
@@ -52,7 +53,7 @@ const useCartStore = create((set) => ({
   }),
 
 
-}));
+}), { name: "suliko-cart" }));
 
 
 export default useCartStore
