@@ -6,12 +6,14 @@ import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import WineList from "./pages/WineList";
 import ErrorPage from "./pages/ErrorPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 import MainLayout from "./layouts/MainLayout";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
