@@ -21,7 +21,7 @@ export default function Cart() {
   const decreaseItem = useCartStore((state) => state.decreaseItem);
   const clearCart = useCartStore((state) => state.clearCart);
 
-  const promoCode = useCartStore((state) => state.PromoCode);
+  const promoCode = useCartStore((state) => state.promoCode);
   const isPromoCorrect = useCartStore((state) => state.isPromoCorrect);
   const promoError = useCartStore((state) => state.promoError);
   const applyPromo = useCartStore((state) => state.applyPromo);

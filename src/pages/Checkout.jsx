@@ -12,7 +12,6 @@ export default function Checkout() {
   const [isOrderSubmitted, setIsOrderSubmitted] = useState(false);
 
   // Form
-
   const {
     register,
     handleSubmit,
@@ -100,11 +99,11 @@ export default function Checkout() {
         {/* Header */}
         <div className="text-center">
           <h1 className="font-heading mt-6 text-6xl font-light tracking-[0.08em] uppercase lg:text-7xl">
-            zamówienie
+            {t("checkout.header")}
           </h1>
 
           <p className="font-body text-text-muted mt-4 text-sm">
-            Wypełnij dane, aby dokończyć zamówienie
+            {t("checkout.header-text")}
           </p>
         </div>
 
@@ -115,7 +114,8 @@ export default function Checkout() {
               1
             </div>
             <span className="font-body text-wine mt-3 text-center text-[10px] tracking-widest uppercase">
-              Dane <br /> kontaktowe
+              {t("checkout.steps-num.1.text1")} <br />{" "}
+              {t("checkout.steps-num.1.text2")}
             </span>
           </div>
 
@@ -132,8 +132,8 @@ export default function Checkout() {
             <span
               className={`font-body mt-3 text-center text-[10px] tracking-widest uppercase ${step >= 2 ? "text-wine" : "text-text-muted"}`}
             >
-              Dostawa <br />
-              płatność
+              {t("checkout.steps-num.2.text1")} <br />
+              {t("checkout.steps-num.2.text2")}
             </span>
           </div>
 
@@ -150,7 +150,7 @@ export default function Checkout() {
             <span
               className={`font-body mt-3 text-center text-[10px] tracking-widest uppercase ${step >= 3 ? "text-wine" : "text-text-muted"}`}
             >
-              Potwierdzenie
+              {t("checkout.steps-num.3.text1")}
             </span>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function Checkout() {
                     </span>
 
                     <h2 className="font-heading text-3xl font-light">
-                      Dane kontaktowe
+                      {t("checkout.main-content.left-card.step-1.header")}
                     </h2>
                   </div>
                   <span className="text-gold text-lg">
@@ -185,15 +185,20 @@ export default function Checkout() {
                   <form className="mt-8">
                     <div>
                       <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
-                        Imię i nazwisko *
+                        {t("checkout.main-content.left-card.step-1.form.name")}{" "}
+                        *
                       </label>
 
                       <input
                         {...register("fullname", {
-                          required: "Imię i nazwisko są wymagane",
+                          required: t(
+                            "checkout.main-content.left-card.step-1.form.name-error1",
+                          ),
                           validate: (value) =>
                             value.trim().length >= 2 ||
-                            "Wpisz poprawne imię i nazwisko",
+                            t(
+                              "checkout.main-content.left-card.step-1.form.name-error2",
+                            ),
                         })}
                         type="text"
                         placeholder="Anna Kowalska"
@@ -209,15 +214,22 @@ export default function Checkout() {
                     <div className="mt-6 grid gap-4 md:grid-cols-2">
                       <div>
                         <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
-                          Telefon *
+                          {t(
+                            "checkout.main-content.left-card.step-1.form.phone",
+                          )}{" "}
+                          *
                         </label>
 
                         <input
                           {...register("phone", {
-                            required: "Numer telefonu jest wymagany",
+                            required: t(
+                              "checkout.main-content.left-card.step-1.form.phone-error1",
+                            ),
                             pattern: {
                               value: /^(?:\+48\s?)?(?:\d{3}[\s-]?){2}\d{3}$/,
-                              message: "Wpisz poprawny numer telefonu",
+                              message: t(
+                                "checkout.main-content.left-card.step-1.form.phone-error2",
+                              ),
                             },
                           })}
                           type="tel"
@@ -233,15 +245,22 @@ export default function Checkout() {
 
                       <div>
                         <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
-                          Email *
+                          {t(
+                            "checkout.main-content.left-card.step-1.form.email",
+                          )}{" "}
+                          *
                         </label>
 
                         <input
                           {...register("email", {
-                            required: "Adres e-mail jest wymagany",
+                            required: t(
+                              "checkout.main-content.left-card.step-1.form.email-error1",
+                            ),
                             pattern: {
                               value: /^\S+@\S+\.\S+$/,
-                              message: "Wpisz poprawny adres e-mail",
+                              message: t(
+                                "checkout.main-content.left-card.step-1.form.email-error2",
+                              ),
                             },
                           })}
                           type="email"
@@ -262,7 +281,9 @@ export default function Checkout() {
                       onClick={goToDeliveryStep}
                       className="bg-wine font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-8 flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                     >
-                      Dalej: dostawa
+                      {t(
+                        "checkout.main-content.left-card.step-1.form.step1-btn",
+                      )}
                       <MoveRight size={13} />
                     </button>
                   </form>
@@ -286,7 +307,7 @@ export default function Checkout() {
                       </span>
 
                       <h2 className="font-heading text-3xl font-light">
-                        Dostawa i płatność
+                        {t("checkout.main-content.left-card.step-2.header")}
                       </h2>
                     </div>
                     <span className="text-gold text-lg">
@@ -298,7 +319,10 @@ export default function Checkout() {
                     <form className="mt-8">
                       <div>
                         <p className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
-                          Metoda dostawy *
+                          {t(
+                            "checkout.main-content.left-card.step-2.form.delivery-method",
+                          )}{" "}
+                          *
                         </p>
 
                         <div className="grid grid-cols-2 gap-3">
@@ -312,12 +336,16 @@ export default function Checkout() {
                             <input
                               type="radio"
                               {...register("deliveryMethod", {
-                                required: "Wybierz metodę dostawy",
+                                required: t(
+                                  "checkout.main-content.left-card.step-2.form.delivery-pickup-error",
+                                ),
                               })}
                               value="delivery"
                               className="sr-only"
                             />
-                            Dostawa
+                            {t(
+                              "checkout.main-content.left-card.step-2.form.delivery",
+                            )}
                           </label>
 
                           <label
@@ -330,12 +358,16 @@ export default function Checkout() {
                             <input
                               type="radio"
                               {...register("deliveryMethod", {
-                                required: "Wybierz metodę dostawy",
+                                required: t(
+                                  "checkout.main-content.left-card.step-2.form.delivery-pickup-error",
+                                ),
                               })}
                               value="pickup"
                               className="sr-only"
                             />
-                            Odbiór osobisty
+                            {t(
+                              "checkout.main-content.left-card.step-2.form.pickup",
+                            )}
                           </label>
 
                           {errors.deliveryMethod && (
@@ -349,14 +381,19 @@ export default function Checkout() {
                         <>
                           <div>
                             <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
-                              Adres dostawy *
+                              {t(
+                                "checkout.main-content.left-card.step-2.form.address",
+                              )}{" "}
+                              *
                             </label>
 
                             <input
                               {...register("address", {
                                 required:
                                   deliveryMethod === "delivery"
-                                    ? "Adres dostawy jest wymagany"
+                                    ? t(
+                                        "checkout.main-content.left-card.step-2.form.address-error",
+                                      )
                                     : false,
                               })}
                               type="text"
@@ -371,18 +408,25 @@ export default function Checkout() {
                           </div>
                           <div>
                             <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
-                              Kod pocztowy *
+                              {t(
+                                "checkout.main-content.left-card.step-2.form.postal-code",
+                              )}{" "}
+                              *
                             </label>
 
                             <input
                               {...register("postalCode", {
                                 required:
                                   deliveryMethod === "delivery"
-                                    ? "Kod pocztowy jest wymagany"
+                                    ? t(
+                                        "checkout.main-content.left-card.step-2.form.postal-code-error1",
+                                      )
                                     : false,
                                 pattern: {
                                   value: /^\d{2}-\d{3}$/,
-                                  message: "Wpisz poprawny kod pocztowy",
+                                  message: t(
+                                    "checkout.main-content.left-card.step-2.form.postal-code-error2",
+                                  ),
                                 },
                               })}
                               type="text"
@@ -400,20 +444,27 @@ export default function Checkout() {
 
                       <div>
                         <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
-                          Uwagi do zamówienia
+                          {t(
+                            "checkout.main-content.left-card.step-2.form.message",
+                          )}
                         </label>
 
                         <textarea
                           {...register("notes")}
                           rows={5}
                           className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 mb-2 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
-                          placeholder="Proszę położyć dodatkowe sztućce..."
+                          placeholder={t(
+                            "checkout.main-content.left-card.step-2.form.message-placeholder",
+                          )}
                         ></textarea>
                       </div>
 
                       <div>
                         <p className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
-                          Metody płatności *
+                          {t(
+                            "checkout.main-content.left-card.step-2.form.payment-method",
+                          )}{" "}
+                          *
                         </p>
 
                         <div className="grid grid-cols-2 gap-3">
@@ -427,12 +478,16 @@ export default function Checkout() {
                             <input
                               type="radio"
                               {...register("paymentMethod", {
-                                required: "Wybierz metodę płatności",
+                                required: t(
+                                  "checkout.main-content.left-card.step-2.form.cash-error",
+                                ),
                               })}
                               value="cash"
                               className="sr-only"
                             />
-                            Gotówka
+                            {t(
+                              "checkout.main-content.left-card.step-2.form.cash",
+                            )}
                           </label>
 
                           <label
@@ -445,12 +500,16 @@ export default function Checkout() {
                             <input
                               type="radio"
                               {...register("paymentMethod", {
-                                required: "Wybierz metodę płatności",
+                                required: t(
+                                  "checkout.main-content.left-card.step-2.form.byCard-error",
+                                ),
                               })}
                               value="card"
                               className="sr-only"
                             />
-                            Karta kredytowa
+                            {t(
+                              "checkout.main-content.left-card.step-2.form.byCard",
+                            )}
                           </label>
                           {errors.paymentMethod && (
                             <span className="font-body mt-1 block text-[10px] text-red-400">
@@ -465,7 +524,9 @@ export default function Checkout() {
                         onClick={goToConfirmationStep}
                         className="bg-wine font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-8 flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
-                        Potwierdzenie zamówienia
+                        {t(
+                          "checkout.main-content.left-card.step-2.form.step2-btn",
+                        )}
                         <MoveRight size={13} />
                       </button>
                     </form>
@@ -490,7 +551,7 @@ export default function Checkout() {
                       </span>
 
                       <h2 className="font-heading text-3xl font-light">
-                        Potwierdzenie zamówienia
+                        {t("checkout.main-content.left-card.step-3.header")}
                       </h2>
                     </div>
                     <span className="text-gold text-lg">
@@ -503,13 +564,17 @@ export default function Checkout() {
                       <div className="mt-8 grid gap-6 md:grid-cols-2">
                         <div className="border-gold/20 bg-cream/70 rounded border p-5">
                           <p className="font-body text-gold mb-4 text-[10px] tracking-widest uppercase">
-                            Dane kontaktowe
+                            {t(
+                              "checkout.main-content.left-card.step-3.contact-data",
+                            )}
                           </p>
 
                           <div className="space-y-3">
                             <div className="flex justify-between gap-4">
                               <span className="font-body text-text-muted text-sm">
-                                Imię i nazwisko
+                                {t(
+                                  "checkout.main-content.left-card.step-3.name",
+                                )}
                               </span>
                               <span className="font-body text-text text-right text-sm">
                                 {formValues.fullname}
@@ -518,7 +583,9 @@ export default function Checkout() {
 
                             <div className="flex justify-between gap-4">
                               <span className="font-body text-text-muted text-sm">
-                                Telefon
+                                {t(
+                                  "checkout.main-content.left-card.step-3.phone",
+                                )}
                               </span>
                               <span className="font-body text-text text-right text-sm">
                                 {formValues.phone}
@@ -527,7 +594,9 @@ export default function Checkout() {
 
                             <div className="flex justify-between gap-4">
                               <span className="font-body text-text-muted text-sm">
-                                Email
+                                {t(
+                                  "checkout.main-content.left-card.step-3.email",
+                                )}
                               </span>
                               <span className="font-body text-text text-right text-sm">
                                 {formValues.email}
@@ -538,18 +607,26 @@ export default function Checkout() {
 
                         <div className="border-gold/20 bg-cream/70 rounded border p-5">
                           <p className="font-body text-gold mb-4 text-[10px] tracking-widest uppercase">
-                            Dostawa i płatność
+                            {t(
+                              "checkout.main-content.left-card.step-3.delivery-payment",
+                            )}
                           </p>
 
                           <div className="space-y-3">
                             <div className="flex justify-between gap-4">
                               <span className="font-body text-text-muted text-sm">
-                                Metoda dostawy
+                                {t(
+                                  "checkout.main-content.left-card.step-3.delivery-method",
+                                )}
                               </span>
                               <span className="font-body text-text text-right text-sm">
                                 {formValues.deliveryMethod === "delivery"
-                                  ? "Dostawa"
-                                  : "Odbiór osobisty"}
+                                  ? t(
+                                      "checkout.main-content.left-card.step-3.delivery",
+                                    )
+                                  : t(
+                                      "checkout.main-content.left-card.step-3.pickup",
+                                    )}
                               </span>
                             </div>
 
@@ -557,7 +634,9 @@ export default function Checkout() {
                               <>
                                 <div className="flex justify-between gap-4">
                                   <span className="font-body text-text-muted text-sm">
-                                    Adres
+                                    {t(
+                                      "checkout.main-content.left-card.step-3.address",
+                                    )}
                                   </span>
                                   <span className="font-body text-text text-right text-sm">
                                     {formValues.address}
@@ -566,7 +645,9 @@ export default function Checkout() {
 
                                 <div className="flex justify-between gap-4">
                                   <span className="font-body text-text-muted text-sm">
-                                    Kod pocztowy
+                                    {t(
+                                      "checkout.main-content.left-card.step-3.postal-code",
+                                    )}
                                   </span>
                                   <span className="font-body text-text text-right text-sm">
                                     {formValues.postalCode}
@@ -579,19 +660,27 @@ export default function Checkout() {
 
                             <div className="flex justify-between gap-4">
                               <span className="font-body text-text-muted text-sm">
-                                Płatność
+                                {t(
+                                  "checkout.main-content.left-card.step-3.payment",
+                                )}
                               </span>
                               <span className="font-body text-text text-right text-sm">
                                 {formValues.paymentMethod === "cash"
-                                  ? "Gotówka"
-                                  : "Karta kredytowa"}
+                                  ? t(
+                                      "checkout.main-content.left-card.step-3.cash",
+                                    )
+                                  : t(
+                                      "checkout.main-content.left-card.step-3.byCard",
+                                    )}
                               </span>
                             </div>
 
                             {formValues.notes && (
                               <div className="flex justify-between gap-4">
                                 <span className="font-body text-text-muted text-sm">
-                                  Uwagi do zamówienia
+                                  {t(
+                                    "checkout.main-content.left-card.step-3.message",
+                                  )}
                                 </span>
                                 <span className="font-body text-text text-right text-sm">
                                   {formValues.notes}
@@ -608,7 +697,9 @@ export default function Checkout() {
                           onClick={handleSubmit(handleOrderSubmit)}
                           className="bg-wine font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-8 flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                         >
-                          Złóż zamówienie
+                          {t(
+                            "checkout.main-content.left-card.step-3.confirm-btn",
+                          )}
                         </button>
                       </form>
                     </>
@@ -620,7 +711,7 @@ export default function Checkout() {
             {/* Right order summary */}
             <aside className="bg-dark-wine text-cream rounded-lg p-8 shadow-xl md:p-9">
               <h2 className="font-heading text-3xl font-light">
-                Twoje zamówienie
+                {t("checkout.main-content.right-card.order")}
               </h2>
 
               <div className="mt-8 space-y-5">
@@ -654,17 +745,17 @@ export default function Checkout() {
 
               <div className="border-gold/10 mt-8 space-y-3 border-b pb-5">
                 <div className="font-body text-cream/60 flex justify-between text-sm">
-                  <span>Suma produktów</span>
+                  <span>{t("checkout.main-content.right-card.sum")}</span>
                   <span className="text-cream">{subtotal.toFixed(0)} zł</span>
                 </div>
 
                 <div className="font-body text-cream/60 flex justify-between text-sm">
-                  <span>Dostawa</span>
+                  <span>{t("checkout.main-content.right-card.delivery")}</span>
                   <span className="text-cream">{delivery} zł</span>
                 </div>
 
                 <div className="font-body text-cream/60 flex justify-between text-sm">
-                  <span>Kod promocyjny</span>
+                  <span>{t("checkout.main-content.right-card.promo")}</span>
                   <span className="text-gold">− {discount.toFixed(0)} zł</span>
                 </div>
               </div>
@@ -679,7 +770,7 @@ export default function Checkout() {
               <div className="border-gold/10 mt-8 border-t pt-5">
                 <p className="font-body text-cream/45 flex items-center gap-2 text-[11px]">
                   <LockKeyhole size={12} />
-                  Twoje dane są bezpieczne i nie są udostępniane
+                  {t("checkout.main-content.right-card.safety")}
                 </p>
               </div>
             </aside>
@@ -690,22 +781,22 @@ export default function Checkout() {
           <div className="bg-cream text-text min-h-screen px-6 py-24">
             <div className="mx-auto max-w-2xl text-center">
               <p className="font-body text-gold text-[10px] tracking-[0.35em] uppercase">
-                Zamówienie potwierdzone
+                {t("checkout.main-content.confirmation.confirmation")}
               </p>
 
               <h1 className="font-heading mt-6 text-6xl font-light">
-                Dziękujemy
+                {t("checkout.main-content.confirmation.thanks")}
               </h1>
 
               <p className="font-body text-text-muted mx-auto mt-6 max-w-xl text-sm leading-7">
-                Twoje zamówienie zostało przyjęte. <br /> Wkrótce skontaktujemy
-                się z Tobą, aby potwierdzić szczegóły dostawy.
+                {t("checkout.main-content.confirmation.info1")} <br />{" "}
+                {t("checkout.main-content.confirmation.info2")}
               </p>
 
               <div className="border-gold/30 bg-card mx-auto mt-10 max-w-md rounded border px-8 py-6">
                 <div className="border-gold/20 flex justify-between border-b pb-3">
                   <span className="font-body text-text-muted text-sm">
-                    Numer zamówienia
+                    {t("checkout.main-content.confirmation.order-num")}
                   </span>
                   <span className="font-heading text-wine text-xl">
                     #SLK-2026
@@ -714,9 +805,11 @@ export default function Checkout() {
 
                 <div className="mt-4 flex justify-between">
                   <span className="font-body text-text-muted text-sm">
-                    Czas dostawy
+                    {t("checkout.main-content.confirmation.order-time")}
                   </span>
-                  <span className="font-body text-text text-sm">45–60 min</span>
+                  <span className="font-body text-text text-sm">
+                    {t("checkout.main-content.confirmation.order-min")}
+                  </span>
                 </div>
               </div>
 
@@ -725,14 +818,14 @@ export default function Checkout() {
                   to="/menu"
                   className="border-wine/30 text-wine font-body hover:bg-wine hover:text-cream focus-visible:ring-gold focus-visible:ring-offset-cream inline-flex items-center justify-center rounded border px-8 py-4 text-[12px] tracking-widest uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                 >
-                  Wróć do menu
+                  {t("checkout.main-content.confirmation.menu-btn")}
                 </Link>
 
                 <Link
                   to="/"
                   className="border-wine/30 text-wine font-body hover:bg-wine hover:text-cream focus-visible:ring-gold focus-visible:ring-offset-cream inline-flex items-center justify-center rounded border px-8 py-4 text-[12px] tracking-widest uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
                 >
-                  Strona główna
+                  {t("checkout.main-content.confirmation.home-btn")}
                 </Link>
               </div>
             </div>
