@@ -2,10 +2,13 @@ import { useState } from "react";
 import useCartStore from "../store/cartStore";
 import { useTranslation } from "react-i18next";
 import { getCartTotals } from "../utils/cartTotals";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import CheckoutStepsNav from "../components/CheckoutStepsNav";
 import OrderConfirmation from "../components/OrderConfirmation";
+import CheckoutContactStep from "../components/CheckoutContactStep";
+import CheckoutDeliveryStep from "../components/CheckoutDeliveryStep";
+import ChechoutReviewStep from "../components/CheckoutReviewStep";
 
 import { LockKeyhole, ChevronDown, MoveRight } from "lucide-react";
 
@@ -165,111 +168,11 @@ export default function Checkout() {
                 </button>
 
                 {step === 1 && (
-                  <form className="mt-8">
-                    <div>
-                      <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
-                        {t("checkout.main-content.left-card.step-1.form.name")}{" "}
-                        *
-                      </label>
-
-                      <input
-                        {...register("fullname", {
-                          required: t(
-                            "checkout.main-content.left-card.step-1.form.name-error1",
-                          ),
-                          validate: (value) =>
-                            value.trim().length >= 2 ||
-                            t(
-                              "checkout.main-content.left-card.step-1.form.name-error2",
-                            ),
-                        })}
-                        type="text"
-                        placeholder="Anna Kowalska"
-                        className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
-                      />
-                      {errors.fullname && (
-                        <span className="font-body mt-1 text-[10px] text-red-400">
-                          {errors.fullname.message}
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="mt-6 grid gap-4 md:grid-cols-2">
-                      <div>
-                        <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
-                          {t(
-                            "checkout.main-content.left-card.step-1.form.phone",
-                          )}{" "}
-                          *
-                        </label>
-
-                        <input
-                          {...register("phone", {
-                            required: t(
-                              "checkout.main-content.left-card.step-1.form.phone-error1",
-                            ),
-                            pattern: {
-                              value: /^(?:\+48\s?)?(?:\d{3}[\s-]?){2}\d{3}$/,
-                              message: t(
-                                "checkout.main-content.left-card.step-1.form.phone-error2",
-                              ),
-                            },
-                          })}
-                          type="tel"
-                          placeholder="+48 000 000 000"
-                          className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
-                        />
-                        {errors.phone && (
-                          <span className="font-body mt-1 text-[10px] text-red-400">
-                            {errors.phone.message}
-                          </span>
-                        )}
-                      </div>
-
-                      <div>
-                        <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
-                          {t(
-                            "checkout.main-content.left-card.step-1.form.email",
-                          )}{" "}
-                          *
-                        </label>
-
-                        <input
-                          {...register("email", {
-                            required: t(
-                              "checkout.main-content.left-card.step-1.form.email-error1",
-                            ),
-                            pattern: {
-                              value: /^\S+@\S+\.\S+$/,
-                              message: t(
-                                "checkout.main-content.left-card.step-1.form.email-error2",
-                              ),
-                            },
-                          })}
-                          type="email"
-                          placeholder="anna@example.com"
-                          className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
-                        />
-
-                        {errors.email && (
-                          <span className="font-body mt-1 text-[10px] text-red-400">
-                            {errors.email.message}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={goToDeliveryStep}
-                      className="bg-wine font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-8 flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-                    >
-                      {t(
-                        "checkout.main-content.left-card.step-1.form.step1-btn",
-                      )}
-                      <MoveRight size={13} />
-                    </button>
-                  </form>
+                  <CheckoutContactStep
+                    register={register}
+                    errors={errors}
+                    onNext={goToDeliveryStep}
+                  />
                 )}
               </div>
 
@@ -299,220 +202,13 @@ export default function Checkout() {
                   </button>
 
                   {step === 2 && (
-                    <form className="mt-8">
-                      <div>
-                        <p className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
-                          {t(
-                            "checkout.main-content.left-card.step-2.form.delivery-method",
-                          )}{" "}
-                          *
-                        </p>
-
-                        <div className="grid grid-cols-2 gap-3">
-                          <label
-                            className={`font-body flex cursor-pointer items-center justify-center gap-2 rounded border px-4 py-3 text-[12px] tracking-widest uppercase transition-colors duration-200 ${
-                              deliveryMethod === "delivery"
-                                ? "border-wine bg-wine text-cream"
-                                : "border-text/20 text-text hover:border-wine/50 bg-transparent"
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              {...register("deliveryMethod", {
-                                required: t(
-                                  "checkout.main-content.left-card.step-2.form.delivery-pickup-error",
-                                ),
-                              })}
-                              value="delivery"
-                              className="sr-only"
-                            />
-                            {t(
-                              "checkout.main-content.left-card.step-2.form.delivery",
-                            )}
-                          </label>
-
-                          <label
-                            className={`font-body flex cursor-pointer items-center justify-center gap-2 rounded border px-4 py-3 text-[12px] tracking-widest uppercase transition-colors duration-200 ${
-                              deliveryMethod === "pickup"
-                                ? "border-wine bg-wine text-cream"
-                                : "border-text/20 text-text hover:border-wine/50 bg-transparent"
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              {...register("deliveryMethod", {
-                                required: t(
-                                  "checkout.main-content.left-card.step-2.form.delivery-pickup-error",
-                                ),
-                              })}
-                              value="pickup"
-                              className="sr-only"
-                            />
-                            {t(
-                              "checkout.main-content.left-card.step-2.form.pickup",
-                            )}
-                          </label>
-
-                          {errors.deliveryMethod && (
-                            <span className="font-body mt-1 block text-[10px] text-red-400">
-                              {errors.deliveryMethod.message}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      {deliveryMethod === "delivery" && (
-                        <>
-                          <div>
-                            <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
-                              {t(
-                                "checkout.main-content.left-card.step-2.form.address",
-                              )}{" "}
-                              *
-                            </label>
-
-                            <input
-                              {...register("address", {
-                                required:
-                                  deliveryMethod === "delivery"
-                                    ? t(
-                                        "checkout.main-content.left-card.step-2.form.address-error",
-                                      )
-                                    : false,
-                              })}
-                              type="text"
-                              placeholder="ul. Mokotowska 95A/5"
-                              className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
-                            />
-                            {errors.address && (
-                              <span className="font-body mt-1 block text-[10px] text-red-400">
-                                {errors.address.message}
-                              </span>
-                            )}
-                          </div>
-                          <div>
-                            <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
-                              {t(
-                                "checkout.main-content.left-card.step-2.form.postal-code",
-                              )}{" "}
-                              *
-                            </label>
-
-                            <input
-                              {...register("postalCode", {
-                                required:
-                                  deliveryMethod === "delivery"
-                                    ? t(
-                                        "checkout.main-content.left-card.step-2.form.postal-code-error1",
-                                      )
-                                    : false,
-                                pattern: {
-                                  value: /^\d{2}-\d{3}$/,
-                                  message: t(
-                                    "checkout.main-content.left-card.step-2.form.postal-code-error2",
-                                  ),
-                                },
-                              })}
-                              type="text"
-                              placeholder="99-999"
-                              className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
-                            />
-                            {errors.postalCode && (
-                              <span className="font-body mt-1 block text-[10px] text-red-400">
-                                {errors.postalCode.message}
-                              </span>
-                            )}
-                          </div>
-                        </>
-                      )}
-
-                      <div>
-                        <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
-                          {t(
-                            "checkout.main-content.left-card.step-2.form.message",
-                          )}
-                        </label>
-
-                        <textarea
-                          {...register("notes")}
-                          rows={5}
-                          className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 mb-2 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
-                          placeholder={t(
-                            "checkout.main-content.left-card.step-2.form.message-placeholder",
-                          )}
-                        ></textarea>
-                      </div>
-
-                      <div>
-                        <p className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
-                          {t(
-                            "checkout.main-content.left-card.step-2.form.payment-method",
-                          )}{" "}
-                          *
-                        </p>
-
-                        <div className="grid grid-cols-2 gap-3">
-                          <label
-                            className={`font-body flex cursor-pointer items-center justify-center gap-2 rounded border px-4 py-3 text-[12px] tracking-widest uppercase transition-colors duration-200 ${
-                              paymentMethod === "cash"
-                                ? "border-wine bg-wine text-cream"
-                                : "border-text/20 text-text hover:border-wine/50 bg-transparent"
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              {...register("paymentMethod", {
-                                required: t(
-                                  "checkout.main-content.left-card.step-2.form.cash-error",
-                                ),
-                              })}
-                              value="cash"
-                              className="sr-only"
-                            />
-                            {t(
-                              "checkout.main-content.left-card.step-2.form.cash",
-                            )}
-                          </label>
-
-                          <label
-                            className={`font-body flex cursor-pointer items-center justify-center gap-2 rounded border px-4 py-3 text-[12px] tracking-widest uppercase transition-colors duration-200 ${
-                              paymentMethod === "card"
-                                ? "border-wine bg-wine text-cream"
-                                : "border-text/20 text-text hover:border-wine/50 bg-transparent"
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              {...register("paymentMethod", {
-                                required: t(
-                                  "checkout.main-content.left-card.step-2.form.byCard-error",
-                                ),
-                              })}
-                              value="card"
-                              className="sr-only"
-                            />
-                            {t(
-                              "checkout.main-content.left-card.step-2.form.byCard",
-                            )}
-                          </label>
-                          {errors.paymentMethod && (
-                            <span className="font-body mt-1 block text-[10px] text-red-400">
-                              {errors.paymentMethod.message}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={goToConfirmationStep}
-                        className="bg-wine font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-8 flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-                      >
-                        {t(
-                          "checkout.main-content.left-card.step-2.form.step2-btn",
-                        )}
-                        <MoveRight size={13} />
-                      </button>
-                    </form>
+                    <CheckoutDeliveryStep
+                      register={register}
+                      errors={errors}
+                      onNext={goToConfirmationStep}
+                      paymentMethod={paymentMethod}
+                      deliveryMethod={deliveryMethod}
+                    />
                   )}
                 </div>
               </div>
@@ -543,149 +239,12 @@ export default function Checkout() {
                   </button>
 
                   {step === 3 && (
-                    <>
-                      <div className="mt-8 grid gap-6 md:grid-cols-2">
-                        <div className="border-gold/20 bg-cream/70 rounded border p-5">
-                          <p className="font-body text-gold mb-4 text-[10px] tracking-widest uppercase">
-                            {t(
-                              "checkout.main-content.left-card.step-3.contact-data",
-                            )}
-                          </p>
-
-                          <div className="space-y-3">
-                            <div className="flex justify-between gap-4">
-                              <span className="font-body text-text-muted text-sm">
-                                {t(
-                                  "checkout.main-content.left-card.step-3.name",
-                                )}
-                              </span>
-                              <span className="font-body text-text text-right text-sm">
-                                {formValues.fullname}
-                              </span>
-                            </div>
-
-                            <div className="flex justify-between gap-4">
-                              <span className="font-body text-text-muted text-sm">
-                                {t(
-                                  "checkout.main-content.left-card.step-3.phone",
-                                )}
-                              </span>
-                              <span className="font-body text-text text-right text-sm">
-                                {formValues.phone}
-                              </span>
-                            </div>
-
-                            <div className="flex justify-between gap-4">
-                              <span className="font-body text-text-muted text-sm">
-                                {t(
-                                  "checkout.main-content.left-card.step-3.email",
-                                )}
-                              </span>
-                              <span className="font-body text-text text-right text-sm">
-                                {formValues.email}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="border-gold/20 bg-cream/70 rounded border p-5">
-                          <p className="font-body text-gold mb-4 text-[10px] tracking-widest uppercase">
-                            {t(
-                              "checkout.main-content.left-card.step-3.delivery-payment",
-                            )}
-                          </p>
-
-                          <div className="space-y-3">
-                            <div className="flex justify-between gap-4">
-                              <span className="font-body text-text-muted text-sm">
-                                {t(
-                                  "checkout.main-content.left-card.step-3.delivery-method",
-                                )}
-                              </span>
-                              <span className="font-body text-text text-right text-sm">
-                                {formValues.deliveryMethod === "delivery"
-                                  ? t(
-                                      "checkout.main-content.left-card.step-3.delivery",
-                                    )
-                                  : t(
-                                      "checkout.main-content.left-card.step-3.pickup",
-                                    )}
-                              </span>
-                            </div>
-
-                            {formValues.deliveryMethod === "delivery" ? (
-                              <>
-                                <div className="flex justify-between gap-4">
-                                  <span className="font-body text-text-muted text-sm">
-                                    {t(
-                                      "checkout.main-content.left-card.step-3.address",
-                                    )}
-                                  </span>
-                                  <span className="font-body text-text text-right text-sm">
-                                    {formValues.address}
-                                  </span>
-                                </div>
-
-                                <div className="flex justify-between gap-4">
-                                  <span className="font-body text-text-muted text-sm">
-                                    {t(
-                                      "checkout.main-content.left-card.step-3.postal-code",
-                                    )}
-                                  </span>
-                                  <span className="font-body text-text text-right text-sm">
-                                    {formValues.postalCode}
-                                  </span>
-                                </div>
-                              </>
-                            ) : (
-                              false
-                            )}
-
-                            <div className="flex justify-between gap-4">
-                              <span className="font-body text-text-muted text-sm">
-                                {t(
-                                  "checkout.main-content.left-card.step-3.payment",
-                                )}
-                              </span>
-                              <span className="font-body text-text text-right text-sm">
-                                {formValues.paymentMethod === "cash"
-                                  ? t(
-                                      "checkout.main-content.left-card.step-3.cash",
-                                    )
-                                  : t(
-                                      "checkout.main-content.left-card.step-3.byCard",
-                                    )}
-                              </span>
-                            </div>
-
-                            {formValues.notes && (
-                              <div className="flex justify-between gap-4">
-                                <span className="font-body text-text-muted text-sm">
-                                  {t(
-                                    "checkout.main-content.left-card.step-3.message",
-                                  )}
-                                </span>
-                                <span className="font-body text-text text-right text-sm">
-                                  {formValues.notes}
-                                </span>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                      <form className="mt-8">
-                        <button
-                          type="button"
-                          disabled={isSubmitting}
-                          onClick={handleSubmit(handleOrderSubmit)}
-                          className="bg-wine font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-8 flex w-full items-center justify-center gap-2 rounded px-8 py-4 text-[12px] tracking-widest text-white uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-                        >
-                          {t(
-                            "checkout.main-content.left-card.step-3.confirm-btn",
-                          )}
-                        </button>
-                      </form>
-                    </>
+                    <ChechoutReviewStep
+                      formValues={formValues}
+                      isSubmitting={isSubmitting}
+                      onSubmit={handleOrderSubmit}
+                      handleSubmit={handleSubmit}
+                    />
                   )}
                 </div>
               </div>
