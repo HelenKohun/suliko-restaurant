@@ -951,6 +951,7 @@
       "right-card": {
         "order": "Your order",
         "sum": "Items subtotal",
+        "total": "Total",
         "delivery": "Delivery",
         "promo": "Promo code",
         "safety": "Your data is safe and will not be shared"
