@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export default function ChechoutReviewStep({
+export default function CheckoutReviewStep({
   formValues,
   isSubmitting,
   handleSubmit,
