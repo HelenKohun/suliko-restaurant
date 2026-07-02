@@ -878,5 +878,100 @@
         "description": "Blend odmian kachetyńskich w wersji różowej. Świeże i owocowe z mineralną kwasowością."
       }
     }
+  },
+  "checkout": {
+    "header": "zamówienie",
+    "header-text": "Wypełnij dane, aby dokończyć zamówienie",
+    "steps-num": {
+      "1": {
+        "text1": "Dane",
+        "text2": "kontaktowe"
+      },
+      "2": {
+        "text1": "Dostawa",
+        "text2": "płatność"
+      },
+      "3": {
+        "text1": "Potwierdzenie"
+      }
+    },
+
+    "main-content": {
+      "left-card": {
+        "step-1": {
+          "header": "Dane kontaktowe",
+          "form": {
+            "name": "Imię i nazwisko",
+            "name-error1": "Imię i nazwisko są wymagane",
+            "name-error2": "Wpisz poprawne imię i nazwisko",
+            "phone": "Telefon",
+            "phone-error1": "Numer telefonu jest wymagany",
+            "phone-error2": "Wpisz poprawny numer telefonu",
+            "email": "Email",
+            "email-error1": "Adres e-mail jest wymagany",
+            "email-error2": "Wpisz poprawny adres e-mail",
+            "step1-btn": "Dalej: dostawa"
+          }
+        },
+        "step-2": {
+          "header": "Dostawa i płatność",
+          "form": {
+            "delivery-method": "Metoda dostawy",
+            "delivery": "Dostawa",
+            "delivery-pickup-error": "Wybierz metodę dostawy",
+            "pickup": "Odbiór osobisty",
+            "address": "Adres dostawy",
+            "address-error": "Adres dostawy jest wymagany",
+            "postal-code": "Kod pocztowy",
+            "postal-code-error1": "Kod pocztowy jest wymagany",
+            "postal-code-error2": "Wpisz poprawny kod pocztowy",
+            "message": "Uwagi do zamówienia",
+            "message-placeholder": "Proszę położyć dodatkowe sztućce...",
+            "payment-method": "Metoda płatności",
+            "cash": "Gotówka",
+            "cash-error": "Wybierz metodę płatności",
+            "byCard": "Karta kredytowa",
+            "byCard-error": "Wybierz metodę płatności",
+            "step2-btn": "Potwierdzenie zamówienia"
+          }
+        },
+        "step-3": {
+          "header": "Potwierdzenie zamówienia",
+          "contact-data": "Dane kontaktowe",
+          "name": "Imię i nazwisko",
+          "phone": "Telefon",
+          "email": "Email",
+          "delivery-payment": "Dostawa i płatność",
+          "delivery-method": "Metoda dostawy",
+          "delivery": "Dostawa",
+          "pickup": "Odbiór osobisty",
+          "address": "Adres",
+          "postal-code": "Kod pocztowy",
+          "payment": "Płatność",
+          "cash": "Gotówka",
+          "byCard": "Karta kredytowa",
+          "message": "Uwagi do zamówienia",
+          "confirm-btn": "Złóż zamówienie"
+        }
+      },
+      "right-card": {
+        "order": "Twoje zamówienie",
+        "sum": "Suma produktów",
+        "delivery": "Dostawa",
+        "promo": "Kod promocyjny",
+        "safety": "Twoje dane są bezpieczne i nie są udostępniane"
+      },
+      "confirmation": {
+        "confirmation": "Zamówienie potwierdzone",
+        "thanks": "Dziękujemy",
+        "info1": "Twoje zamówienie zostało przyjęte.",
+        "info2": "Wkrótce skontaktujemy się z Tobą, aby potwierdzić szczegóły dostawy.",
+        "order-num": "Numer zamówienia",
+        "order-time": "Czas dostawy",
+        "order-min": "45–60 min",
+        "menu-btn": "Wróć do menu",
+        "home-btn": "Strona główna"
+      }
+    }
   }
 }

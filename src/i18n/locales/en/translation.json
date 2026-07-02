@@ -872,5 +872,100 @@
         "description": "A blend of Kakhetian varieties in a rosé expression. Fresh and fruit-driven, with mineral acidity."
       }
     }
+  },
+  "checkout": {
+    "header": "Order",
+    "header-text": "Fill in your details to complete your order",
+    "steps-num": {
+      "1": {
+        "text1": "Contact",
+        "text2": "details"
+      },
+      "2": {
+        "text1": "Delivery",
+        "text2": "payment"
+      },
+      "3": {
+        "text1": "Confirmation"
+      }
+    },
+
+    "main-content": {
+      "left-card": {
+        "step-1": {
+          "header": "Contact details",
+          "form": {
+            "name": "Full name",
+            "name-error1": "Full name is required",
+            "name-error2": "Please enter a valid full name",
+            "phone": "Phone",
+            "phone-error1": "Phone number is required",
+            "phone-error2": "Please enter a valid phone number",
+            "email": "Email",
+            "email-error1": "Email address is required",
+            "email-error2": "Please enter a valid email address",
+            "step1-btn": "Next: delivery"
+          }
+        },
+        "step-2": {
+          "header": "Delivery and payment",
+          "form": {
+            "delivery-method": "Delivery method",
+            "delivery": "Delivery",
+            "delivery-pickup-error": "Please choose a delivery method",
+            "pickup": "Pick-up",
+            "address": "Delivery address",
+            "address-error": "Delivery address is required",
+            "postal-code": "Postal code",
+            "postal-code-error1": "Postal code is required",
+            "postal-code-error2": "Please enter a valid postal code",
+            "message": "Order notes",
+            "message-placeholder": "Please add extra cutlery...",
+            "payment-method": "Payment method",
+            "cash": "Cash",
+            "cash-error": "Please choose a payment method",
+            "byCard": "Credit card",
+            "byCard-error": "Please choose a payment method",
+            "step2-btn": "Review order"
+          }
+        },
+        "step-3": {
+          "header": "Order confirmation",
+          "contact-data": "Contact details",
+          "name": "Full name",
+          "phone": "Phone",
+          "email": "Email",
+          "delivery-payment": "Delivery and payment",
+          "delivery-method": "Delivery method",
+          "delivery": "Delivery",
+          "pickup": "Pick-up",
+          "address": "Address",
+          "postal-code": "Postal code",
+          "payment": "Payment",
+          "cash": "Cash",
+          "byCard": "Credit card",
+          "message": "Order notes",
+          "confirm-btn": "Place order"
+        }
+      },
+      "right-card": {
+        "order": "Your order",
+        "sum": "Items subtotal",
+        "delivery": "Delivery",
+        "promo": "Promo code",
+        "safety": "Your data is safe and will not be shared"
+      },
+      "confirmation": {
+        "confirmation": "Order confirmed",
+        "thanks": "Thank you",
+        "info1": "Your order has been received.",
+        "info2": "We will contact you shortly to confirm the delivery details.",
+        "order-num": "Order number",
+        "order-time": "Delivery time",
+        "order-min": "45–60 min",
+        "menu-btn": "Back to menu",
+        "home-btn": "Home page"
+      }
+    }
   }
 }
