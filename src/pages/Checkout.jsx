@@ -4,12 +4,33 @@ import { useTranslation } from "react-i18next";
 import { getCartTotals } from "../utils/cartTotals";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import CheckoutStepsNav from "../components/CheckoutStepsNav";
 
 import { LockKeyhole, ChevronDown, MoveRight } from "lucide-react";
 
 export default function Checkout() {
+  // Translation
+  const { t } = useTranslation();
+
   const [step, setStep] = useState(1);
   const [isOrderSubmitted, setIsOrderSubmitted] = useState(false);
+
+  const steps = [
+    {
+      id: 1,
+      text1: t("checkout.steps-num.1.text1"),
+      text2: t("checkout.steps-num.1.text2"),
+    },
+    {
+      id: 2,
+      text1: t("checkout.steps-num.2.text1"),
+      text2: t("checkout.steps-num.2.text2"),
+    },
+    {
+      id: 3,
+      text1: t("checkout.steps-num.3.text1"),
+    },
+  ];
 
   // Form
   const {
@@ -70,7 +91,6 @@ export default function Checkout() {
         total,
       },
     };
-    console.log(orderData);
 
     clearCart();
     reset();
@@ -83,9 +103,6 @@ export default function Checkout() {
   const items = useCartStore((state) => state.items);
   const isPromoCorrect = useCartStore((state) => state.isPromoCorrect);
   const clearCart = useCartStore((state) => state.clearCart);
-
-  // Translation
-  const { t } = useTranslation();
 
   // Cart Totals
   const { subtotal, discount, delivery, total } = getCartTotals(items, {
@@ -109,50 +126,15 @@ export default function Checkout() {
 
         {/* Steps */}
         <div className="mt-12 flex items-start justify-center gap-4 lg:gap-8">
-          <div className="flex flex-col items-center">
-            <div className="bg-wine text-cream font-body flex h-9 w-9 items-center justify-center rounded-full text-lg">
-              1
-            </div>
-            <span className="font-body text-wine mt-3 text-center text-[10px] tracking-widest uppercase">
-              {t("checkout.steps-num.1.text1")} <br />{" "}
-              {t("checkout.steps-num.1.text2")}
-            </span>
-          </div>
-
-          <div
-            className={`mt-4 h-px w-20 lg:w-24 ${step >= 2 ? "bg-text/90" : "bg-text/20"}`}
-          />
-
-          <div className="flex flex-col items-center">
-            <div
-              className={`flex h-9 w-9 items-center justify-center rounded-full text-lg ${step >= 2 ? "bg-wine text-cream" : "border-text/20 text-text-muted border"}`}
-            >
-              2
-            </div>
-            <span
-              className={`font-body mt-3 text-center text-[10px] tracking-widest uppercase ${step >= 2 ? "text-wine" : "text-text-muted"}`}
-            >
-              {t("checkout.steps-num.2.text1")} <br />
-              {t("checkout.steps-num.2.text2")}
-            </span>
-          </div>
-
-          <div
-            className={`mt-4 h-px w-20 lg:w-24 ${step >= 3 ? "bg-text/90" : "bg-text/20"}`}
-          />
-
-          <div className="flex flex-col items-center">
-            <div
-              className={`flex h-9 w-9 items-center justify-center rounded-full text-lg ${step >= 3 ? "bg-wine text-cream" : "border-text/20 text-text-muted border"}`}
-            >
-              3
-            </div>
-            <span
-              className={`font-body mt-3 text-center text-[10px] tracking-widest uppercase ${step >= 3 ? "text-wine" : "text-text-muted"}`}
-            >
-              {t("checkout.steps-num.3.text1")}
-            </span>
-          </div>
+          {steps.map((stepItem) => (
+            <CheckoutStepsNav
+              key={stepItem.id}
+              id={stepItem.id}
+              text1={stepItem.text1}
+              text2={stepItem.text2}
+              step={step}
+            />
+          ))}
         </div>
 
         {/* Main content */}
