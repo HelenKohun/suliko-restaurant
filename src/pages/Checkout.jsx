@@ -2,15 +2,15 @@ import { useState } from "react";
 import useCartStore from "../store/cartStore";
 import { useTranslation } from "react-i18next";
 import { getCartTotals } from "../utils/cartTotals";
-import { Link, redirect } from "react-router-dom";
+
 import { useForm } from "react-hook-form";
 import CheckoutStepsNav from "../components/CheckoutStepsNav";
 import OrderConfirmation from "../components/OrderConfirmation";
 import CheckoutContactStep from "../components/CheckoutContactStep";
 import CheckoutDeliveryStep from "../components/CheckoutDeliveryStep";
-import ChechoutReviewStep from "../components/CheckoutReviewStep";
+import CheckoutReviewStep from "../components/CheckoutReviewStep";
 
-import { LockKeyhole, ChevronDown, MoveRight } from "lucide-react";
+import { LockKeyhole, ChevronDown } from "lucide-react";
 
 export default function Checkout() {
   // Translation
@@ -96,6 +96,8 @@ export default function Checkout() {
       },
     };
 
+    console.log(orderData);
+
     clearCart();
     reset();
     setIsOrderSubmitted(true);
@@ -113,6 +115,10 @@ export default function Checkout() {
     isPromoCorrect,
     deliveryMethod,
   });
+
+  if (isOrderSubmitted) {
+    return <OrderConfirmation />;
+  }
 
   return (
     <section className="bg-cream text-text min-h-screen px-6 py-24">
@@ -142,24 +148,58 @@ export default function Checkout() {
         </div>
 
         {/* Main content */}
-        {!isOrderSubmitted && (
-          <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_360px]">
-            {/* Left card */}
-            <div className="rounded-lg bg-white/70 p-8 shadow-sm md:p-10">
-              {/* Step 1 */}
+
+        <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_360px]">
+          {/* Left card */}
+          <div className="rounded-lg bg-white/70 p-8 shadow-sm md:p-10">
+            {/* Step 1 */}
+            <div>
+              <button
+                type="button"
+                className="flex w-full items-center justify-between"
+                onClick={() => setStep(1)}
+              >
+                <div className="flex items-center gap-4">
+                  <span className="bg-wine text-cream font-body flex h-7 w-7 items-center justify-center rounded-full text-sm">
+                    1
+                  </span>
+
+                  <h2 className="font-heading text-3xl font-light">
+                    {t("checkout.main-content.left-card.step-1.header")}
+                  </h2>
+                </div>
+                <span className="text-gold text-lg">
+                  <ChevronDown />
+                </span>
+              </button>
+
+              {step === 1 && (
+                <CheckoutContactStep
+                  register={register}
+                  errors={errors}
+                  onNext={goToDeliveryStep}
+                />
+              )}
+            </div>
+
+            {/* Step 2 */}
+
+            <div className="border-text/15 mt-5 border-t pt-5">
               <div>
                 <button
                   type="button"
                   className="flex w-full items-center justify-between"
-                  onClick={() => setStep(1)}
+                  onClick={goToDeliveryStep}
                 >
                   <div className="flex items-center gap-4">
-                    <span className="bg-wine text-cream font-body flex h-7 w-7 items-center justify-center rounded-full text-sm">
-                      1
+                    <span
+                      className={`font-body flex h-7 w-7 items-center justify-center rounded-full text-sm ${step >= 2 ? "bg-wine text-cream" : "border-text/20 text-text-muted border"}`}
+                    >
+                      2
                     </span>
 
                     <h2 className="font-heading text-3xl font-light">
-                      {t("checkout.main-content.left-card.step-1.header")}
+                      {t("checkout.main-content.left-card.step-2.header")}
                     </h2>
                   </div>
                   <span className="text-gold text-lg">
@@ -167,159 +207,122 @@ export default function Checkout() {
                   </span>
                 </button>
 
-                {step === 1 && (
-                  <CheckoutContactStep
+                {step === 2 && (
+                  <CheckoutDeliveryStep
                     register={register}
                     errors={errors}
-                    onNext={goToDeliveryStep}
+                    onNext={goToConfirmationStep}
+                    paymentMethod={paymentMethod}
+                    deliveryMethod={deliveryMethod}
                   />
                 )}
               </div>
+            </div>
 
-              {/* Step 2 */}
+            {/* Step 3 */}
 
-              <div className="border-text/15 mt-5 border-t pt-5">
-                <div>
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between"
-                    onClick={goToDeliveryStep}
-                  >
-                    <div className="flex items-center gap-4">
-                      <span
-                        className={`font-body flex h-7 w-7 items-center justify-center rounded-full text-sm ${step >= 2 ? "bg-wine text-cream" : "border-text/20 text-text-muted border"}`}
-                      >
-                        2
-                      </span>
-
-                      <h2 className="font-heading text-3xl font-light">
-                        {t("checkout.main-content.left-card.step-2.header")}
-                      </h2>
-                    </div>
-                    <span className="text-gold text-lg">
-                      <ChevronDown />
+            <div className="border-text/15 mt-5 border-t pt-5">
+              <div>
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between"
+                  onClick={goToConfirmationStep}
+                >
+                  <div className="flex items-center gap-4">
+                    <span
+                      className={`font-body flex h-7 w-7 items-center justify-center rounded-full text-sm ${step >= 3 ? "bg-wine text-cream" : "border-text/20 text-text-muted border"}`}
+                    >
+                      3
                     </span>
-                  </button>
 
-                  {step === 2 && (
-                    <CheckoutDeliveryStep
-                      register={register}
-                      errors={errors}
-                      onNext={goToConfirmationStep}
-                      paymentMethod={paymentMethod}
-                      deliveryMethod={deliveryMethod}
-                    />
-                  )}
-                </div>
+                    <h2 className="font-heading text-3xl font-light">
+                      {t("checkout.main-content.left-card.step-3.header")}
+                    </h2>
+                  </div>
+                  <span className="text-gold text-lg">
+                    <ChevronDown />
+                  </span>
+                </button>
+
+                {step === 3 && (
+                  <CheckoutReviewStep
+                    formValues={formValues}
+                    isSubmitting={isSubmitting}
+                    onSubmit={handleOrderSubmit}
+                    handleSubmit={handleSubmit}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Right order summary */}
+          <aside className="bg-dark-wine text-cream rounded-lg p-8 shadow-xl md:p-9">
+            <h2 className="font-heading text-3xl font-light">
+              {t("checkout.main-content.right-card.order")}
+            </h2>
+
+            <div className="mt-8 space-y-5">
+              {items.map((item) => {
+                const isWine = item.itemType === "wine";
+
+                const itemName = isWine
+                  ? item.name
+                  : t(`menuData.${item.categoryId}.dishes.${item.dishId}.name`);
+
+                return (
+                  <div
+                    className="border-gold/10 flex items-baseline justify-between gap-4 border-b pb-3"
+                    key={item.id}
+                  >
+                    <div>
+                      <p className="font-heading text-xl">{itemName}</p>
+                      <p className="font-body text-gold/60 mt-1 text-[10px] tracking-widest uppercase">
+                        {`x ${item.quantity}`}
+                      </p>
+                    </div>
+                    <p className="font-body text-gold text-sm">
+                      {item.price * item.quantity} zł
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="border-gold/10 mt-8 space-y-3 border-b pb-5">
+              <div className="font-body text-cream/60 flex justify-between text-sm">
+                <span>{t("checkout.main-content.right-card.sum")}</span>
+                <span className="text-cream">{subtotal.toFixed(0)} zł</span>
               </div>
 
-              {/* Step 3 */}
+              <div className="font-body text-cream/60 flex justify-between text-sm">
+                <span>{t("checkout.main-content.right-card.delivery")}</span>
+                <span className="text-cream">{delivery} zł</span>
+              </div>
 
-              <div className="border-text/15 mt-5 border-t pt-5">
-                <div>
-                  <button
-                    type="button"
-                    className="flex w-full items-center justify-between"
-                    onClick={goToConfirmationStep}
-                  >
-                    <div className="flex items-center gap-4">
-                      <span
-                        className={`font-body flex h-7 w-7 items-center justify-center rounded-full text-sm ${step >= 3 ? "bg-wine text-cream" : "border-text/20 text-text-muted border"}`}
-                      >
-                        3
-                      </span>
-
-                      <h2 className="font-heading text-3xl font-light">
-                        {t("checkout.main-content.left-card.step-3.header")}
-                      </h2>
-                    </div>
-                    <span className="text-gold text-lg">
-                      <ChevronDown />
-                    </span>
-                  </button>
-
-                  {step === 3 && (
-                    <ChechoutReviewStep
-                      formValues={formValues}
-                      isSubmitting={isSubmitting}
-                      onSubmit={handleOrderSubmit}
-                      handleSubmit={handleSubmit}
-                    />
-                  )}
-                </div>
+              <div className="font-body text-cream/60 flex justify-between text-sm">
+                <span>{t("checkout.main-content.right-card.promo")}</span>
+                <span className="text-gold">− {discount.toFixed(0)} zł</span>
               </div>
             </div>
 
-            {/* Right order summary */}
-            <aside className="bg-dark-wine text-cream rounded-lg p-8 shadow-xl md:p-9">
-              <h2 className="font-heading text-3xl font-light">
-                {t("checkout.main-content.right-card.order")}
-              </h2>
+            <div className="mt-6 flex items-end justify-between">
+              <p className="font-heading text-3xl">
+                {t("checkout.main-content.right-card.total")}
+              </p>
+              <p className="font-heading text-gold text-3xl">
+                {total.toFixed(0)} zł
+              </p>
+            </div>
 
-              <div className="mt-8 space-y-5">
-                {items.map((item) => {
-                  const isWine = item.itemType === "wine";
-
-                  const itemName = isWine
-                    ? item.name
-                    : t(
-                        `menuData.${item.categoryId}.dishes.${item.dishId}.name`,
-                      );
-
-                  return (
-                    <div
-                      className="border-gold/10 flex items-baseline justify-between gap-4 border-b pb-3"
-                      key={item.id}
-                    >
-                      <div>
-                        <p className="font-heading text-xl">{itemName}</p>
-                        <p className="font-body text-gold/60 mt-1 text-[10px] tracking-widest uppercase">
-                          {`x ${item.quantity}`}
-                        </p>
-                      </div>
-                      <p className="font-body text-gold text-sm">
-                        {item.price * item.quantity} zł
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="border-gold/10 mt-8 space-y-3 border-b pb-5">
-                <div className="font-body text-cream/60 flex justify-between text-sm">
-                  <span>{t("checkout.main-content.right-card.sum")}</span>
-                  <span className="text-cream">{subtotal.toFixed(0)} zł</span>
-                </div>
-
-                <div className="font-body text-cream/60 flex justify-between text-sm">
-                  <span>{t("checkout.main-content.right-card.delivery")}</span>
-                  <span className="text-cream">{delivery} zł</span>
-                </div>
-
-                <div className="font-body text-cream/60 flex justify-between text-sm">
-                  <span>{t("checkout.main-content.right-card.promo")}</span>
-                  <span className="text-gold">− {discount.toFixed(0)} zł</span>
-                </div>
-              </div>
-
-              <div className="mt-6 flex items-end justify-between">
-                <p className="font-heading text-3xl">Razem</p>
-                <p className="font-heading text-gold text-3xl">
-                  {total.toFixed(0)} zł
-                </p>
-              </div>
-
-              <div className="border-gold/10 mt-8 border-t pt-5">
-                <p className="font-body text-cream/45 flex items-center gap-2 text-[11px]">
-                  <LockKeyhole size={12} />
-                  {t("checkout.main-content.right-card.safety")}
-                </p>
-              </div>
-            </aside>
-          </div>
-        )}
-
-        {isOrderSubmitted && <OrderConfirmation />}
+            <div className="border-gold/10 mt-8 border-t pt-5">
+              <p className="font-body text-cream/45 flex items-center gap-2 text-[11px]">
+                <LockKeyhole size={12} />
+                {t("checkout.main-content.right-card.safety")}
+              </p>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
   );
