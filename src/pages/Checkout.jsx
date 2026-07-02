@@ -125,7 +125,7 @@ export default function Checkout() {
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center">
-          <h1 className="font-heading mt-6 text-6xl font-light tracking-[0.08em] uppercase lg:text-7xl">
+          <h1 className="font-heading mt-6 text-4xl font-light tracking-[0.08em] uppercase lg:text-7xl">
             {t("checkout.header")}
           </h1>
 
@@ -164,7 +164,7 @@ export default function Checkout() {
                     1
                   </span>
 
-                  <h2 className="font-heading text-3xl font-light">
+                  <h2 className="font-heading text-2xl font-light lg:text-3xl">
                     {t("checkout.main-content.left-card.step-1.header")}
                   </h2>
                 </div>
@@ -198,7 +198,7 @@ export default function Checkout() {
                       2
                     </span>
 
-                    <h2 className="font-heading text-3xl font-light">
+                    <h2 className="font-heading text-2xl font-light lg:text-3xl">
                       {t("checkout.main-content.left-card.step-2.header")}
                     </h2>
                   </div>
@@ -235,7 +235,7 @@ export default function Checkout() {
                       3
                     </span>
 
-                    <h2 className="font-heading text-3xl font-light">
+                    <h2 className="font-heading text-2xl font-light sm:text-center lg:text-3xl">
                       {t("checkout.main-content.left-card.step-3.header")}
                     </h2>
                   </div>
