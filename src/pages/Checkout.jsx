@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useCartStore from "../store/cartStore";
 import { useTranslation } from "react-i18next";
 import { getCartTotals } from "../utils/cartTotals";
@@ -18,6 +18,12 @@ export default function Checkout() {
 
   const [step, setStep] = useState(1);
   const [isOrderSubmitted, setIsOrderSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (isOrderSubmitted) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [isOrderSubmitted]);
 
   const steps = [
     {
