@@ -3,7 +3,7 @@ import useCartStore from "../store/cartStore";
 import { useTranslation } from "react-i18next";
 import { getCartTotals } from "../utils/cartTotals";
 
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import CheckoutStepsNav from "../components/CheckoutStepsNav";
 import OrderConfirmation from "../components/OrderConfirmation";
 import CheckoutContactStep from "../components/CheckoutContactStep";
@@ -20,9 +20,13 @@ export default function Checkout() {
   const [isOrderSubmitted, setIsOrderSubmitted] = useState(false);
 
   useEffect(() => {
-    if (isOrderSubmitted) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    if (!isOrderSubmitted) return;
+
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, [isOrderSubmitted]);
 
   const steps = [
@@ -47,15 +51,23 @@ export default function Checkout() {
     register,
     handleSubmit,
     reset,
-    watch,
     trigger,
+    control,
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: { deliveryMethod: "delivery", paymentMethod: "cash" },
   });
 
-  const deliveryMethod = watch("deliveryMethod");
-  const paymentMethod = watch("paymentMethod");
+  const deliveryMethod = useWatch({
+    control,
+    name: "deliveryMethod",
+  });
+
+  const paymentMethod = useWatch({
+    control,
+    name: "paymentMethod",
+  });
+  const formValues = useWatch({ control });
 
   async function goToDeliveryStep() {
     const isValid = await trigger(["fullname", "phone", "email"]);
@@ -108,8 +120,6 @@ export default function Checkout() {
     reset();
     setIsOrderSubmitted(true);
   }
-
-  const formValues = watch();
 
   // Cart Store
   const items = useCartStore((state) => state.items);

@@ -30,7 +30,7 @@ export default function Cart() {
   // States
   const [promo, setPromo] = useState(promoCode || "");
   const [itemToDelete, setItemToDelete] = useState(null);
-  const [deliveryMethod, setDeliveryMethod] = useState("delivery");
+  const deliveryMethod = "delivery";
 
   const { subtotal, discount, delivery, total } = getCartTotals(items, {
     isPromoCorrect,
