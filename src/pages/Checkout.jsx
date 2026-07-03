@@ -121,11 +121,17 @@ export default function Checkout() {
   }
 
   return (
-    <section className="bg-cream text-text min-h-screen px-6 py-24">
+    <section
+      aria-labelledby="checkout-title"
+      className="bg-cream text-text min-h-screen px-6 py-24"
+    >
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center">
-          <h1 className="font-heading mt-6 text-4xl font-light tracking-[0.08em] uppercase lg:text-7xl">
+          <h1
+            id="checkout-title"
+            className="font-heading mt-6 text-4xl font-light tracking-[0.08em] uppercase lg:text-7xl"
+          >
             {t("checkout.header")}
           </h1>
 
@@ -135,7 +141,10 @@ export default function Checkout() {
         </div>
 
         {/* Steps */}
-        <div className="mt-12 flex items-start justify-center gap-4 lg:gap-8">
+        <nav
+          className="mt-12 flex items-start justify-center gap-4 lg:gap-8"
+          aria-label={t("aria-labels.checkout.steps")}
+        >
           {steps.map((stepItem) => (
             <CheckoutStepsNav
               key={stepItem.id}
@@ -145,7 +154,7 @@ export default function Checkout() {
               step={step}
             />
           ))}
-        </div>
+        </nav>
 
         {/* Main content */}
 
@@ -158,6 +167,8 @@ export default function Checkout() {
                 type="button"
                 className="flex w-full items-center justify-between"
                 onClick={() => setStep(1)}
+                aria-expanded={step === 1}
+                aria-controls="checkout-step-1"
               >
                 <div className="flex items-center gap-4">
                   <span className="bg-wine text-cream font-body flex h-7 w-7 items-center justify-center rounded-full text-sm">
@@ -169,16 +180,18 @@ export default function Checkout() {
                   </h2>
                 </div>
                 <span className="text-gold text-lg">
-                  <ChevronDown />
+                  <ChevronDown aria-hidden="true" />
                 </span>
               </button>
 
               {step === 1 && (
-                <CheckoutContactStep
-                  register={register}
-                  errors={errors}
-                  onNext={goToDeliveryStep}
-                />
+                <div id="checkout-step-1">
+                  <CheckoutContactStep
+                    register={register}
+                    errors={errors}
+                    onNext={goToDeliveryStep}
+                  />
+                </div>
               )}
             </div>
 
@@ -190,6 +203,8 @@ export default function Checkout() {
                   type="button"
                   className="flex w-full items-center justify-between"
                   onClick={goToDeliveryStep}
+                  aria-expanded={step === 2}
+                  aria-controls="checkout-step-2"
                 >
                   <div className="flex items-center gap-4">
                     <span
@@ -203,18 +218,20 @@ export default function Checkout() {
                     </h2>
                   </div>
                   <span className="text-gold text-lg">
-                    <ChevronDown />
+                    <ChevronDown aria-hidden="true" />
                   </span>
                 </button>
 
                 {step === 2 && (
-                  <CheckoutDeliveryStep
-                    register={register}
-                    errors={errors}
-                    onNext={goToConfirmationStep}
-                    paymentMethod={paymentMethod}
-                    deliveryMethod={deliveryMethod}
-                  />
+                  <div id="checkout-step-2">
+                    <CheckoutDeliveryStep
+                      register={register}
+                      errors={errors}
+                      onNext={goToConfirmationStep}
+                      paymentMethod={paymentMethod}
+                      deliveryMethod={deliveryMethod}
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -227,6 +244,8 @@ export default function Checkout() {
                   type="button"
                   className="flex w-full items-center justify-between"
                   onClick={goToConfirmationStep}
+                  aria-expanded={step === 3}
+                  aria-controls="checkout-step-3"
                 >
                   <div className="flex items-center gap-4">
                     <span
@@ -240,29 +259,37 @@ export default function Checkout() {
                     </h2>
                   </div>
                   <span className="text-gold text-lg">
-                    <ChevronDown />
+                    <ChevronDown aria-hidden="true" />
                   </span>
                 </button>
 
                 {step === 3 && (
-                  <CheckoutReviewStep
-                    formValues={formValues}
-                    isSubmitting={isSubmitting}
-                    onSubmit={handleOrderSubmit}
-                    handleSubmit={handleSubmit}
-                  />
+                  <div id="checkout-step-3">
+                    <CheckoutReviewStep
+                      formValues={formValues}
+                      isSubmitting={isSubmitting}
+                      onSubmit={handleOrderSubmit}
+                      handleSubmit={handleSubmit}
+                    />
+                  </div>
                 )}
               </div>
             </div>
           </div>
 
           {/* Right order summary */}
-          <aside className="bg-dark-wine text-cream rounded-lg p-8 shadow-xl md:p-9">
-            <h2 className="font-heading text-3xl font-light">
+          <aside
+            className="bg-dark-wine text-cream rounded-lg p-8 shadow-xl md:p-9"
+            aria-labelledby="order-summary-title"
+          >
+            <h2
+              className="font-heading text-3xl font-light"
+              id="order-summary-title"
+            >
               {t("checkout.main-content.right-card.order")}
             </h2>
 
-            <div className="mt-8 space-y-5">
+            <ul className="mt-8 space-y-5">
               {items.map((item) => {
                 const isWine = item.itemType === "wine";
 
@@ -271,7 +298,7 @@ export default function Checkout() {
                   : t(`menuData.${item.categoryId}.dishes.${item.dishId}.name`);
 
                 return (
-                  <div
+                  <li
                     className="border-gold/10 flex items-baseline justify-between gap-4 border-b pb-3"
                     key={item.id}
                   >
@@ -284,10 +311,10 @@ export default function Checkout() {
                     <p className="font-body text-gold text-sm">
                       {item.price * item.quantity} zł
                     </p>
-                  </div>
+                  </li>
                 );
               })}
-            </div>
+            </ul>
 
             <div className="border-gold/10 mt-8 space-y-3 border-b pb-5">
               <div className="font-body text-cream/60 flex justify-between text-sm">
@@ -317,7 +344,7 @@ export default function Checkout() {
 
             <div className="border-gold/10 mt-8 border-t pt-5">
               <p className="font-body text-cream/45 flex items-center gap-2 text-[11px]">
-                <LockKeyhole size={12} />
+                <LockKeyhole size={12} aria-hidden="true" />
                 {t("checkout.main-content.right-card.safety")}
               </p>
             </div>

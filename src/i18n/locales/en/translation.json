@@ -16,7 +16,10 @@
       "ru": "Russian",
       "switcher": "Change language to {{language}}"
     },
-    "contactMap": "Map showing the location of Suliko restaurant"
+    "contactMap": "Map showing the location of Suliko restaurant",
+    "checkout": {
+      "steps": "Checkout steps"
+    }
   },
   "hero": {
     "eyebrow": "Authentic Georgian cuisine",

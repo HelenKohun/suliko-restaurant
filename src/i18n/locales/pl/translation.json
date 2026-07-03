@@ -16,7 +16,10 @@
       "ru": "rosyjski",
       "switcher": "Zmień język na {{language}}"
     },
-    "contactMap": "Mapa lokalizacji restauracji Suliko"
+    "contactMap": "Mapa lokalizacji restauracji Suliko",
+    "checkout": {
+      "steps": "Etapy zamówienia"
+    }
   },
   "hero": {
     "eyebrow": "Autentyczna kuchnia gruzińska",

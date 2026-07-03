@@ -11,10 +11,10 @@ export default function CheckoutDeliveryStep({
   const { t } = useTranslation();
   return (
     <form className="mt-8">
-      <div>
-        <p className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
+      <fieldset>
+        <legend className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
           {t("checkout.main-content.left-card.step-2.form.delivery-method")} *
-        </p>
+        </legend>
 
         <div className="grid grid-cols-2 gap-3">
           <label
@@ -33,6 +33,9 @@ export default function CheckoutDeliveryStep({
               })}
               value="delivery"
               className="sr-only"
+              aria-describedby={
+                errors.deliveryMethod ? "delivery-method-error" : undefined
+              }
             />
             {t("checkout.main-content.left-card.step-2.form.delivery")}
           </label>
@@ -53,25 +56,34 @@ export default function CheckoutDeliveryStep({
               })}
               value="pickup"
               className="sr-only"
+              aria-describedby={
+                errors.deliveryMethod ? "delivery-method-error" : undefined
+              }
             />
             {t("checkout.main-content.left-card.step-2.form.pickup")}
           </label>
-
-          {errors.deliveryMethod && (
-            <span className="font-body mt-1 block text-[10px] text-red-400">
-              {errors.deliveryMethod.message}
-            </span>
-          )}
         </div>
-      </div>
+        {errors.deliveryMethod && (
+          <span
+            className="font-body mt-1 block text-[10px] text-red-400"
+            id="delivery-method-error"
+          >
+            {errors.deliveryMethod.message}
+          </span>
+        )}
+      </fieldset>
       {deliveryMethod === "delivery" && (
         <>
           <div>
-            <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
+            <label
+              className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase"
+              htmlFor="checkout-address"
+            >
               {t("checkout.main-content.left-card.step-2.form.address")} *
             </label>
 
             <input
+              id="checkout-address"
               {...register("address", {
                 required:
                   deliveryMethod === "delivery"
@@ -91,11 +103,15 @@ export default function CheckoutDeliveryStep({
             )}
           </div>
           <div>
-            <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
+            <label
+              className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase"
+              htmlFor="checkout-poctal-code"
+            >
               {t("checkout.main-content.left-card.step-2.form.postal-code")} *
             </label>
 
             <input
+              id="checkout-poctal-code"
               {...register("postalCode", {
                 required:
                   deliveryMethod === "delivery"
@@ -124,11 +140,15 @@ export default function CheckoutDeliveryStep({
       )}
 
       <div>
-        <label className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase">
+        <label
+          className="font-body text-gold mt-3 mb-2 block text-[11px] tracking-widest uppercase"
+          htmlFor="checkout-notes"
+        >
           {t("checkout.main-content.left-card.step-2.form.message")}
         </label>
 
         <textarea
+          id="checkout-notes"
           {...register("notes")}
           rows={5}
           className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 mb-2 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
@@ -138,10 +158,10 @@ export default function CheckoutDeliveryStep({
         ></textarea>
       </div>
 
-      <div>
-        <p className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
+      <fieldset>
+        <legend className="font-body text-gold mb-2 text-[11px] tracking-widest uppercase">
           {t("checkout.main-content.left-card.step-2.form.payment-method")} *
-        </p>
+        </legend>
 
         <div className="grid grid-cols-2 gap-3">
           <label
@@ -160,6 +180,9 @@ export default function CheckoutDeliveryStep({
               })}
               value="cash"
               className="sr-only"
+              aria-describedby={
+                errors.paymentMethod ? "payment-method-error" : undefined
+              }
             />
             {t("checkout.main-content.left-card.step-2.form.cash")}
           </label>
@@ -180,16 +203,22 @@ export default function CheckoutDeliveryStep({
               })}
               value="card"
               className="sr-only"
+              aria-describedby={
+                errors.paymentMethod ? "payment-method-error" : undefined
+              }
             />
             {t("checkout.main-content.left-card.step-2.form.byCard")}
           </label>
-          {errors.paymentMethod && (
-            <span className="font-body mt-1 block text-[10px] text-red-400">
-              {errors.paymentMethod.message}
-            </span>
-          )}
         </div>
-      </div>
+        {errors.paymentMethod && (
+          <span
+            id="payment-method-error"
+            className="font-body mt-1 block text-[10px] text-red-400"
+          >
+            {errors.paymentMethod.message}
+          </span>
+        )}
+      </fieldset>
 
       <button
         type="button"

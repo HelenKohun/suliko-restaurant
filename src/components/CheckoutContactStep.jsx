@@ -6,11 +6,15 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
   return (
     <form className="mt-8">
       <div>
-        <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
+        <label
+          className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase"
+          htmlFor="checkout-fullname"
+        >
           {t("checkout.main-content.left-card.step-1.form.name")} *
         </label>
 
         <input
+          id="checkout-fullname"
           {...register("fullname", {
             required: t(
               "checkout.main-content.left-card.step-1.form.name-error1",
@@ -32,11 +36,15 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
 
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         <div>
-          <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
+          <label
+            className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase"
+            htmlFor="checkout-phone"
+          >
             {t("checkout.main-content.left-card.step-1.form.phone")} *
           </label>
 
           <input
+            id="checkout-phone"
             {...register("phone", {
               required: t(
                 "checkout.main-content.left-card.step-1.form.phone-error1",
@@ -60,11 +68,15 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
         </div>
 
         <div>
-          <label className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase">
+          <label
+            className="font-body text-gold mb-2 block text-[11px] tracking-widest uppercase"
+            htmlFor="checkout-email"
+          >
             {t("checkout.main-content.left-card.step-1.form.email")} *
           </label>
 
           <input
+            id="checkout-email"
             {...register("email", {
               required: t(
                 "checkout.main-content.left-card.step-1.form.email-error1",

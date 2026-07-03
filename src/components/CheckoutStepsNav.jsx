@@ -3,6 +3,7 @@ export default function CheckoutStepsNav({ id, text1, text2, step }) {
     <>
       <div className="flex flex-col items-center">
         <div
+          aria-current={step === id ? "step" : undefined}
           className={`flex h-9 w-9 items-center justify-center rounded-full text-lg ${step >= id ? "bg-wine text-cream" : "border-text/20 text-text-muted border"}`}
         >
           {id}
