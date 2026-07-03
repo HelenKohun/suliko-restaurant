@@ -15,6 +15,11 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
 
         <input
           id="checkout-fullname"
+          autoComplete="name"
+          aria-invalid={!!errors.fullname}
+          aria-describedby={
+            errors.fullname ? "checkout-fullname-error" : undefined
+          }
           {...register("fullname", {
             required: t(
               "checkout.main-content.left-card.step-1.form.name-error1",
@@ -28,9 +33,13 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
           className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
         />
         {errors.fullname && (
-          <span className="font-body mt-1 text-[10px] text-red-400">
+          <p
+            className="font-body mt-1 text-[10px] text-red-400"
+            id="checkout-fullname-error"
+            role="alert"
+          >
             {errors.fullname.message}
-          </span>
+          </p>
         )}
       </div>
 
@@ -45,6 +54,9 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
 
           <input
             id="checkout-phone"
+            autoComplete="tel"
+            aria-invalid={!!errors.phone}
+            aria-describedby={errors.phone ? "checkout-phone-error" : undefined}
             {...register("phone", {
               required: t(
                 "checkout.main-content.left-card.step-1.form.phone-error1",
@@ -57,13 +69,19 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
               },
             })}
             type="tel"
+            inputMode="tel"
+            spellCheck={false}
             placeholder="+48 000 000 000"
             className="border-text/20 font-body text-text placeholder:text-text-muted/60 focus-visible:border-wine focus-visible:ring-wine/30 bg-cream/70 w-full rounded border px-4 py-3 text-sm transition-shadow duration-200 outline-none focus-visible:ring-1"
           />
           {errors.phone && (
-            <span className="font-body mt-1 text-[10px] text-red-400">
+            <p
+              className="font-body mt-1 text-[10px] text-red-400"
+              id="checkout-phone-error"
+              role="alert"
+            >
               {errors.phone.message}
-            </span>
+            </p>
           )}
         </div>
 
@@ -77,6 +95,11 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
 
           <input
             id="checkout-email"
+            autoComplete="email"
+            autoCapitalize="none"
+            spellCheck={false}
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "checkout-email-error" : undefined}
             {...register("email", {
               required: t(
                 "checkout.main-content.left-card.step-1.form.email-error1",
@@ -94,9 +117,13 @@ export default function CheckoutContactStep({ register, errors, onNext }) {
           />
 
           {errors.email && (
-            <span className="font-body mt-1 text-[10px] text-red-400">
+            <p
+              className="font-body mt-1 text-[10px] text-red-400"
+              id="checkout-email-error"
+              role="alert"
+            >
               {errors.email.message}
-            </span>
+            </p>
           )}
         </div>
       </div>

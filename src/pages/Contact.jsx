@@ -24,22 +24,22 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: <MapPin />,
+      icon: MapPin,
       title: t("contact.info.address.title"),
       text: t("contact.info.address.text"),
     },
     {
-      icon: <Clock />,
+      icon: Clock,
       title: t("contact.info.hours.title"),
       text: t("contact.info.hours.text"),
     },
     {
-      icon: <Phone />,
+      icon: Phone,
       title: t("contact.info.phone.title"),
       text: t("contact.info.phone.text"),
     },
     {
-      icon: <Mail />,
+      icon: Mail,
       title: t("contact.info.email.title"),
       text: t("contact.info.email.text"),
     },
@@ -142,6 +142,7 @@ export default function Contact() {
                     type="button"
                     onClick={() => {
                       setIsSuccess(false);
+                      reset();
                     }}
                     className="font-body border-wine/40 text-wine hover:bg-wine w-full max-w-xs rounded border px-8 py-3 text-[11px] tracking-widest uppercase transition-colors duration-200 hover:text-white sm:w-auto sm:max-w-none sm:text-[12px]"
                   >
@@ -166,10 +167,21 @@ export default function Contact() {
                     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                       <div>
                         {/* Firstname */}
-                        <label className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase">
-                          {t("contact.form.firstName")}
+                        <label
+                          className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase"
+                          htmlFor="contact-firstname"
+                        >
+                          {t("contact.form.firstName")} *
                         </label>
                         <input
+                          aria-required="true"
+                          id="contact-firstname"
+                          autoComplete="given-name"
+                          autoCapitalize="words"
+                          aria-invalid={!!errors.name}
+                          aria-describedby={
+                            errors.name ? "contact-firstname-error" : undefined
+                          }
                           {...register("name", {
                             required: t("contact.form.input.firstname-error1"),
                             validate: (value) =>
@@ -181,18 +193,35 @@ export default function Contact() {
                           className="border-text/20 font-body text-text w-full rounded border bg-transparent px-4 py-3 text-sm outline-none placeholder:italic"
                         />
                         {errors.name && (
-                          <span className="font-body mt-1 text-[10px] text-red-400">
+                          <p
+                            className="font-body mt-1 text-[10px] text-red-400"
+                            id="contact-firstname-error"
+                            role="alert"
+                          >
                             {errors.name.message}
-                          </span>
+                          </p>
                         )}
                       </div>
 
                       <div>
                         {/* Lastname */}
-                        <label className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase">
-                          {t("contact.form.lastName")}
+                        <label
+                          className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase"
+                          htmlFor="contact-lastname"
+                        >
+                          {t("contact.form.lastName")} *
                         </label>
                         <input
+                          aria-required="true"
+                          id="contact-lastname"
+                          autoComplete="family-name"
+                          autoCapitalize="words"
+                          aria-invalid={!!errors.lastname}
+                          aria-describedby={
+                            errors.lastname
+                              ? "contact-lastname-error"
+                              : undefined
+                          }
                           {...register("lastname", {
                             required: t("contact.form.input.lastname-error1"),
                             validate: (value) =>
@@ -204,19 +233,35 @@ export default function Contact() {
                           className="border-text/20 font-body text-text w-full rounded border bg-transparent px-4 py-3 text-sm outline-none placeholder:italic"
                         />
                         {errors.lastname && (
-                          <span className="font-body mt-1 text-[10px] text-red-400">
+                          <p
+                            className="font-body mt-1 text-[10px] text-red-400"
+                            id="contact-lastname-error"
+                            role="alert"
+                          >
                             {errors.lastname.message}
-                          </span>
+                          </p>
                         )}
                       </div>
                     </div>
 
                     <div>
                       {/* Email address */}
-                      <label className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase">
-                        {t("contact.form.email")}
+                      <label
+                        className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase"
+                        htmlFor="contact-email"
+                      >
+                        {t("contact.form.email")} *
                       </label>
                       <input
+                        aria-required="true"
+                        id="contact-email"
+                        autoComplete="email"
+                        autoCapitalize="none"
+                        spellCheck={false}
+                        aria-invalid={!!errors.email}
+                        aria-describedby={
+                          errors.email ? "contact-email-error" : undefined
+                        }
                         {...register("email", {
                           required: t("contact.form.input.email-error1"),
                           pattern: {
@@ -229,18 +274,34 @@ export default function Contact() {
                         className="border-text/20 font-body text-text w-full rounded border bg-transparent px-4 py-3 text-sm outline-none placeholder:italic"
                       />
                       {errors.email && (
-                        <span className="font-body mt-1 text-[10px] text-red-400">
+                        <p
+                          className="font-body mt-1 text-[10px] text-red-400"
+                          id="contact-email-error"
+                          role="alert"
+                        >
                           {errors.email.message}
-                        </span>
+                        </p>
                       )}
                     </div>
 
                     <div>
                       {/* Phone number */}
-                      <label className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase">
-                        {t("contact.form.phone")}
+                      <label
+                        className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase"
+                        htmlFor="contact-phone"
+                      >
+                        {t("contact.form.phone")} *
                       </label>
                       <input
+                        aria-required="true"
+                        id="contact-phone"
+                        autoComplete="tel"
+                        inputMode="tel"
+                        spellCheck={false}
+                        aria-invalid={!!errors.phone}
+                        aria-describedby={
+                          errors.phone ? "contact-phone-error" : undefined
+                        }
                         {...register("phone", {
                           required: t("contact.form.input.phone-error1"),
                           pattern: {
@@ -253,18 +314,31 @@ export default function Contact() {
                         className="border-text/20 font-body text-text w-full rounded border bg-transparent px-4 py-3 text-sm outline-none placeholder:italic"
                       />
                       {errors.phone && (
-                        <span className="font-body mt-1 text-[10px] text-red-400">
+                        <p
+                          className="font-body mt-1 text-[10px] text-red-400"
+                          id="contact-phone-error"
+                          role="alert"
+                        >
                           {errors.phone.message}
-                        </span>
+                        </p>
                       )}
                     </div>
 
                     <div>
                       {/* Subject */}
-                      <label className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase">
-                        {t("contact.form.subject")}
+                      <label
+                        className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase"
+                        htmlFor="contact-subject"
+                      >
+                        {t("contact.form.subject")} *
                       </label>
                       <select
+                        aria-required="true"
+                        id="contact-subject"
+                        aria-invalid={!!errors.subject}
+                        aria-describedby={
+                          errors.subject ? "contact-subject-error" : undefined
+                        }
                         {...register("subject", {
                           required: t("contact.form.input.subjects-error"),
                         })}
@@ -281,18 +355,32 @@ export default function Contact() {
                         ))}
                       </select>
                       {errors.subject && (
-                        <span className="font-body mt-1 text-[10px] text-red-400">
+                        <p
+                          className="font-body mt-1 text-[10px] text-red-400"
+                          id="contact-subject-error"
+                          role="alert"
+                        >
                           {errors.subject.message}
-                        </span>
+                        </p>
                       )}
                     </div>
 
                     <div>
                       {/* Message */}
-                      <label className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase">
-                        {t("contact.form.message")}
+                      <label
+                        className="font-body text-text mb-2 block text-[12px] tracking-widest uppercase"
+                        htmlFor="contact-message"
+                      >
+                        {t("contact.form.message")} *
                       </label>
                       <textarea
+                        aria-required="true"
+                        id="contact-message"
+                        aria-invalid={!!errors.message}
+                        aria-describedby={
+                          errors.message ? "contact-message-error" : undefined
+                        }
+                        placeholder={t("contact.form.messagePlaceholder")}
                         {...register("message", {
                           required: t("contact.form.input.message-error1"),
                           validate: (value) =>
@@ -303,15 +391,20 @@ export default function Contact() {
                         className="border-text/20 font-body text-text w-full resize-none rounded border bg-transparent px-4 py-3 text-sm outline-none"
                       />
                       {errors.message && (
-                        <span className="font-body mt-1 text-[10px] text-red-400">
+                        <p
+                          className="font-body mt-1 text-[10px] text-red-400"
+                          id="contact-message-error"
+                          role="alert"
+                        >
                           {errors.message.message}
-                        </span>
+                        </p>
                       )}
                     </div>
 
                     <button
-                      type="sumbit"
+                      type="submit"
                       disabled={isSubmitting}
+                      aria-busy={isSubmitting}
                       className="bg-wine text-cream font-body hover:bg-wine-light focus-visible:ring-gold focus-visible:ring-offset-cream mt-2 rounded px-8 py-4 text-[12px] tracking-widest uppercase transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60"
                     >
                       {isSubmitting
@@ -336,21 +429,26 @@ export default function Contact() {
           <div className="border-gold/30 mb-12 border-t" />
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:justify-items-center">
-            {contactInfo.map((item) => (
-              <div key={item.title} className="flex gap-4">
-                <div className="text-gold text-xl">{item.icon}</div>
+            {contactInfo.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="flex gap-4">
+                  <div className="text-gold text-xl">
+                    <Icon aria-hidden="true" />
+                  </div>
 
-                <div>
-                  <h3 className="font-body text-wine mb-3 text-[14px] tracking-widest uppercase">
-                    {item.title}
-                  </h3>
+                  <div>
+                    <h3 className="font-body text-wine mb-3 text-[14px] tracking-widest uppercase">
+                      {item.title}
+                    </h3>
 
-                  <p className="font-body text-text-muted text-[13px] leading-6 whitespace-pre-line">
-                    {item.text}
-                  </p>
+                    <p className="font-body text-text-muted text-[13px] leading-6 whitespace-pre-line">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Socials */}
@@ -360,26 +458,26 @@ export default function Contact() {
             </span>
 
             <div className="flex items-center gap-5">
-              <a
-                href="#"
+              <button
+                type="button"
                 className="font-body text-wine hover:text-gold text-[14px] tracking-widest uppercase transition-colors duration-200"
               >
                 Instagram
-              </a>
+              </button>
 
-              <a
-                href="#"
+              <button
+                type="button"
                 className="font-body text-wine hover:text-gold text-[14px] tracking-widest uppercase transition-colors duration-200"
               >
                 Facebook
-              </a>
+              </button>
 
-              <a
-                href="#"
+              <button
+                type="button"
                 className="font-body text-wine hover:text-gold text-[14px] tracking-widest uppercase transition-colors duration-200"
               >
                 TikTok
-              </a>
+              </button>
             </div>
           </div>
         </div>
