@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 export default function OrderConfirmation() {
   const { t } = useTranslation();
   return (
-    <div className="bg-cream text-text min-h-screen px-6 py-24">
+    <div className="bg-cream text-text min-h-[70vh] px-6 lg:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <p className="font-body text-gold text-[10px] tracking-[0.35em] uppercase">
           {t("checkout.main-content.confirmation.confirmation")}
         </p>
 
-        <h1 className="font-heading mt-6 text-6xl font-light">
+        <h1 className="font-heading mt-6 text-5xl font-light sm:text-6xl">
           {t("checkout.main-content.confirmation.thanks")}
         </h1>
 
