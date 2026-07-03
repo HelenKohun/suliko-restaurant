@@ -509,6 +509,7 @@
       "phone": "Telefon",
       "subject": "Temat",
       "subjectDefault": "Wybierz temat",
+      "messagePlaceholder": "TODO",
       "subjects": {
         "reservation": "Rezerwacja",
         "groupReservation": "Rezerwacja grupowa",
@@ -977,5 +978,11 @@
         "home-btn": "Strona główna"
       }
     }
+  },
+  "notFound": {
+    "title": "Nic tu nie ma",
+    "description": "Wygląda na to, że strona, której szukasz, nie istnieje lub została przeniesiona.",
+    "home": "Strona główna",
+    "menu": "Menu"
   }
 }
