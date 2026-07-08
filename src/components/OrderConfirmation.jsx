@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 export default function OrderConfirmation() {
   const { t } = useTranslation();
   return (
-    <div className="bg-cream text-text min-h-[70vh] px-6 lg:py-24">
+    <div className="bg-cream text-text min-h-[70vh] px-6 py-15 lg:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <p className="font-body text-gold text-[10px] tracking-[0.35em] uppercase">
           {t("checkout.main-content.confirmation.confirmation")}

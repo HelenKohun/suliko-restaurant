@@ -413,7 +413,7 @@ export default function Booking() {
                   type="submit"
                   disabled={isSubmitting}
                   aria-busy={isSubmitting}
-                  className="bg-gold font-body hover:bg-gold/80 text-dark-wine w-full rounded px-8 py-4 text-[11px] font-medium tracking-widest uppercase transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-10 sm:text-[12px]"
+                  className="bg-gold font-body hover:bg-gold/80 w-full rounded px-8 py-4 text-[11px] font-medium tracking-widest text-white uppercase transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-10 sm:text-[12px]"
                 >
                   {isSubmitting
                     ? t("booking.form.submit-btn.sending")

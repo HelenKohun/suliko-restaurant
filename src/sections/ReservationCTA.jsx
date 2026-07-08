@@ -117,11 +117,15 @@ export default function ReservationCTA() {
         <div className="mb-10 flex w-full flex-col gap-8 lg:flex-row">
           {/* Date */}
           <div className="border-text/25 focus-within:border-gold flex flex-1 flex-col border-b pb-2 transition-colors duration-200">
-            <label className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase">
+            <label
+              className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase"
+              htmlFor="home-booking-date"
+            >
               {t("reservationCTA.date")}
             </label>
             <input
               type="date"
+              id="home-booking-date"
               min={today}
               value={date}
               onChange={(e) => setDate(e.target.value)}
@@ -131,12 +135,16 @@ export default function ReservationCTA() {
 
           {/* Hour */}
           <div className="border-text/25 focus-within:border-gold focus-within:ring-gold/40 focus-within:ring-offset-cream flex flex-1 flex-col rounded-sm border-b pb-2 transition-colors duration-200 focus-within:ring-1 focus-within:ring-offset-4">
-            <label className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase">
+            <label
+              className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase"
+              htmlFor="home-booking-time"
+            >
               {t("reservationCTA.time")}
             </label>
 
             <select
               defaultValue=""
+              id="home-booking-time"
               onChange={(e) => setTime(e.target.value)}
               className="font-heading text-text cursor-pointer bg-transparent text-xl font-light outline-none"
             >
@@ -154,11 +162,15 @@ export default function ReservationCTA() {
 
           {/* Number of guests */}
           <div className="border-text/25 focus-within:border-gold focus-within:ring-gold/40 focus-within:ring-offset-cream flex flex-1 flex-col rounded-sm border-b pb-2 transition-colors duration-200 focus-within:ring-1 focus-within:ring-offset-4">
-            <label className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase">
+            <label
+              className="font-body text-gold mb-2 text-[10px] tracking-widest uppercase"
+              htmlFor="home-booking-guests"
+            >
               {t("reservationCTA.guests")}
             </label>
             <select
               value={guests}
+              id="home-booking-guests"
               onChange={(e) => setGuests(e.target.value)}
               className="font-heading text-text cursor-pointer bg-transparent text-xl font-light outline-none"
             >

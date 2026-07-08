@@ -23,7 +23,7 @@ export default function LangSwitcher() {
               i18n.changeLanguage(lang);
               localStorage.setItem("suliko-language", lang);
             }}
-            className={`font-body cursor-pointer text-[10px] tracking-widest uppercase transition-colors duration-200 ${isActive ? "text-gold" : "text-white/70 hover:text-white/70"}`}
+            className={`font-body cursor-pointer px-3 py-3 text-[10px] tracking-widest uppercase transition-colors duration-200 ${isActive ? "text-gold" : "text-white/70 hover:text-white/70"}`}
           >
             {lang}
           </button>
