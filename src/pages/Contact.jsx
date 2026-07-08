@@ -395,7 +395,7 @@ export default function Contact() {
                               t("contact.form.input.message-error2"),
                           })}
                           rows={5}
-                          className="border-text/20 font-body text-text w-full resize-none rounded border bg-transparent px-4 py-3 text-sm outline-none"
+                          className="border-text/20 font-body text-text w-full resize-none rounded border bg-transparent px-4 py-3 text-sm outline-none placeholder:italic"
                         />
                         {errors.message && (
                           <p

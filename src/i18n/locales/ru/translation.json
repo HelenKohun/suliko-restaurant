@@ -536,6 +536,7 @@
       "phone": "Телефон",
       "subject": "Тема",
       "subjectDefault": "Выберите тему",
+      "messagePlaceholder": "Я хотел(а) бы организовать приём для 15 человек в следующую среду...",
       "subjects": {
         "reservation": "Бронирование",
         "groupReservation": "Бронирование для группы",

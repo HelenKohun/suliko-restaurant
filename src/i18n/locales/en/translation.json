@@ -536,6 +536,7 @@
       "phone": "Phone",
       "subject": "Subject",
       "subjectDefault": "Select a subject",
+      "messagePlaceholder": "I would like to organize a party for 15 people next Wednesday...",
       "subjects": {
         "reservation": "Reservation",
         "groupReservation": "Group reservation",

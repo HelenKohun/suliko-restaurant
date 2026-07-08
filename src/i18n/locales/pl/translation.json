@@ -543,7 +543,7 @@
       "phone": "Telefon",
       "subject": "Temat",
       "subjectDefault": "Wybierz temat",
-      "messagePlaceholder": "TODO",
+      "messagePlaceholder": "Chciałbym/Chciałabym zorganizować przyjęcie dla 15 osób w następną środę...",
       "subjects": {
         "reservation": "Rezerwacja",
         "groupReservation": "Rezerwacja grupowa",
