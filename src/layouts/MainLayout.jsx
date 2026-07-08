@@ -40,7 +40,7 @@ export default function MainLayout() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="bg-gold font-heading fixed right-6 bottom-6 z-50 flex h-[70px] w-[70px] items-center justify-center rounded-full text-3xl shadow-md shadow-black/30 hover:shadow-black/40 lg:right-10 lg:bottom-10"
+            className="bg-gold font-heading fixed right-6 bottom-6 z-80 flex h-[70px] w-[70px] items-center justify-center rounded-full text-3xl shadow-md shadow-black/30 hover:shadow-black/40 lg:right-10 lg:bottom-10"
           >
             <ChevronUp className="text-cream" size={30} />
           </button>
