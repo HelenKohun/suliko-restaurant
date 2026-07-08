@@ -1,4 +1,38 @@
 {
+  "seo": {
+    "home": {
+      "title": "Suliko | Authentic Georgian Restaurant",
+      "description": "Traditional Georgian cuisine in Warsaw. Khachapuri, khinkali, wine and warm hospitality."
+    },
+    "menu": {
+      "title": "Menu | Suliko",
+      "description": "Explore authentic Georgian dishes, desserts and wines."
+    },
+    "booking": {
+      "title": "Book a Table | Suliko",
+      "description": "Reserve your table online at Suliko restaurant."
+    },
+    "contact": {
+      "title": "Contact | Suliko",
+      "description": "Contact Suliko restaurant in Warsaw."
+    },
+    "wine": {
+      "title": "Wine | Suliko",
+      "description": "Discover wines selected to pair with Georgian cuisine."
+    },
+    "checkout": {
+      "title": "Checkout | Suliko",
+      "description": "Complete your order and choose delivery or pickup from Suliko restaurant."
+    },
+    "cart": {
+      "title": "Your Cart | Suliko",
+      "description": "Review your selected Georgian dishes before placing your order."
+    },
+    "notFound": {
+      "title": "404 - Page Not Found | Suliko",
+      "description": "The page you're looking for doesn't exist. Explore our menu or return to the homepage."
+    }
+  },
   "aria-labels": {
     "wineCard": "Add wine {{name}} to the cart",
     "cart": {

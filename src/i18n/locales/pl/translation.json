@@ -1,4 +1,38 @@
 {
+  "seo": {
+    "home": {
+      "title": "Suliko | Autentyczna Restauracja Gruzińska",
+      "description": "Tradycyjna kuchnia gruzińska w Warszawie. Chaczapuri, chinkali, gruzińskie wina i wyjątkowa gościnność."
+    },
+    "menu": {
+      "title": "Menu | Suliko",
+      "description": "Poznaj autentyczne dania kuchni gruzińskiej, desery oraz wyselekcjonowane wina."
+    },
+    "booking": {
+      "title": "Rezerwacja Stolika | Suliko",
+      "description": "Zarezerwuj stolik online w restauracji Suliko."
+    },
+    "contact": {
+      "title": "Kontakt | Suliko",
+      "description": "Skontaktuj się z restauracją Suliko w Warszawie."
+    },
+    "wine": {
+      "title": "Wina | Suliko",
+      "description": "Odkryj starannie wybrane wina idealnie komponujące się z kuchnią gruzińską."
+    },
+    "checkout": {
+      "title": "Finalizacja Zamówienia | Suliko",
+      "description": "Dokończ zamówienie i wybierz dostawę lub odbiór osobisty."
+    },
+    "cart": {
+      "title": "Koszyk | Suliko",
+      "description": "Sprawdź wybrane dania kuchni gruzińskiej przed złożeniem zamówienia."
+    },
+    "notFound": {
+      "title": "404 – Strona Nie Znaleziona | Suliko",
+      "description": "Strona, której szukasz, nie istnieje. Wróć na stronę główną lub przejdź do naszego menu."
+    }
+  },
   "aria-labels": {
     "wineCard": "Dodaj wino {{name}} do koszyka",
     "cart": {
