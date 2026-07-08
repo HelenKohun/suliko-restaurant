@@ -93,7 +93,7 @@ const useCartStore = create(persist((set) => ({
     items: [],
     promoCode: "",
     isPromoCorrect: false,
-    promoError: true,
+    promoError: false,
   }),
 
 
