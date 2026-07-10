@@ -28,7 +28,7 @@ export default function Notification({ notification, setNotification }) {
 
           <Link
             to="/cart"
-            className="font-body text-gold border-gold/60 hover:text-cream focus-visible:ring-gold mt-4 inline-flex rounded border px-4 py-2 text-[11px] tracking-widest uppercase transition-colors focus-visible:ring-2 focus-visible:outline-none"
+            className="font-body text-gold border-gold/60 hover:text-cream focus-visible:ring-gold hover:bg-gold mt-4 inline-flex rounded border px-4 py-2 text-[11px] tracking-widest uppercase transition-colors focus-visible:ring-2 focus-visible:outline-none"
           >
             {t("menuPage.notification.goToCart")}
           </Link>
