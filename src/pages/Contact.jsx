@@ -464,26 +464,20 @@ export default function Contact() {
               </span>
 
               <div className="flex items-center gap-5">
-                <button
-                  type="button"
+                <a
+                  href="https://www.instagram.com/"
                   className="font-body text-wine hover:text-gold text-[14px] tracking-widest uppercase transition-colors duration-200"
                 >
                   Instagram
-                </button>
+                </a>
 
-                <button
+                <a
+                  href="https://www.facebook.com/"
                   type="button"
                   className="font-body text-wine hover:text-gold text-[14px] tracking-widest uppercase transition-colors duration-200"
                 >
                   Facebook
-                </button>
-
-                <button
-                  type="button"
-                  className="font-body text-wine hover:text-gold text-[14px] tracking-widest uppercase transition-colors duration-200"
-                >
-                  TikTok
-                </button>
+                </a>
               </div>
             </div>
           </div>
