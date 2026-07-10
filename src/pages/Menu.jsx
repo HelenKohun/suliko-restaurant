@@ -27,14 +27,11 @@ export default function Menu() {
     if (window.innerWidth >= 1024) return;
 
     setTimeout(() => {
-      menuSectionRef.current?.scrollIntoView(
-        {
-          behavior: "smooth",
-          block: "start",
-        },
-        0,
-      );
-    });
+      menuSectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 0);
   }
 
   function handleAddItem(item) {
@@ -70,7 +67,6 @@ export default function Menu() {
           <button
             type="button"
             onClick={() => {
-              setActiveCategory(null);
               handleCategoryChange(null);
             }}
             className={`font-body -mb-px border-b-[1.5px] px-5 py-3 text-[13px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200 ${activeCategory === null ? "text-text border-wine" : "text-text-muted hover:text-gold border-transparent"}`}
@@ -82,7 +78,6 @@ export default function Menu() {
               type="button"
               key={cat.id}
               onClick={() => {
-                setActiveCategory(cat.id);
                 handleCategoryChange(cat.id);
               }}
               className={`font-body -mb-px cursor-pointer border-b-[1.5px] px-5 py-3 text-[12px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200 ${activeCategory === cat.id ? "text-text border-wine" : "text-text-muted hover:text-gold border-transparent"}`}
