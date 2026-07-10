@@ -1,4 +1,4 @@
-import { Plus } from "lucide-react";
+import { Plus, Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 // Wine bottles
@@ -11,8 +11,9 @@ import winePhoto6 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247940
 import winePhoto7 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247954-removebg-preview.png";
 import winePhoto8 from "../assets/Wine/pexels-alex-dos-santos-305643819-34247934-removebg-preview.png";
 
-export default function WineCard({ wine, onClick }) {
+export default function WineCard({ wine, onClick, addedItemId }) {
   const { t } = useTranslation();
+  const cartItemId = `wine-${wine.id}`;
 
   const photo = [
     winePhoto1,
@@ -81,7 +82,7 @@ export default function WineCard({ wine, onClick }) {
               onClick={() =>
                 onClick({
                   ...wine,
-                  id: `wine-${wine.id}`,
+                  id: cartItemId,
                   itemType: "wine",
                   wineId: wine.id,
                 })
@@ -89,7 +90,11 @@ export default function WineCard({ wine, onClick }) {
               className="border-gold/50 text-cream hover:bg-gold hover:text-wine flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border text-xl leading-none transition-colors duration-300"
               aria-label={t("aria-labels.wineCard", { name: wine.name })}
             >
-              <Plus size={20} />
+              {addedItemId === cartItemId ? (
+                <Check size={20} />
+              ) : (
+                <Plus size={20} />
+              )}
             </button>
           </div>
         </div>

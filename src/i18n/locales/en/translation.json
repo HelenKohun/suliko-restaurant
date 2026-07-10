@@ -153,12 +153,7 @@
     "header-text": "Authentic Georgian cuisine",
     "all-btn": "All",
     "add-btn": "+ Add",
-    "added-btn": "Added",
-    "notification": {
-      "added": "Added to cart",
-      "goToCart": "Go to cart",
-      "close": "Close notification"
-    }
+    "added-btn": "Added"
   },
 
   "menuData": {
@@ -1019,5 +1014,10 @@
     "description": "The page you're looking for doesn't exist or has been moved.",
     "home": "Home",
     "menu": "Menu"
+  },
+  "notification": {
+    "added": "Added to cart",
+    "goToCart": "Go to cart",
+    "close": "Close notification"
   }
 }

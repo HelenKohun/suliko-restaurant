@@ -12,12 +12,15 @@ import WineCard from "../components/WineCard";
 import useCartStore from "../store/cartStore";
 import { useSearchParams } from "react-router-dom";
 import Seo from "../components/Seo";
+import Notification from "../components/Notification";
 
 export default function WineList() {
   const { t } = useTranslation();
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedRegion, setSelectedRegion] = useState(null);
+  const [addedItemId, setAddedItemId] = useState(null);
+  const [notification, setNotification] = useState(null);
 
   const activeType = searchParams.get("type");
   const activeRegion = searchParams.get("region");
@@ -62,6 +65,20 @@ export default function WineList() {
 
       return newParams;
     });
+  }
+
+  function handleAddItem(item) {
+    addItem(item);
+    setAddedItemId(item.id);
+    setNotification(item);
+
+    setTimeout(() => {
+      setAddedItemId(null);
+    }, 2000);
+
+    setTimeout(() => {
+      setNotification(null);
+    }, 5000);
   }
 
   function goToPage(page) {
@@ -280,7 +297,12 @@ export default function WineList() {
               {/* Wine page */}
               <div className="grid flex-1 grid-cols-1 gap-4 px-4 pb-4 sm:grid-cols-2 lg:grid-rows-2 xl:grid-cols-3">
                 {winesForCurrentPage.map((wine) => (
-                  <WineCard wine={wine} key={wine.id} onClick={addItem} />
+                  <WineCard
+                    wine={wine}
+                    key={wine.id}
+                    onClick={handleAddItem}
+                    addedItemId={addedItemId}
+                  />
                 ))}
               </div>
 
@@ -332,6 +354,12 @@ export default function WineList() {
             </div>
           </div>
         </section>
+        {notification && (
+          <Notification
+            notification={notification}
+            setNotification={setNotification}
+          />
+        )}
       </div>
     </>
   );

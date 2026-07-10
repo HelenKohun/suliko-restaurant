@@ -157,12 +157,7 @@
     "header-text": "Autentyczna kuchnia gruzińska",
     "all-btn": "Wszystko",
     "add-btn": "+ Dodaj",
-    "added-btn": "Dodano",
-    "notification": {
-      "added": "Dodano do koszyka",
-      "goToCart": "Przejdź do koszyka",
-      "close": "Zamknij powiadomienie"
-    }
+    "added-btn": "Dodano"
   },
 
   "menuData": {
@@ -1025,5 +1020,10 @@
     "description": "Wygląda na to, że strona, której szukasz, nie istnieje lub została przeniesiona.",
     "home": "Strona główna",
     "menu": "Menu"
+  },
+  "notification": {
+    "added": "Dodano do koszyka",
+    "goToCart": "Przejdź do koszyka",
+    "close": "Zamknij powiadomienie"
   }
 }
