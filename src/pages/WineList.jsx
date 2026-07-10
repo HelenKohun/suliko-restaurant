@@ -78,7 +78,7 @@ export default function WineList() {
 
     setTimeout(() => {
       setNotification(null);
-    }, 5000);
+    }, 3500);
   }
 
   function goToPage(page) {

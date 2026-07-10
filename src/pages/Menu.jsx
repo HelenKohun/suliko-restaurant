@@ -48,7 +48,7 @@ export default function Menu() {
 
     setTimeout(() => {
       setNotification(null);
-    }, 5000);
+    }, 3500);
   }
 
   return (
