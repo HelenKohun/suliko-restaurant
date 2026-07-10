@@ -6,6 +6,7 @@ export default function MenuCategory({
   index,
   visibleCategories,
   onClick,
+  addedItemId,
 }) {
   const { t } = useTranslation();
 
@@ -17,7 +18,7 @@ export default function MenuCategory({
       >
         {/* Image */}
         <div
-          className={`hidden lg:block ${
+          className={`block ${
             cat.imgPosition === "right" ? "lg:order-2" : "lg:order-1"
           }`}
         >
@@ -41,47 +42,52 @@ export default function MenuCategory({
           </h2>
 
           <div className="flex flex-col">
-            {cat.dishes.map((dish) => (
-              <div
-                key={dish.id}
-                className="border-text/8 first:border-text/8 grid grid-cols-[1fr_auto] gap-x-4 border-b py-5 first:border-t"
-              >
-                <div className="min-w-0">
-                  <div className="font-heading text-text text-[22px] font-light lg:text-2xl">
-                    {t(`menuData.${cat.id}.dishes.${dish.id}.name`)}
+            {cat.dishes.map((dish) => {
+              const cartItemId = `${cat.id}-${dish.id}`;
+              return (
+                <div
+                  key={dish.id}
+                  className="border-text/8 first:border-text/8 grid grid-cols-[1fr_auto] gap-x-4 border-b py-5 first:border-t"
+                >
+                  <div className="min-w-0">
+                    <div className="font-heading text-text text-[22px] font-light lg:text-2xl">
+                      {t(`menuData.${cat.id}.dishes.${dish.id}.name`)}
+                    </div>
+                    <div className="font-body text-text-muted mt-1 text-[12px] leading-relaxed">
+                      {t(`menuData.${cat.id}.dishes.${dish.id}.description`)}
+                    </div>
                   </div>
-                  <div className="font-body text-text-muted mt-1 text-[12px] leading-relaxed">
-                    {t(`menuData.${cat.id}.dishes.${dish.id}.description`)}
+                  <div className="flex shrink-0 items-center gap-2 pt-1 lg:gap-3">
+                    <span className="font-body text-gold text-[13px] font-medium lg:text-[15px]">
+                      {dish.price} zł
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        onClick({
+                          ...dish,
+                          id: cartItemId,
+                          dishId: dish.id,
+                          categoryId: cat.id,
+                        })
+                      }
+                      className="font-body text-wine border-wine/30 active:bg-wine lg:hover:bg-wine focus-visible:ring-gold focus-visible:ring-offset-cream rounded border px-2 py-1 text-[12px] tracking-widest uppercase transition-all duration-150 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 active:text-white lg:px-3 lg:text-[11px] lg:hover:text-white"
+                    >
+                      {addedItemId === cartItemId
+                        ? t("menuPage.added-btn")
+                        : t("menuPage.add-btn")}
+                    </button>
                   </div>
                 </div>
-                <div className="flex shrink-0 items-center gap-2 pt-1 lg:gap-3">
-                  <span className="font-body text-gold text-[13px] font-medium lg:text-[15px]">
-                    {dish.price} zł
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      onClick({
-                        ...dish,
-                        id: `${cat.id}-${dish.id}`,
-                        dishId: dish.id,
-                        categoryId: cat.id,
-                      })
-                    }
-                    className="font-body text-wine border-wine/30 active:bg-wine lg:hover:bg-wine focus-visible:ring-gold focus-visible:ring-offset-cream rounded border px-2 py-1 text-[12px] tracking-widest uppercase transition-all duration-150 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95 active:text-white lg:px-3 lg:text-[11px] lg:hover:text-white"
-                  >
-                    {t("menuPage.add-btn")}
-                  </button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
 
       {/* Separator between categories */}
       {index < visibleCategories.length - 1 && (
-        <div className="bg-text/8 mt-20 h-px" />
+        <div className="lg:bg-text/8 lg:mt-20 lg:h-px" />
       )}
 
       {index === visibleCategories.length - 1 && <div className="mt-10" />}

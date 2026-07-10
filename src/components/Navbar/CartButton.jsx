@@ -10,7 +10,7 @@ export default function CartButton({ onClick }) {
     <Link
       to="/cart"
       onClick={onClick}
-      className="font-body relative text-[12px] tracking-widest text-white/70 uppercase transition-colors duration-200 hover:text-white"
+      className="font-body relative text-[12px] tracking-widest text-white uppercase transition-colors duration-200 hover:text-white"
     >
       🛒
       {items.length > 0 && (

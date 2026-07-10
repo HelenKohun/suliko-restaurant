@@ -57,7 +57,7 @@ export default function Cart() {
       <>
         <Seo page="cart" />
         <div className="bg-cream flex min-h-screen flex-col items-center justify-center px-6 text-center">
-          <h1 className="font-heading text-text mb-4 text-7xl font-light tracking-[0.12em]">
+          <h1 className="font-heading text-text mb-4 text-6xl font-light tracking-[0.12em]">
             {t("cart.cart")}
           </h1>
           <p className="font-body text-text-muted mb-8 text-[15px] tracking-widest uppercase">
@@ -87,7 +87,7 @@ export default function Cart() {
         <div className="mx-auto max-w-md lg:max-w-7xl">
           {/* Header */}
           <div className="mb-12 text-center">
-            <h1 className="font-heading text-text text-7xl font-light tracking-[0.12em] lg:text-8xl">
+            <h1 className="font-heading text-text text-6xl font-light tracking-[0.12em] lg:text-8xl">
               {t("cart.cart")}
             </h1>
             <p className="font-body text-text-muted mt-2 text-[12px] tracking-[0.18em] uppercase">

@@ -152,8 +152,15 @@
     "header": "MENU",
     "header-text": "Authentic Georgian cuisine",
     "all-btn": "All",
-    "add-btn": "+ Add"
+    "add-btn": "+ Add",
+    "added-btn": "Added",
+    "notification": {
+      "added": "Added to cart",
+      "goToCart": "Go to cart",
+      "close": "Close notification"
+    }
   },
+
   "menuData": {
     "zimne-przystawki": {
       "label": "Cold starters",

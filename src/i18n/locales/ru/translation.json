@@ -149,8 +149,15 @@
     "header": "МЕНЮ",
     "header-text": "Аутентичная грузинская кухня",
     "all-btn": "Все",
-    "add-btn": "+ Добавь"
+    "add-btn": "+ Добавь",
+    "added-btn": "Добавлено",
+    "notification": {
+      "added": "Добавлено в корзину",
+      "goToCart": "Перейти в корзину",
+      "close": "Закрыть уведомление"
+    }
   },
+
   "menuData": {
     "zimne-przystawki": {
       "label": "Холодные закуски",

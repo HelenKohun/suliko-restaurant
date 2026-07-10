@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { menuData } from "../data/menuData";
 import MenuCategory from "../components/MenuCategory";
 import useCartStore from "../store/cartStore";
 import Seo from "../components/Seo";
+import Notification from "../components/Notification";
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState(null);
+  const [addedItemId, setAddedItemId] = useState(null);
+  const [notification, setNotification] = useState(null);
+  const menuSectionRef = useRef(null);
 
   // useCartStore
   const addItem = useCartStore((state) => state.addItem);
@@ -16,6 +20,36 @@ export default function Menu() {
   const visibleCategories = activeCategory
     ? menuData.filter((cat) => cat.id === activeCategory)
     : menuData;
+
+  function handleCategoryChange(categoryId) {
+    setActiveCategory(categoryId);
+
+    if (window.innerWidth >= 1024) return;
+
+    setTimeout(() => {
+      menuSectionRef.current?.scrollIntoView(
+        {
+          behavior: "smooth",
+          block: "start",
+        },
+        0,
+      );
+    });
+  }
+
+  function handleAddItem(item) {
+    addItem(item);
+    setAddedItemId(item.id);
+    setNotification(item);
+
+    setTimeout(() => {
+      setAddedItemId(null);
+    }, 2000);
+
+    setTimeout(() => {
+      setNotification(null);
+    }, 5000);
+  }
 
   return (
     <>
@@ -35,7 +69,10 @@ export default function Menu() {
         <div className="border-text/10 mt-8 flex flex-col justify-center border-b lg:mx-12 lg:flex-row">
           <button
             type="button"
-            onClick={() => setActiveCategory(null)}
+            onClick={() => {
+              setActiveCategory(null);
+              handleCategoryChange(null);
+            }}
             className={`font-body -mb-px border-b-[1.5px] px-5 py-3 text-[13px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200 ${activeCategory === null ? "text-text border-wine" : "text-text-muted hover:text-gold border-transparent"}`}
           >
             {t("menuPage.all-btn")}
@@ -44,7 +81,10 @@ export default function Menu() {
             <button
               type="button"
               key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
+              onClick={() => {
+                setActiveCategory(cat.id);
+                handleCategoryChange(cat.id);
+              }}
               className={`font-body -mb-px cursor-pointer border-b-[1.5px] px-5 py-3 text-[12px] tracking-widest whitespace-nowrap uppercase transition-colors duration-200 ${activeCategory === cat.id ? "text-text border-wine" : "text-text-muted hover:text-gold border-transparent"}`}
             >
               {t(`menuData.${cat.id}.label`)}
@@ -53,17 +93,27 @@ export default function Menu() {
         </div>
 
         {/* Categories */}
-        <div className="mx-auto flex max-w-7xl flex-col gap-12 px-12 lg:gap-20 lg:py-16">
+        <div
+          ref={menuSectionRef}
+          className="mx-auto flex max-w-7xl scroll-mt-24 flex-col gap-1 px-12 lg:gap-20 lg:py-16"
+        >
           {visibleCategories.map((cat, index) => (
             <MenuCategory
               key={cat.id}
               cat={cat}
               index={index}
               visibleCategories={visibleCategories}
-              onClick={addItem}
+              onClick={handleAddItem}
+              addedItemId={addedItemId}
             />
           ))}
         </div>
+        {notification && (
+          <Notification
+            notification={notification}
+            setNotification={setNotification}
+          />
+        )}
       </div>
     </>
   );

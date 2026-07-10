@@ -156,8 +156,15 @@
     "header": "MENU",
     "header-text": "Autentyczna kuchnia gruzińska",
     "all-btn": "Wszystko",
-    "add-btn": "+ Dodaj"
+    "add-btn": "+ Dodaj",
+    "added-btn": "Dodano",
+    "notification": {
+      "added": "Dodano do koszyka",
+      "goToCart": "Przejdź do koszyka",
+      "close": "Zamknij powiadomienie"
+    }
   },
+
   "menuData": {
     "zimne-przystawki": {
       "label": "Zimne przystawki",
