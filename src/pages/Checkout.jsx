@@ -115,8 +115,6 @@ export default function Checkout() {
       },
     };
 
-    console.log(orderData);
-
     clearCart();
     reset();
     setIsOrderSubmitted(true);

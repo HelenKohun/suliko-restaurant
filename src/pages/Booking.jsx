@@ -31,8 +31,7 @@ export default function Booking() {
     { icon: Phone, text: t("booking.info.phone") },
   ];
 
-  //Time options
-
+  //Time optionsss
   const {
     register,
     handleSubmit,
@@ -51,10 +50,8 @@ export default function Booking() {
   }, [searchParams, setValue]);
 
   function onSubmit(data) {
-    console.log(data);
-    //  EmailJS
+    // Supabase integration will be added later
   }
-
   if (isSubmitSuccessful) {
     return (
       <>

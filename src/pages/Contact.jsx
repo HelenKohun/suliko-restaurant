@@ -57,7 +57,6 @@ export default function Contact() {
   function onSubmit(data) {
     reset();
     setIsSuccess(true);
-    console.log(data);
   }
 
   return (
