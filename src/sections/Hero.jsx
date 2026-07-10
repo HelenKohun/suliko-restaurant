@@ -40,13 +40,13 @@ export default function Hero() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <Link
               to="/booking"
-              className="font-body border-gold/50 bg-gold hover:bg-gold/10 rounded-xs border px-6 py-3 text-[10px] tracking-widest text-white uppercase transition-colors duration-200"
+              className="font-body border-gold/50 bg-gold hover:bg-gold/10 rounded-xs border px-6 py-3 text-center text-[10px] tracking-widest text-white uppercase transition-colors duration-200"
             >
               {t("hero.cta")}
             </Link>
             <Link
               to="/menu"
-              className="font-body text-[10px] tracking-widest text-white/80 uppercase transition-colors duration-200 hover:text-white/70"
+              className="font-body border-gold/50 border px-6 py-3 text-center text-[10px] tracking-widest text-white/80 uppercase transition-colors duration-200 hover:text-white/70 lg:border-0 lg:px-0 lg:py-0 lg:text-left"
             >
               {t("hero.scroll")}
             </Link>
