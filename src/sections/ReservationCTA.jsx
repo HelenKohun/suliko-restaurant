@@ -17,7 +17,6 @@ export default function ReservationCTA() {
     return `${year}-${month}-${day}`;
   }
   const today = getTodayDateString();
-  console.log(today);
 
   // Time options
   const timeOptions = [
