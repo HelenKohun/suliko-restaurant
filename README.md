@@ -1,16 +1,88 @@
-# React + Vite
+# Suliko Restaurant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multilingual restaurant website featuring online ordering and table reservations.
 
-Currently, two official plugins are available:
+![Home](docs/images/home-page.webp)
+![Checkout](docs/images/checkout-page.webp)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[🌐 Live Demo](https://suliko-restaurant.netlify.app/) · [📂 GitHub Repository](https://github.com/HelenKohun/suliko-restaurant)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## About the Project
 
-## Expanding the ESLint configuration
+Suliko is a multilingual restaurant website designed as a complete digital experience for a modern Georgian restaurant. Inspired by the atmosphere of premium dining, the project focuses on creating a welcoming first impression while supporting every stage of the guest's journey - from exploring the menu and discovering wines to reserving a table or placing an online order. Every feature was designed to make the experience intuitive, comfortable, and to strengthen trust between the restaurant and its guests.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features
+
+- Responsive design optimized for desktop and mobile devices.
+- Multilingual interface (English, Polish and Russian).
+- Interactive menu with category filtering.
+- Wine catalogue with filtering by type, style and region.
+- Online ordering with a persistent shopping cart.
+- Checkout flow with client-side validation.
+- Table reservation form with date and time selection.
+- SEO optimization and accessibility improvements.
+
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Zustand
+- React Hook Form
+- i18next
+- React Helmet Async
+- React Leaflet
+
+## Project Structure
+
+```text
+src/
+├── assets/        Images and static media
+├── components/    Reusable UI components
+├── config/        Project configuration
+├── constants/     SEO data
+├── data/          Menu, wine, navigation, and booking data
+├── i18n/          Translation files and localization setup
+├── layouts/       Shared page layouts
+├── pages/         Route-level page components
+├── sections/      Larger homepage sections
+├── store/         Global state management with Zustand
+├── utils/         Reusable helper functions
+```
+
+## Getting Started
+
+### Requirements
+
+- Node.js 20.19+
+- npm
+
+```bash
+git clone https://github.com/HelenKohun/suliko-restaurant.git
+
+cd suliko-restaurant
+
+npm install
+
+npm run dev
+```
+
+## Future Improvements
+
+- Integrate **Supabase** to store and manage online orders, table reservations, and restaurant data.
+- Develop an **admin dashboard** for managing the menu, wine catalogue, orders, and reservations.
+- Implement **administrator authentication** to securely access the management panel.
+- Add **email notifications** for reservation and order confirmations.
+- Enhance the user experience with **subtle animations and microinteractions**.
+
+## Author
+
+**Helen Kohun**
+
+Frontend Developer
+
+- GitHub: https://github.com/HelenKohun
+- LinkedIn: https://www.linkedin.com/in/olena-kohun-a800a8305/
